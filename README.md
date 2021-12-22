@@ -1,6 +1,6 @@
 # Jillian's Portfolio
 
-My digital porfolio! \[Work In Progress\]
+👋 Hey there! My digital porfolio \[Work In Progress\].
 
 Includes:
 - about me: skills, interests, and past experience
