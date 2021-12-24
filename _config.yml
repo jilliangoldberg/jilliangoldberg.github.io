@@ -1,6 +1,5 @@
 ### Site Settings ###
 title               : Jillian Goldberg
-# profile: assets/headshot.jpeg
 
 description         : 
 baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
@@ -18,7 +17,7 @@ plugins:
 nav_exclude:                                            # The following paths are excluded from navbar
   - pages/tags.html
   - pages/404.html
-  - pages/index.md
+  # - pages/index.md
 
 ### Author Info ###
 author:
@@ -40,10 +39,6 @@ collections:
   projects:
     output: true
     permalink: /projects/:name
-
-### Disqus ###
-# disqus:
-#   shortname: your-short-name-disqus                     # Your website Shortname on disqus
 
 
 ### Analytics ###

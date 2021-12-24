@@ -15,6 +15,6 @@ After completing my double degree in EECS + Business, I aim to use what I learn 
 
 👩🏻‍💻women in STEM and youth empowerment \\
 📈the power of consumer-centric data \\
-♻️social transformation and environmental progress.
+♻️social transformation and environmental progress
 
 Feel free to take a look around!
