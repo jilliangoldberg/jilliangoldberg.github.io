@@ -6,18 +6,13 @@ weight: 1
 ---
 
 # **About Me**
+<h2></h2>
 <!-- :wave: -->
 ##### **Who am I?**
 :wave: Hi! My name is **Jillian** and I'm from 📍Frisco, TX (near Dallas). I study [Electrical Engineering and Computer Science](https://eecs.berkeley.edu/) (EECS) + [Business Administration](https://haas.berkeley.edu/) in the [Management, Entrepreneurship, and Technology (M.E.T.)](https://met.berkeley.edu/) program at UC Berkeley. I'm passionate about **data science and machine learning**, especially using the power of data to answer real world questions, enhance personalized consumer experiences, and improve people's daily lives. 
 
 Learn more about my [📊projects](../projects/), read my [✍️blog](../blog/), or take a peek at my [📚course notes](../notes/).
 <br/><br/> 
-
-<!-- :grin: 
-##### **What do I like?**
-I'm passionate about using the **power of data** to answer questions about the real world and improve people's daily lives. I'm most interested in data science and machine learning, especially when enhancing products for positive and personalized consumer experiences. 
-<br/><br/>  -->
-
 <!-- :bear: -->
 ##### **What do I do?**
 On campus, I'm a project leader, account manager, and senior advisor for [Voyager Consulting](voyagerconsulting.org), and I teach UC Berkeley's [CS 61A](cs61a.org) as an Academic Intern and through [Computer Science Mentors](csmentors.berkeley.edu). I play on the [Cal Women's Club Volleyball](instagram.com/calclubvolleyball) team and I'm a mentor in the [Engineering Berkeley Mentorship Cohort](https://engineering.berkeley.edu/students/programs/mentor-programs/berkeley-mentorship-cohort/).

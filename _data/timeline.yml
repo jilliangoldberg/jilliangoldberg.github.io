@@ -18,6 +18,14 @@
     - Transitioned over 5 billion rows of data to daily-refreshed, point-in-time visualization and aggregation reports.
     - Created pilot dashboard tool to be scalable company-wide, with demonstrated interest in 4 other business units.
 
+- title: Account Manager
+  company: Voyager Consulting
+  from: May 2021
+  to: Present
+  bullets: 
+    - Connect with VP and C-Suite leaders; secured clients Apple, Uber, The Gates Foundation, Home Depot in Fall 2021.
+    - Design project methodologies, define scope, and create proposal decks by collaborating with company leaders.
+
 - title: Data Consultant
   company: Volvo Cars
   from: Jan 2021
@@ -26,6 +34,14 @@
     - Designed an inventive, binary search-based pricing survey to gauge consumer demand for 30+ new car features.
     - Analyzed over 2,000 customer responses to determine optimal price points and develop R Shiny pricing model.
 
+- title: Diversity, Equity & Inclusion Leader
+  company: Voyager Consulting
+  from: May 2021
+  to: Present
+  bullets: 
+    - Promote diversity and inclusion on campus and take action to address challenges for Women in STEM.
+    - Organized town halls/workshops to encourage important conversations between faculty and students.
+
 - title: Data Consultant
   company: ViacomCBS
   from: Sep 2020
@@ -33,11 +49,3 @@
   bullets: 
     - Created an API using Python to extract 2 years worth of internal company data from 6 sources (e.g., Jira, GitHub).
     - Utilized regression analysis to identify KPIs and metric correlations to increase productivity and profitability.
-
-- title: Account Manager
-  company: Voyager Consulting
-  from: May 2021
-  to: Present
-  bullets: 
-    - Connect with VP and C-Suite leaders; secured clients Apple, Uber, The Gates Foundation, Home Depot in Fall 2021.
-    - Design project methodologies, define scope, and create proposal decks by collaborating with company leaders.

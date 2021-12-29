@@ -1,8 +1,6 @@
 ---
 layout: default
-# title: home
 permalink: /
-# weight: 0
 ---
 
 {% include landing.html %}
