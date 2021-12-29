@@ -3,9 +3,11 @@
   from: Sep 2021
   to: Dec 2021
   bullets: 
-    - Identifying user archetypes for the Uber Eats subscription, <a href="ubereats.com/eats-pass">EatsPass</a>, to gain insight into consumer behavior.
-    - Utilize unsupervised learning ML techniques (K-means, <a href="https://medium.com/gradient/using-random-forests-for-segmentation-e4793482f129">Random Forest</a>, PCA, data visualization) for feature predictions and clustering.
-    - Optimizing for conversion and retention through promotion ideation and growth-based recommendations.
+    - Identified user archetypes for the Uber Eats subscription, EatsPass, to gain insight into consumer behavior.
+    - Utilized unsupervised learning ML techniques (K-means, Random Forest, PCA, data visualization) for feature predictions and clustering.
+    - Optimized for conversion and retention through promotion ideation and growth-based recommendations.
+# <a href="ubereats.com/eats-pass">EatsPass</a>
+# <a href="https://medium.com/gradient/using-random-forests-for-segmentation-e4793482f129">Random Forest</a>
 
 - title: Data Engineer Intern
   company: Proctor & Gamble

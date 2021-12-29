@@ -91,7 +91,7 @@
 @keyframes four-anim { 50% { transform: scale(0.98); } }
 html { padding-left: calc(100vw - 100%); }
 
-body { font-family: "Cochin", serifl; }
+body { font-family: "Avenir Next", serif; }
 
 .badge { font-weight: 500; }
 
@@ -464,3 +464,4 @@ body { font-family: "Cochin", serifl; }
 [data-theme="dark"] .list-group-item-action:hover, [data-theme="dark"] .list-group-item-action:focus { background-color: #1d1d1e; }
 [data-theme="dark"] .post footer { text-decoration: none; }
 [data-theme="dark"] .timeline-body .timeline-item:after { background-color: #17191a; }
+[data-theme="dark"] .timeline-body { background-color: #242526; }
