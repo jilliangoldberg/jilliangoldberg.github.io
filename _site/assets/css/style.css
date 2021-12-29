@@ -91,6 +91,12 @@
 @keyframes four-anim { 50% { transform: scale(0.98); } }
 html { padding-left: calc(100vw - 100%); }
 
+@font-face { font-family: 'Avenir Next'; font-style: normal; src: url("../fonts/AvenirNextLTPro-Regular.otf");
+  /* File to be stored at your site */ }
+@font-face { font-family: 'Avenir Next'; font-style: normal; font-weight: bold; src: url("../fonts/AvenirNextLTPro-Bold.otf");
+  /* File to be stored at your site */ }
+@font-face { font-family: 'Avenir Next'; font-style: italic; src: url("../fonts/AvenirNextLTPro-It.otf");
+  /* File to be stored at your site */ }
 body { font-family: "Avenir Next", serif; }
 
 .badge { font-weight: 500; }
