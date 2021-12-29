@@ -33,7 +33,6 @@ author:
 ### Posts ###
 permalink: /blog/:title
 
-
 ### Collections ###
 collections:
   projects:
@@ -60,6 +59,11 @@ defaults:
       type: "posts"
     values:
       comments: false                                   # Set to true to enable disqus comments
+  - scope:
+      path: ""
+      type: "notes"
+    values:
+      comments: false    
 
 
 ### Exclude from processing ###

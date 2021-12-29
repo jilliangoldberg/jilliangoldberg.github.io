@@ -1,8 +1,8 @@
 ---
 layout: default
-title: home
+# title: home
 permalink: /
-weight: 0
+# weight: 0
 ---
 
 {% include landing.html %}
@@ -18,3 +18,9 @@ After completing my double degree in EECS + Business, I aim to use what I learn 
 ♻️social transformation and environmental progress
 
 Feel free to take a look around!
+
+<div class="row">
+<img src="../images/headshot.png" alt="Screen Shot 2021-09-24 at 11.12.02 PM" style="zoom:25%; padding:30px" />
+<img src="../images/headshot.png" alt="Screen Shot 2021-09-24 at 11.12.02 PM" style="zoom:25%; padding:30px" />
+<img src="../images/headshot.png" alt="Screen Shot 2021-09-24 at 11.12.02 PM" style="zoom:25%; padding:30px" />
+</div>

@@ -1,14 +1,27 @@
-html{
+html {
   padding-left: calc(100vw - 100%);
 }
 
 body {
-  // font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-family: "Cochin", serif;
-  // font-family: "Garamond", serif;
-  // font-family: "Poppins", sans-serif;
+  font-family: "Cochin", serifl
 }
 
 .badge {
   font-weight: 500;
+}
+
+.bg-light,
+.badge-light {
+  &,
+  * {
+    color: $text-black !important;
+  }
+}
+
+.bg-dark,
+.badge-dark {
+  &,
+  * {
+    color: $text-white !important;
+  }
 }

@@ -1,0 +1,33 @@
+@mixin themed($property, $light-value, $dark-value) {
+  [data-theme="light"] & {
+    #{$property}: $light-value;
+  }
+
+  [data-theme="dark"] & {
+    #{$property}: $dark-value;
+  }
+}
+
+#theme-toggler:before {
+  @include themed(content, "🌙", "🌞");
+}
+
+.navbar-themed {
+  .navbar-brand,
+  .navbar-nav .nav-link.active {
+    @include themed(color, $primary, $text-white);
+  }
+
+  .navbar-nav .nav-link {
+    @include themed(color, rgba($primary, 0.9), rgba($text-white, 0.9));
+  }
+}
+
+.text-themed {
+  @include themed(color, $primary, $text-white);
+}
+
+.bg-themed {
+  @include themed(background-color, $light, $dark);
+}
+

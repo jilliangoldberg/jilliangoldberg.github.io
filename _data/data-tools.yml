@@ -1,0 +1,11 @@
+- name: Pandas/NumPy
+  percentage: 90
+  color: 
+
+- name: Tableau/PowerBI
+  percentage: 85
+  color: 
+  
+- name: Scikit-learn/TensorFlow
+  percentage: 80
+  color: 

@@ -4,8 +4,8 @@
 
 - name: SQL
   percentage: 85
-  color: danger
+  color: 
 
 - name: Java
   percentage: 70
-  color: info
+  color: 

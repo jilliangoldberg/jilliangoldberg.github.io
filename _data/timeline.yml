@@ -1,17 +1,41 @@
-- title: Student, Harvard CS
-  from: 2014
-  to: 2018
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+- title: Data Science/ML Intern
+  company: Uber Technologies
+  from: Sep 2021
+  to: Dec 2021
+  bullets: 
+    - Identifying user archetypes for the Uber Eats subscription, <a href="ubereats.com/eats-pass">EatsPass</a>, to gain insight into consumer behavior.
+    - Utilize unsupervised learning ML techniques (K-means, <a href="https://medium.com/gradient/using-random-forests-for-segmentation-e4793482f129">Random Forest</a>, PCA, data visualization) for feature predictions and clustering.
+    - Optimizing for conversion and retention through promotion ideation and growth-based recommendations.
 
-- title: Software Engineer, Google, UK
-  from: 2018
-  to: present
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-               nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-               reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+- title: Data Engineer Intern
+  company: Proctor & Gamble
+  from: June 2021
+  to: Aug 2021
+  bullets: 
+    - Designed an automated dashboard using SQL and Power BI to enable product quality and statistical data analysis.
+    - Transitioned over 5 billion rows of data to daily-refreshed, point-in-time visualization and aggregation reports.
+    - Created pilot dashboard tool to be scalable company-wide, with demonstrated interest in 4 other business units.
+
+- title: Data Consultant
+  company: Volvo Cars
+  from: Jan 2021
+  to: Dec 2021
+  bullets: 
+    - Designed an inventive, binary search-based pricing survey to gauge consumer demand for 30+ new car features.
+    - Analyzed over 2,000 customer responses to determine optimal price points and develop R Shiny pricing model.
+
+- title: Data Consultant
+  company: ViacomCBS
+  from: Sep 2020
+  to: Dec 2020
+  bullets: 
+    - Created an API using Python to extract 2 years worth of internal company data from 6 sources (e.g., Jira, GitHub).
+    - Utilized regression analysis to identify KPIs and metric correlations to increase productivity and profitability.
+
+- title: Account Manager
+  company: Voyager Consulting
+  from: May 2021
+  to: Present
+  bullets: 
+    - Connect with VP and C-Suite leaders; secured clients Apple, Uber, The Gates Foundation, Home Depot in Fall 2021.
+    - Design project methodologies, define scope, and create proposal decks by collaborating with company leaders.

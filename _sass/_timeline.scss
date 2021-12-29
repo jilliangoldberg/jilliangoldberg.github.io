@@ -1,6 +1,5 @@
 .timeline-body {
   position: relative;
-  background-color: $light;
   border-radius: 0 $rounded-borders $rounded-borders 0;
   padding: 5px 0;
 
@@ -41,6 +40,11 @@
         margin-top: -5px;
         margin-bottom: 15px;
         color: #6c757d;
+      }
+
+      .company {
+        font-family: "Cochin", serif;
+        font-weight: lighter;
       }
     }
   }
