@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fall 2021: CS 188 Midterm">
+  <meta property="og:description" content="">
+
+  <title>Fall 2021: CS 188 Midterm</title>
+  <meta name="description" content="">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Math Latex Support -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+  <!-- Theme style -->
+  <script src="/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <!-- <a class="navbar-brand" href="/"><h5><b> Jillian Goldberg </b></h5></a> -->
+  <a class="navbar-brand" href="/"> <img src="../images/jilliangoldberg-logo.png" alt="Jillian Goldberg" > </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link " href="https://berkeley.zoom.us/my/jilliangoldberg"target="_blank"></a>
+
+      <a class="nav-item nav-link active" href="/notes/cs188-m">Fall 2021: CS 188 Midterm</a>
+
+      <a class="nav-item nav-link " href="/notes/chinese-1a">Fall 2021: Chinese 1A</a>
+
+      <a class="nav-item nav-link " href="/about/">about</a>
+
+      <a class="nav-item nav-link " href="/blog/">blog</a>
+
+      <a class="nav-item nav-link active" href="/notes/">notes</a>
+
+      <a class="nav-item nav-link " href="/projects/">projects</a>
+
+      <a class="nav-item nav-link " href="/experience/">experience</a>
+
+      <a class="nav-item nav-link " href="https://drive.google.com/file/d/1nxD0JIPxPSoM7pxtSQ-0P4EegFgnIoks/view?usp=sharing"target="_blank">resume</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <div class="row">
+      <a class="m-1 btn btn-outline-primary btn-2 " href="../notes">
+  Back to Notes
+</a>
+      <a class="m-1 btn btn-outline-primary btn-2 " href="../notes">
+  Next
+</a> 
+  </div>
+
+  <h1 id="cs-188-midterm-1-notes"><strong>CS 188 Midterm 1 Notes</strong></h1>
+
+<h2 id="probability-review">Probability Review</h2>
+
+<h3 id="random-variables---px">Random Variables - P(X)</h3>
+<ul>
+  <li>X is a random variable, so it doesn’t have a set value - Takes on a range of values</li>
+  <li>P(X) defines what probability X may take on a certain value</li>
+  <li>The distribution of the values of X</li>
+  <li>Properties:</li>
+  <li>Distribution may never have negative probabilities</li>
+  <li>Sums to 1</li>
+  <li>Notation:</li>
+  <li>Capital Letters = distribution over Random Variables</li>
+  <li>Lowercase Letters = actual values</li>
+  <li>Ex: P(X) vs P(X = +x) vs P(+x)
+    <h3 id="joint-distributions">Joint Distributions</h3>
+  </li>
+  <li>P(X,Y) = distribution of the cross product of X and Y</li>
+  <li>Defines the probability of ever single x happening with every single y</li>
+  <li>It is a distribution so sums to 1 and has no negative values</li>
+  <li><em>insert picture</em>
+    <h3 id="independent-probability-tables">Independent Probability Tables</h3>
+  </li>
+  <li>Two random variables, C and N</li>
+  <li>C = result of flipping a coin where heads has a probability of .8</li>
+  <li>H = the number of heads that result from flipping a fair coin twice</li>
+  <li>P(C,N) = P(C)P(N)</li>
+  <li>
+    <p>The probability of every C with every N is the individual probabilities multiplied together</p>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>P(C</td>
+          <td>N) means the probability of C given N</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>So P(C</td>
+          <td>N) = P(C) since C and N are independent variables</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>Therefore, P(C,N) = P(C)P(N) since they aren’t correlated
+    <h3 id="simple-chain-rule">Simple Chain Rule</h3>
+    <p>Identity: P(A,B) = P(A|B)P(B) = P(B|A)P(A)</p>
+  </li>
+  <li>Conditional Probability, the solution comes from the definition of Joint Distributions</li>
+  <li>Identity from P(A|B) = P(AB)/P(B) and vise versa
+    <h3 id="bayes-rule">Bayes Rule</h3>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>P(A,B) = P(A</td>
+          <td>B)P(B) = P(B</td>
+          <td>A)P(A)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>Two definitions are equivalent from this!</li>
+  <li>P(A|B) = P(AB)/P(B) = P(B|A)P(A)/(B) - Flip the conditional probability to get P(B|A)
+    <h2 id="lecture-1-intro-to-ai">Lecture 1: Intro to AI</h2>
+    <h3 id="computational-rationality">Computational Rationality</h3>
+  </li>
+  <li>Maximize your expected utility
+    <h3 id="what-can-ai-do">What can AI Do</h3>
+  </li>
+  <li>10 years ago, AI couldn’t play a decent game of jeopardy, win against any human at chess, win against the best humans at Go, play table tennis, grab a cup and put it on the shelf, and translate spoken language into a different language in real time!</li>
+  <li>In 10 years</li>
+  <li>Soon, AI may be able to drive perfectly safely on highways, discover and prove
+new math theorems, write funny stories, and many more!
+Lecture 2: Uninformed Search
+Planning Agents vs Reflex Agents</li>
+  <li>Reflex agents choose action based on current percept (and possibly memory)</li>
+  <li>Reflex agents do not plan ahead</li>
+  <li>Planning agents simulate the future based on its understanding of the world
+Search Problems</li>
+  <li>
+    <p>Necessary components</p>
+  </li>
+  <li>State space, successor function, start space, goal test</li>
+  <li>World state = includes all the details in the real world, including those irrelevant to the
+search problem</li>
+  <li>Search state = only includes the information in the real world that are relevant to the
+search problem</li>
+  <li>The size of the search state is usually a lot smaller than the size of the world state
+    <h3 id="search-tree">Search Tree</h3>
+  </li>
+  <li>State space graph</li>
+  <li>usually very big and is hard to store in the computer memory</li>
+  <li>Search tree</li>
+  <li>progressively covers the relevant part of full state space graph - good replacement for state space graphs</li>
+  <li>Nodes on a fringe</li>
+  <li>Partial plans rather than individual states</li>
+  <li>Ex. S-&gt;D, S-&gt;E, S-&gt;P, S-&gt;D-&gt;B</li>
+  <li>Example of a state space graph</li>
+  <li>Example of Search Tree
+    <h3 id="depth-first-search-dfs-with-search-tree">Depth First Search (DFS) with Search Tree</h3>
+  </li>
+  <li>Properties</li>
+  <li>M = num of tiers</li>
+  <li>In the worst case, it could expand to the whole tree (O(b^m) nodes</li>
+  <li>
+    <p>The maximum space required on the fringe is O(bm)</p>
+  </li>
+  <li>It is complete if m is finite
+Breadth First Search (BFS) with Search Tree</li>
+  <li>In the worst case, it could expand to the whole tree (O(b^m) nodes</li>
+  <li>If the shallowest solutions is at level s:</li>
+  <li>It will expand to at least O(b^s) nodes</li>
+  <li>The maximum space required on the fringe is O(b^s)</li>
+  <li>It is complete if m is finite</li>
+  <li>It is optimal if all costs are 1
+    <h3 id="uniform-cost-search-uhs-with-search-tree">Uniform Cost Search (UHS) with Search Tree</h3>
+  </li>
+  <li>It is complete if m is finite</li>
+  <li>It is optimal if costs are all 1</li>
+  <li>It is optimal in the general case
+    <h2 id="lecture-3-a-search-and-heuristics">Lecture 3: A* Search and Heuristics</h2>
+    <h3 id="heuristics">Heuristics</h3>
+  </li>
+  <li>A function that estimates how close a state is to a goal</li>
+  <li>Takes in a state and returns a number
+    <h3 id="a-search-and-greedy-search">A* Search and Greedy Search</h3>
+  </li>
+  <li>Both use some heuristic function h</li>
+  <li>Both use a priority queue
+    <h3 id="admissible-heuristics">Admissible Heuristics</h3>
+  </li>
+  <li>Underestimate the true cost to the goal</li>
+  <li>
+    <p>Admissible = optimistic!</p>
+  </li>
+  <li>Example</li>
+  <li>Manhattan distance between pacman’s location and the goal location</li>
+  <li>Euclidean distance between pacman and goal -0
+    <h3 id="graph-search-and-tree-search">Graph Search and Tree Search</h3>
+  </li>
+  <li>Admissible heuristic</li>
+  <li>A* tree search is guaranteed to be optimal</li>
+  <li>Consistent heuristic</li>
+  <li>A* tree search is guaranteed to be optimal</li>
+  <li>A* GRAPH search is guaranteed to be optimal
+    <h2 id="lecture-4-game-trees-i">Lecture 4: Game Trees I</h2>
+    <h3 id="adversarial-games">Adversarial Games</h3>
+  </li>
+  <li>AI can achieve human expert level of performance on checkers, chess, go, tic-tac-toe</li>
+  <li>Games include an action space, a state space, and a transition function</li>
+  <li>Similar to search</li>
+  <li>In zero sum games, there is only one utility value associated with each state
+    <h3 id="minimax">Minimax</h3>
+  </li>
+  <li>Each player assumes that the other player is playing optimally</li>
+  <li>It is implemented recursively
+    <h3 id="alpha-beta-pruning">Alpha Beta Pruning</h3>
+  </li>
+  <li>The purpose of pruning is to ignore some nodes in the tree that are not helpful for decision making</li>
+  <li>ALPHA = max’s best option from path to root = INFINITY</li>
+  <li>BETA = min’s best option from path to root = NEGATIVE INFINITY
+    <h3 id="depth-limited-search">Depth Limited Search</h3>
+  </li>
+  <li>Having a bad evaluation function causes pacman to “thrash”</li>
+  <li>Depth matters</li>
+  <li>How deeply the agent looks ahead to make a decision on the next action</li>
+  <li>There’s a tradeoff between the complexity of features and complexity of computation
+    <h2 id="lecture-5-game-trees-ii-and-utilities">Lecture 5: Game Trees II and Utilities</h2>
+    <h3 id="expectimax-vs-minimax">Expectimax vs Minimax</h3>
+  </li>
+  <li>Minimax trees have two types of nodes: min-value and max-value</li>
+  <li>Expectimax has max-value and exp-value</li>
+  <li>Doesn’t have min!</li>
+  <li>Pruning cannot be performed on expectimax trees</li>
+  <li>
+    <p>If the node values are not bounded</p>
+  </li>
+  <li>Evaluation functions can be used in depth-limited expectimax trees to provide an estimate of the true expectimax value
+    <h3 id="probability">Probability</h3>
+  </li>
+  <li>Multiply the value with the probability that it will happen!</li>
+  <li>Example:</li>
+  <li>Suppose that the probability for no traffic (20 min), light traffic (30 min), and heavy traffic (60 min) is now [0.2, 0.2, 0.6]. How would you calculate the expected amount of time to get to the airport?</li>
+  <li>20∗0.2+30∗0.2+60∗0.6=46 Modeling Assumptions</li>
+  <li>When an AI agent models its opponent correctly, it is usually capable of achieving good results</li>
+  <li>When an AI agent models its opponent incorrectly, over-optimism or over-pessimism could negatively affect the AI agent’s decisions
+    <h3 id="multi-agent-utilities">Multi-Agent Utilities</h3>
+  </li>
+  <li>Zero sum games</li>
+  <li>Assumes a single utility function shared by all players</li>
+  <li>Two player zero sum games</li>
+  <li>Can be generalized into a general sum game with two opposite player utility functions</li>
+  <li>General sum games</li>
+  <li>Provides the flexibility of giving each player a utility function</li>
+  <li>Each player maximizes its own component</li>
+  <li>General utility (one for each player)</li>
+  <li>Can give rise to cooperation and competition at different parts of the decision
+making
+    <h3 id="intro-to-utilities">Intro to Utilities</h3>
+  </li>
+  <li>For minimax reasoning</li>
+  <li>Only the order matters and the magnitude (scale) does not matter</li>
+  <li>For expectimax reasoning</li>
+  <li>The magnitude needs to have meaning since we are taking a weighted average</li>
+  <li>Utility functions</li>
+  <li>Gives us a succinct way to express our preferences, as reasonable behavior should
+arise from maximizing well-defined utility functions
+Preferences and Rationality</li>
+  <li>Rationality Examples</li>
+  <li>
+    <p>Alex prefer A over B, B over C. If Alex is a rational agent, Alex must prefer A
+over C.</p>
+  </li>
+  <li>If Bono prefer A over B, B over C, and C over A, then Bono’s preference is intransitive (and thus Bono is irrational).
+    <h3 id="human-utilities">Human Utilities</h3>
+  </li>
+  <li>The utility of having money is a better utility function (than just the amount of money)</li>
+  <li>Allais (1953)</li>
+  <li>The Allais example is an interesting way of showing the paradox of human rationality. When presented with different scenarios of a lottery, many people prefer B&gt;A and C&gt;D. Using the same utility function for both, there is a contradiction that is reached because you can manipulate the utilities for the choices to contradict each other.</li>
+  <li>Shows that human rationality is less predictable because people generally like to avoid risk, however, if there is little difference in risk, people may choose to risk more to gain more.
+    <h2 id="lecture-6-markovs-decision-process">Lecture 6: Markov’s Decision Process</h2>
+    <h3 id="non-deterministic-search">Non-Deterministic Search</h3>
+  </li>
+  <li>EXAMPLE: Grid World!</li>
+  <li>A maze-like problem</li>
+  <li>The agents live in a grid and there are walls, obstacles, and other agents</li>
+  <li>Noisy movement</li>
+  <li>Actions dont always go as planned (stochastic/non-deterministic search)</li>
+  <li>80% of the time, the action North takes the agent north (if there is no wall
+there)</li>
+  <li>10% of the time, north takes the action west, 10% east (not always
+predictable)</li>
+  <li>If there is a wall in the direction that the agent is trying to go, the agent
+will stay put</li>
+  <li>The agent receives rewards each time step (could be good or bad)</li>
+  <li>Living cost (-1 per step)</li>
+  <li>Goal is to maximize the sum of all rewards!</li>
+  <li>Deterministic search returns a plan (a sequence of actions)</li>
+  <li>Non-deterministic search returns a policy (a mapping from state to action)
+    <h3 id="markov-decision-process">Markov Decision Process</h3>
+  </li>
+  <li>Defined by:</li>
+  <li>Set of states s s ∈ S (∈ = “is an element of”)</li>
+  <li>Set of actions a ∈ A</li>
+  <li>A transition function T(s, a, s’)</li>
+  <li>Probability that a (action) from s (state) leads to s’ (next state)</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>i.e., P(s’</td>
+          <td>s, a)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>Also called the model or the dynamics</li>
+  <li>A reward function (R(s, a, s’)</li>
+  <li>Sometimes just R(s) or R(s’)</li>
+  <li>And discount γ if applied</li>
+  <li>A start state</li>
+  <li>A terminal state (possibly)</li>
+  <li>MDPs are non-deterministic search problems</li>
+  <li>One way to solve them is with expectimax search!</li>
+  <li>“Markov” = given the present state, the future and past are independent!</li>
+  <li>The action outcomes only depend on the current state</li>
+  <li>Just like search, where the successor function only depends on current state (not
+history states)</li>
+  <li>Policies</li>
+  <li>Deterministic single-agent search problems = outputs an optimal PLAN/sequence of actions from start to a goal</li>
+  <li>MDPs = outputs an optimal POLICY (π*: S -&gt; A)</li>
+  <li>A policy π gives an action for each state</li>
+  <li>An optimal policy is one that maximizes an expected utility if followed</li>
+  <li>An explicit policy defines a reflex agent</li>
+  <li>Expectimax didn’t compute entire policies</li>
+  <li>It computed the action for a single state only</li>
+  <li>Each MDP state projects an expectimax-like search tree</li>
+  <li>Q-state = (s, a)</li>
+  <li>A state and an action that will be taken</li>
+  <li>A q-state is an expected node from taking action a from state s</li>
+  <li>Each branch is T(s,a,s’) = probability to that state
+    <h3 id="utilities-of-sequences">Utilities of Sequences</h3>
+  </li>
+  <li>More or less?</li>
+  <li>Now or later?</li>
+  <li>Discounting</li>
+  <li>It’s reasonable to maximize the sum of rewards</li>
+  <li>Its also reasonable to prefer rewards now to later</li>
+  <li>
+    <p>One solution: values of rewards decay exponentially</p>
+  </li>
+  <li>How to discount</li>
+  <li>Each time we descend a level, we multiply in the discount one more time - Sooner rewards have higher utility than later rewards</li>
+  <li>Helps the algorithm converge</li>
+  <li>Ex:</li>
+  <li>U([1,2,3]) = 1<em>1 + .5</em>2 + .25*3</li>
+  <li>Therefore, U([1,2,3]) &lt; U([3,2,1])</li>
+  <li>Stationary preferences</li>
+  <li>If we assume stationary preferences, there are only two ways to define utilities</li>
+  <li>Infinite utilities</li>
+  <li>What if the game lasts forever?</li>
+  <li>Finite horizon = terminate after fixed T steps, like depth-limited search</li>
+  <li>
+    <h2 id="discounting--use-0--γ--1">Discounting = use 0 &lt; γ &lt; 1</h2>
+  </li>
+  <li>Smaller γ = smaller “horizon” aka shorter term focus</li>
+  <li>Absorbing state = guarantee that for every policy, there is a terminal state that will
+eventually be reached (like “overheating” for racing)
+    <h3 id="solving-mdps">Solving MDPs</h3>
+  </li>
+  <li>MDP quantities so far:</li>
+  <li>Policy = choice of action for each state</li>
+  <li>Utility = sum of (discounted) rewards</li>
+  <li>Optimal quantities</li>
+  <li>V*(s) = expected utility starting in s and acting optimally</li>
+  <li>Q*(s,a) = maximum expected utility starting out having taken action a from state s, and therefore acting optimally</li>
+  <li>π*(s) = optimal action from state s</li>
+  <li>The optimal V value for states further from the only terminal state with positive reward is lower because the terminal reward is discounted more times</li>
+  <li>V and Q values are connected</li>
+  <li>V<em>(s) = maxaQ</em>(s,a)</li>
+  <li>How to calculate the value of the states</li>
+  <li>
+    <p>Fundamental operation: compute the EXPECTIMAX value of the state</p>
+  </li>
+  <li>Expected utility under optimal action</li>
+  <li>Average sum of (discounted) rewards</li>
+  <li>This is what expectimax computes!</li>
+  <li>Recursive definition of the value</li>
+  <li>Start with V<em>(s) = maxaQ</em>(s,a)</li>
+  <li>This is to define the optimal value as the max of all the Q values below it</li>
+  <li>Basically defining the maximizer at the top</li>
+  <li>
+    <h2 id="then-define-the-chance-node-aka-the-q-value-to-be-the-weighted-sum-of-the-reward--the-discounted-value-of-the-next-node">Then define the chance node, aka the Q value, to be the weighted sum of the reward + the discounted value of the next node</h2>
+  </li>
+  <li>
+    <h2 id="so-combine-the-two-and-get">So combine the two and get:</h2>
+  </li>
+  <li>If you were to write one equation for every state in the state space, what would it look like?</li>
+  <li>A system of equations!</li>
+  <li>N equations, where n is the side of the state space
+Value Iteration</li>
+  <li>Time-limited values!</li>
+  <li>Define Vk(s) to be the optimal value of s if the game ends in k more time steps</li>
+  <li>Kinda like expectimax!</li>
+  <li>Algorithm</li>
+  <li>Start with V0(s): no time steps left means an expected reward sum of zero</li>
+  <li>
+    <h2 id="given-vector-of-vks-values-do-one-ply-of-expectimax-from-each-state">Given vector of Vk(s) values, do one ply of expectimax from each state</h2>
+  </li>
+  <li>The value of the next state is the max over actions of the expected rewards - Repeat this value updating until convergence (Vk+1(s) = Vk(s) for all of the states</li>
+  <li>Complexity of each iteration: O($S^2A$)</li>
+  <li>S is the all the states in the state space</li>
+  <li>A is the amount of actions</li>
+  <li>Theorem: will converge to unique optimal values because approximations get refined towards those values</li>
+  <li>
+    <p>Policy may converge long before the actual values do tho</p>
+  </li>
+  <li>Basically this might find the optimal policy even if all the values haven’t converged yet (because the longer it runs, the smaller the individual value changes are)</li>
+  <li>How</li>
+  <li>Case 1
+    <ul>
+      <li>If the tree has maximum depth M, then VM holds the actual untruncated values</li>
+    </ul>
+  </li>
+  <li>Case 2
+    <ul>
+      <li>If the discount is less than 1</li>
+      <li>Sketch: for any state Vk and Vk + 1 can be viewed as depth k+1 expectimax results in nearly identical search trees</li>
+      <li>The difference is that on the bottom layer, Vk + 1 has actual rewards while Vk has zeros</li>
+      <li>The last layer is at best all RMAX</li>
+      <li>
+        <table>
+          <tbody>
+            <tr>
+              <td>But everything is discounted by γk at that point so $V_k and $V_{k+1} are at most $γ_k max</td>
+              <td>R</td>
+              <td>$ different (as k increases, the values converge)</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="policy-evaluation">Policy Evaluation</h3>
+<ul>
+  <li>Fixed policy</li>
+  <li>Usually we have to look at all actions and then find the policy</li>
+  <li>With a FIXED POLICY, we do what π says (the optimal policy) and see what the action is</li>
+  <li>USE CASE</li>
+  <li>Expectimax trees max over all actions to compute the optimal values</li>
+  <li>If we fixed some policy π(s), then the tree would be simpler because we would already know what action to take</li>
+  <li>Though the tree’s value would depend on which policy we fixed</li>
+  <li>
+    <p>Goal is to compute the utility of a state s under a fixed (generally non-optimal) policy! - Vπ(s) = expected total discounted rewards starting in s and following π</p>
+
+    <p>-</p>
+  </li>
+  <li>How to calculate the V’s:
+    <ul>
+      <li>Turn recursive Bellman equations into updates (like value iteration)</li>
+      <li>Initializes and then updates based on the new states</li>
+    </ul>
+  </li>
+  <li>Idea 2
+    <ul>
+      <li>Without the maxes, the Bellman equations are just a linear system
+        <h3 id="policy-extraction">Policy Extraction</h3>
+      </li>
+    </ul>
+  </li>
+  <li>If we have the optimal values V*(s), we need to figure out which action to take, which we can do by taking the mini-expectimax (one-step)</li>
+  <li>Argmax = outputs the x value at which the result would be the max</li>
+  <li>Kinda like the “domain” version of regular max, which gives you the max value in terms of the output of the function (aka the value)</li>
+  <li>So this particular equation would output the action the agent should take based on the most optimal potential value</li>
+  <li>Policy extraction = gives us the policy implied by the values, which means which action for us to take at every individual state
+    <h3 id="computing-actions-from-q-values">Computing Actions from Q-Values</h3>
+  </li>
+  <li>Actions are easier to select from Q-values than regular v-values</li>
+  <li>Q-Values give ratings to each individual action from each square, v-values just give the overall square a value</li>
+  <li>Q-values:</li>
+  <li>Basically just choose the argmax of all the
+actions in the square</li>
+  <li>Take the best-valued action!
+    <h3 id="policy-iteration">Policy Iteration</h3>
+  </li>
+  <li>Value iteration repeats the bellman updates</li>
+  <li>This is slow, the “max” rarely changes, the policy often converges long before the values</li>
+  <li>Value iteration is slow, policy iteration is FAST!</li>
+  <li>Policy iteration = alternative, faster approach for optimal values</li>
+  <li>STEPS:</li>
+  <li>Step 1: Policy evaluation</li>
+  <li>Calculate utilities for some fixed policy (not optimal utilities!) until convergence</li>
+  <li>Step 2: Policy improvement</li>
+  <li>Update policy using one-step look-ahead with resulting converged (but not optimal) utilities as future values</li>
+  <li>Repeat until policy converges! :) - Evaluation</li>
+  <li>For fixed current policy π, find the values with policy evaluation and iterate until values converge</li>
+  <li>Improvement: for fixed values, get a better policy using policy extraction - Using the one-step look-ahead:
+    <h2 id="summary">Summary</h2>
+  </li>
+  <li>Value iteration ⇒ compute optimal values</li>
+  <li>Policy iteration ⇒ compute optimal values</li>
+  <li>Policy evaluation ⇒ compute values for a particular policy</li>
+  <li>Policy extraction (one-step lookahead) ⇒ turn your values into a policy</li>
+  <li>They all are kinda similar!</li>
+  <li>All different variations of bellman updates</li>
+  <li>All use one-step lookahead expectimax fragments</li>
+  <li>They differ only in whether we plug in a fixed policy or max over the actions
+    <h2 id="lecture-7-reinforcement-learning-i">Lecture 7: Reinforcement Learning I</h2>
+    <h3 id="motivation-for-rl">Motivation for RL</h3>
+  </li>
+  <li>Reinforcement learning = the process of training agents to make sequential decisions</li>
+  <li>Offline Planning</li>
+  <li>
+    <p>Solving MDPs is offline planning because you need to know all the details of the MDP to make decisions</p>
+  </li>
+  <li>You have to determine all quantities through computation rather than playing the actual game</li>
+  <li>Online Learning</li>
+  <li>You have to play to figure out what to do ⇒ reinforcement learning!</li>
+  <li>Key Ideas</li>
+  <li>Exploration = you have to try unknown actions to get information</li>
+  <li>Exploitation = eventually you have to use what you know</li>
+  <li>Regret = even if you learn intelligently, you still make mistakes</li>
+  <li>Sampling = because of chance, you have to try things repeatedly</li>
+  <li>Difficulty = learning can be much harder than solving a known MDP
+    <h3 id="mdp-vs-rl">MDP vs RL</h3>
+  </li>
+  <li>Basic idea:</li>
+  <li>Receive feedback in forms of rewards, which fuels agent’s utility</li>
+  <li>Must learn to act to maximize these rewards</li>
+  <li>Learn based on observed samples of outcomes!</li>
+  <li>Reinforcement Learning has parts similar to MDP:</li>
+  <li>Set of states s ∈ S</li>
+  <li>Set of actions per state a ∈ A</li>
+  <li>Model T(s,a,s’)</li>
+  <li>Reward function R(s,a,s’)</li>
+  <li>Looking for a policy π(s)</li>
+  <li>NEW TWIST!</li>
+  <li>We don’t know T or R, so we don’t know how good or bad each state is, or what each action does</li>
+  <li>Instead, we have to try actions and states to learn what works!</li>
+  <li>Offline vs Online</li>
+  <li>MDPs vs RL</li>
+  <li>MDP thinks about what would happen based on its knowledge, RL just dives right into the action and sees what happens
+    <h3 id="model-based-learning">Model-Based Learning</h3>
+  </li>
+  <li>Model-based learning = learns an approximate model based on experiences and solves for values as if the learned model were correct</li>
+  <li>
+    <p>Aka assumes the learned model is optimal and acts on it!</p>
+  </li>
+  <li>STEPS</li>
+  <li>1: Learn empirical MDP model</li>
+  <li>Count outcomes s’ (aka all the outcomes of the next state) for each state and action (s, a)</li>
+  <li>Normalize to give an estimate of T(s,a,s’) and discover each R(s,a,s’) as you experience (s,a,s’)</li>
+  <li>2: Solve the learned MDP</li>
+  <li>You could use value iteration</li>
+  <li>Example of Model-Based Learning
+    <h2 id="lecture-8-reinforcement-learning-ii">Lecture 8: Reinforcement Learning II</h2>
+    <h3 id="model-free-learning">Model-Free Learning</h3>
+  </li>
+  <li>Summary</li>
+</ul>
+
+<h2 id="mdp-equations">MDP Equations</h2>
+<ul>
+  <li>V*(s) = expected utility starting in s and acting optimally</li>
+  <li>Q*(s,a) = maximum expected utility starting out having taken action a from state s, and
+therefore acting optimally</li>
+  <li>π*(s) = optimal action from state s</li>
+  <li>The optimal V value for states further from the only terminal state with positive reward is
+lower because the terminal reward is discounted more times
+Value Iteration</li>
+  <li>Repeat until convergence</li>
+  <li>Vk+1(s) = Vk(s) for all states in States (∀ state ∈ States)</li>
+  <li>Complexity of each iteration: O(S2A)
+    <h3 id="policy-evaluation-performed-by-direct-evaluation">Policy Evaluation (performed by Direct Evaluation)</h3>
+    <h3 id="policy-extraction-1">Policy Extraction</h3>
+    <h3 id="policy-iteration-1">Policy Iteration</h3>
+    <h2 id="ml-equations">ML Equations</h2>
+    <h3 id="temporal-difference-learning-aka-sample-based-policy-evaluation">Temporal Difference Learning (aka Sample-Based Policy Evaluation)</h3>
+    <p>(performed by Direct Evaluation)</p>
+  </li>
+</ul>
+
+<h3 id="q-learning">Q-Learning</h3>
+<h3 id="exploration-vs-exploitation">Exploration vs Exploitation</h3>
+<ul>
+  <li>Several schemes for forcing exploration</li>
+  <li>Like e-greedy: random actions with small e, deterministic on large e</li>
+  <li>Decrease e overtime to prevent thrashing</li>
+  <li>f(u, n) acts as a optimistic utility reward to unvisited states with estimated value u and
+visit count n
+    <h3 id="regret">Regret</h3>
+  </li>
+  <li>A measure of total mistake cost</li>
+  <li>To minimize regret = optimally learning to be optimal</li>
+  <li>
+    <p>The difference between your (expected) rewards and optimal (expected) rewards</p>
+  </li>
+  <li>Random expiration has higher regret
+    <h3 id="feature-based-representation">Feature-Based Representation</h3>
+  </li>
+  <li>Generalize across similar states!</li>
+  <li>New Q function or value function can be expressed using weights
+    <h3 id="approximate-q-learning">Approximate Q-Learning</h3>
+    <h3 id="optimization-with-least-squares">Optimization with Least Squares</h3>
+    <h3 id="take-the-derivative-of-the-least-squares-error-to-justify-why-the-q-update-works">Take the derivative of the least squares error to justify why the q update works:</h3>
+  </li>
+</ul>
+
+<h3 id="minimizing-error">Minimizing Error</h3>
+<h3 id="policy-search">Policy Search</h3>
+<ul>
+  <li>Starts with an okay solution (like Q-learning) =, then fine-tunes by hill climbing on feature weights</li>
+</ul>
+
+
+</div>
+  </main>
+
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <!-- <i class="fas fa-code"></i> with <i class="fas fa-heart"></i> -->
+    Designed by <strong>Jillian Goldberg</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:jilliangoldberg@berkeley.edu"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-2x"></i>
+    </a><a class="social mx-1"  href="https://www.facebook.com/jillian.goldberg.71"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#3b5998'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-facebook fa-2x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/jilliangoldberg"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-2x"></i>
+    </a><a class="social mx-1"  href="https://www.linkedin.com/in/jilliangoldberg"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#007bb5'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-2x"></i>
+    </a><a class="social mx-1"  href="https://www.youtube.com/JillianGoldberg"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#ff0000'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-youtube fa-2x"></i>
+    </a>
+
+</div><small id="attribution">
+    <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+  
+</footer>
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+
+</body>
+
+</html>

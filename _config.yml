@@ -23,6 +23,8 @@ nav_exclude:                                            # The following paths ar
   - pages/notes/cs61c-m.md
   - pages/notes/cs70-m.md
   - pages/notes/cs70-f.md
+  - pages/notes/chinese-1a/md
+  - pages/notes/cs188-m.md
 
 ### Author Info ###
 author:

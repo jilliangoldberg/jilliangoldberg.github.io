@@ -1,6 +1,6 @@
 ---
 layout: note
-permalink: /notes/_cs70-m
+permalink: /notes/cs70-m
 ---
 
 # **CS 70 Midterm Review**
