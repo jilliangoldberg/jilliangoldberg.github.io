@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CS 70 Final Review">
+  <meta property="og:description" content="">
+
+  <title>CS 70 Final Review</title>
+  <meta name="description" content="">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Math Latex Support -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+  <!-- Theme style -->
+  <script src="/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <!-- <a class="navbar-brand" href="/"><h5><b> Jillian Goldberg </b></h5></a> -->
+  <a class="navbar-brand" href="/"> <img src="../images/jilliangoldberg-logo.png" alt="Jillian Goldberg" > </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link " href="https://berkeley.zoom.us/my/jilliangoldberg"target="_blank"></a>
+
+      <a class="nav-item nav-link " href="/about/">about</a>
+
+      <a class="nav-item nav-link " href="/blog/">blog</a>
+
+      <a class="nav-item nav-link active" href="/notes/">notes</a>
+
+      <a class="nav-item nav-link " href="/projects/">projects</a>
+
+      <a class="nav-item nav-link " href="/experience/">experience</a>
+
+      <a class="nav-item nav-link " href="https://drive.google.com/file/d/1nxD0JIPxPSoM7pxtSQ-0P4EegFgnIoks/view?usp=sharing"target="_blank">resume</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <div class="row">
+      <a class="m-1 btn btn-outline-primary btn-2 " href="../pages/notes">
+  Back to Notes
+</a>
+      <a class="m-1 btn btn-outline-primary btn-2 " href="../pages/notes">
+  Next
+</a> 
+  </div>
+
+  <h1 id="cs-70-final-review"><strong>CS 70 Final Review</strong></h1>
+
+<h3 id="countability">Countability</h3>
+
+<p><strong>Definition</strong></p>
+
+<ul>
+  <li>a set is <strong>countable</strong> if you are able to match every element up with the set of positive integers \(\N\)</li>
+  <li>in other words, if there is a bijection between \(S\) and \(\N\)</li>
+</ul>
+
+<p><strong>Bijections</strong></p>
+
+<ul>
+  <li><strong>Injection</strong> = \(f\) maps distinct inputs to distinct outputs</li>
+  <li><strong>Surjection</strong> = \(f\) “hits” every element in range, in other words: \((\forall y \exist x)(f(x) = y)\)</li>
+  <li><strong>Bijection</strong> = both! every \(x\) maps to a distinct \(y\)</li>
+</ul>
+
+<p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-14%20at%204.32.36%20PM.png" alt="Screen Shot 2021-12-14 at 4.32.36 PM" style="zoom:40%;" /></p>
+
+<p><strong>Cardinality</strong></p>
+
+<ul>
+  <li>when two sets have the same size, which can be found by demonstrating a pairing between elements in two sets</li>
+  <li>shows a bijection</li>
+</ul>
+
+<p><strong>Ways to Prove Countability</strong></p>
+
+<ul>
+  <li>
+    <p><strong>On a graph:</strong> demonstrate that you are able to connect all the dots in an “endless” or “infinite” way.</p>
+
+    <p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-14%20at%204.36.00%20PM.png" alt="Screen Shot 2021-12-14 at 4.36.00 PM" style="zoom:50%;" align="left" /></p>
+  </li>
+  <li>
+    <p><strong>In a set:</strong> use diagonalization!</p>
+
+    <ul>
+      <li>prove that for an infinite amount of numbers, you can always find one number that you “forgot” to list if you go diagonally in the list and differ from that number each time.</li>
+    </ul>
+
+    <p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-14%20at%204.38.22%20PM.png" alt="Screen Shot 2021-12-14 at 4.38.22 PM" style="zoom:50%;" align="left" /></p>
+  </li>
+  <li>
+    <p>so if you have some real number \(s = 0.6570...\) by adding \(1\) to every diagonalized digit, then we would know that we “forgot” to include it, since this contradicting number would be infinitely different than any number we can find with \(f(x)\)</p>
+  </li>
+</ul>
+
+<p><strong>Uncountable Sets</strong></p>
+
+<ul>
+  <li>
+    <p>compare a set of numbers to a mapping of an uncountable set, such as the real numbers \(\R \in [0,1]\)</p>
+  </li>
+  <li>
+    <p>Ex: <strong>the Cantor set</strong></p>
+
+    <ul>
+      <li>
+        <p>defined by removing the middle third of line segments infinitely many times</p>
+
+        <p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-14%20at%204.58.32%20PM.png" alt="Screen Shot 2021-12-14 at 4.58.32 PM" style="zoom:50%;" align="left" /></p>
+      </li>
+      <li>
+        <p>eventually, as you iterate this pattern an infinite amount of times, you will get a set of isolated points with <strong>no more intervals</strong></p>
+
+        <p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-14%20at%205.01.16%20PM.png" alt="Screen Shot 2021-12-14 at 5.01.16 PM" style="zoom:50%;" align="left" /></p>
+      </li>
+      <li>
+        <p>this can be broken down into ternary numbers, where you can say that for every number, it can be represented by \([0, 1, 2]\), such as \(0.02020022...\)</p>
+      </li>
+      <li>
+        <p>if you divide this by two, you get a binary representation of the interval from \([0,1]\), which represents the set of real numbers between \(0\) and \(1\), thus, the Cantor set is <strong>uncountable</strong></p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Power Sets</strong></p>
+
+<ul>
+  <li>
+    <p>if \(S\) is a set, the power set of \(S\), \(\mathcal{P}(A)\), is the set of all subsets of \(S\)</p>
+
+    <ul>
+      <li>
+        <p>Ex: \(S = \{1,2,3\}\), so \(\mathcal{P}(S) = \{\{\},\{1\},\{2\},\{3\},\{1,2\}, \{1,3\},\{2,3\},\{1,2,3\}\}\)</p>
+      </li>
+      <li>
+        <p>if the size of \(S = k\) is finite, then \(\mathcal{P}(S) = 2^k\)</p>
+      </li>
+      <li>
+\[|\mathcal{P}(\N)| &gt; |\N|\]
+      </li>
+      <li>
+        <p>says that the cardinality (size) of the power set is greater than the cardinality of N</p>
+      </li>
+      <li>
+        <p>even if the set \(\N\) is countable, the power set \(\mathcal{P}(\N)\) is uncountable because we can use diagonalization to always find a subset we forgot by finding the contradiction to the set that we’ve mapped out.</p>
+
+        <p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-14%20at%205.11.43%20PM.png" alt="Screen Shot 2021-12-14 at 5.11.43 PM" style="zoom:50%;" align="left" /></p>
+      </li>
+      <li>using binary strings, we can use diagonalization to flip the bits, in order to find the \(b\) bit that we infinitely missed in our set</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="computability">Computability</h3>
+
+<p><strong>Self-Replicating Programs</strong></p>
+
+<ul>
+  <li><strong>Quine</strong> = a program that can print itself
+    <ul>
+      <li>Ex: in English pseudocode:</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-14%20at%205.39.59%20PM.png" alt="Screen Shot 2021-12-14 at 5.39.59 PM" style="zoom:50%;" align="left" /></p>
+
+<p><strong>Recursion Theorem</strong></p>
+
+<ul>
+  <li>
+    <p>used to explain how we generate quines!</p>
+  </li>
+  <li>
+    <p>given any program \(P(x, y)\), we can always convert it to another program \(Q(x)\), such that \(Q(x) = P(x, Q)\)</p>
+    <ul>
+      <li>in other words, \(Q\) behaves exactly as \(P\) would if its second input is the description of the program \(Q\)</li>
+      <li>\(Q\) = the “self-aware” version of \(P\), where \(Q\) has access to its own description</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>The Halting Problem</strong></p>
+
+<ul>
+  <li>
+    <p>there <strong>does not exist</strong> a program that can tell us if a program halts on an input x (<strong>uncomputable</strong>)</p>
+
+    <p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-14%20at%205.48.49%20PM.png" alt="Screen Shot 2021-12-14 at 5.48.49 PM" style="zoom:50%;" align="left" /></p>
+  </li>
+  <li>
+    <p>when solving a problem, we are trying to prove the contradiction that there exists a program \(TestHalt\)</p>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">Turing</span><span class="p">(</span><span class="n">P</span><span class="p">)</span>
+	<span class="k">if</span> <span class="n">TestHalt</span><span class="p">(</span><span class="n">P</span><span class="p">,</span><span class="n">P</span><span class="p">)</span> <span class="o">=</span> <span class="err">“</span><span class="n">yes</span><span class="err">”</span> <span class="n">then</span> <span class="n">loop</span> <span class="n">forever</span>
+	<span class="k">else</span> <span class="n">halt</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>if a program P when given P as an input halts, then Turing(P) loops forever</p>
+
+    <ul>
+      <li>otherwise, Turing(P) halts</li>
+    </ul>
+
+    <p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-14%20at%205.54.56%20PM.png" alt="Screen Shot 2021-12-14 at 5.54.56 PM" style="zoom:50%;" align="left" /></p>
+  </li>
+  <li>
+    <p>we can say that Turing either Halts or Loops forever, but by diagonalization, we can find a program that contradicts every entry in the mapping of the \((i, j)^{th}\) entries</p>
+    <ul>
+      <li>thus, the behavior of Turing is different from that of \(P_n\), since it will contradict itself, because if TestHalt(P, P) returns “yes” then that will loop forever, but contradict the meaning of the original test, since the programs should be telling us that the test <em>did</em> halt and stop looping</li>
+      <li>therefore, our list of \(P_n\) “forgot” to list Turing as one of the programs with results H or L, so we can conclude that TestHalt does not exist and the Halting Problem cannot be solved!</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="intersection-of-events">Intersection of Events</h3>
+
+<p><strong>Union of Events</strong></p>
+
+<ul>
+  <li><strong>Principle of Inclusion-Exclusion</strong> = used when events are independent, but not disjoint
+    <ul>
+      <li><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-07%20at%2010.19.16%20PM.png" alt="Screen Shot 2021-12-07 at 10.19.16 PM" style="zoom:50%;" align="left" /></li>
+      <li>basically starts by summing all the event probabilities, then <em>subtracts</em> the probabilities of all pairwise intersections, then <em>add</em> back in the probabilities of all three-way intersections</li>
+    </ul>
+  </li>
+  <li><strong>Ex:</strong> Vegas dice rolling!</li>
+</ul>
+
+<p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-07%20at%2010.22.54%20PM.png" alt="Screen Shot 2021-12-07 at 10.22.54 PM" style="zoom:50%;" /></p>
+
+<ul>
+  <li>usually too computationally-expensive</li>
+  <li>Just look at the first term!</li>
+  <li><strong>Mutually exclusive events</strong> = if \(A_1, ..., A_n\) are mutually exclusive, then:
+    <ul>
+      <li><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-07%20at%2010.33.21%20PM.png" alt="Screen Shot 2021-12-07 at 10.33.21 PM" style="zoom:50%;" align="left" /></li>
+    </ul>
+  </li>
+  <li><strong>Union Bound</strong> = if we add up \(P[A_i]\), it will always be equal to or an overestimate of the probability of the union
+    <ul>
+      <li><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-07%20at%2010.35.15%20PM.png" alt="Screen Shot 2021-12-07 at 10.35.15 PM" style="zoom:50%;" align="left" /></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="random-variables">Random Variables</h3>
+
+<p>Random variables are defined by two things:</p>
+
+<ol>
+  <li>the set of values it can take</li>
+  <li>the probability with which it takes on the values</li>
+</ol>
+
+<p>\(E[X] =\) mean/expectation of the distribution</p>
+
+\[Var(X) = E[X^2] - E[X]^2\]
+
+<h4 id="bernoulli-distribution">Bernoulli Distribution</h4>
+
+<ul>
+  <li>\(X\) ~ \(Bernoulli(p)\)</li>
+</ul>
+
+<p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-07%20at%2010.37.44%20PM.png" alt="Screen Shot 2021-12-07 at 10.37.44 PM" style="zoom:50%;" align="left" /></p>
+
+<h5 id="binomial-distribution">Binomial Distribution</h5>
+
+<ul>
+  <li>\(X\) ~ \(Bin(n, p)\)
+    <ul>
+      <li>where n is the number of trials and p is the probability of something occuring</li>
+    </ul>
+  </li>
+  <li>
+\[\sum_{i=0}^n P[X = i]=1\]
+  </li>
+  <li>implies that \(\sum_{i=0}^n {n \choose i} p^i (1-p)^{n-i}=1\)</li>
+  <li>which basically means that if you are choosing \(i\) cases to succeed, you would need to find how many different ways there are to choose i out of n, find the p probability i times, and the (1-p) probability the remainding times out of n</li>
+</ul>
+
+<p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-07%20at%208.20.01%20PM.png" alt="Screen Shot 2021-12-07 at 8.20.01 PM" style="zoom:40%;" align="left" /></p>
+
+<ul>
+  <li><strong>Ex:</strong> Error correction problem
+    <ul>
+      <li>we want to encode \(n\) packets into \(n + k\) packets, how do we choose k?</li>
+      <li>model each packet getting lost with probability \(p\) and the losses are indep, then if we transmit \(n + k\) packages, the number of packets received is a random variable \(X\) with binomial distribution
+        <ul>
+          <li>\(X\) ~ \(Bin(n + k, 1 - p)\)</li>
+        </ul>
+      </li>
+      <li><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-07%20at%2010.44.12%20PM.png" alt="Screen Shot 2021-12-07 at 10.44.12 PM" style="zoom:50%;" align="left" /></li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Hypergeometric Distribution</strong></p>
+
+<ul>
+  <li>\(Y\) ~ \(Hypergeometric(N, B, n)\)
+    <ul>
+      <li>N = the total number of items</li>
+      <li>B = the number of specific items</li>
+      <li>n = the number out of B that you want to pick</li>
+    </ul>
+  </li>
+  <li>picking a certain number of items <strong>without replacement</strong></li>
+  <li>take into account what we want and don’t want</li>
+  <li><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-07%20at%2010.50.33%20PM.png" alt="Screen Shot 2021-12-07 at 10.50.33 PM" style="zoom:50%;" align="left" /></li>
+  <li><strong>Ex</strong>: if we have a bucket with 30 red balls and 70 blue balls
+    <ul>
+      <li>now there are \({100 \choose 20}\) ways to choose 20 balls since there is no replacement anymore</li>
+      <li><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-07%20at%202.28.23%20PM.png" alt="Screen Shot 2021-12-07 at 2.28.23 PM" style="zoom:50%;" align="left" /></li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Geometric Distribution</strong></p>
+
+<ul>
+  <li>\(X\) ~ \(Geometric(p)\)
+    <ul>
+      <li>p = probability of the event happening</li>
+    </ul>
+  </li>
+  <li>number of trials until a certain event happens
+    <ul>
+      <li>Ex: how many tosses before the first head appears, how many picks until we get a red ball</li>
+    </ul>
+  </li>
+  <li>
+\[P[X = i] = (1 - p)^{i-1}p^1\]
+    <ul>
+      <li>since \(i\) trials have been unsuccessful and only the most recent trial has probability \(p\) of being successful</li>
+    </ul>
+  </li>
+  <li>
+\[E[X] = \sum_{i=1}^\infin i \times P[X=i] = p\sum_{i=1}^\infin i(1 - p)^{i-1} = \frac{1}{p}\]
+  </li>
+  <li>
+\[Var(X) = \frac{1-p}{p^2}\]
+  </li>
+  <li>the <strong>Tail Sum Formula</strong> is used to say that the expectation of X will always be the sum of all probabilities where X is greater than or equal to i, or \(E[X] = \sum_{i=1}^\infin P[X \geq i]\)
+    <ul>
+      <li>this simplifies the <strong>expectation</strong> to be \(E[X] = \frac{1}{p}\)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Poisson Distribution</strong></p>
+
+<ul>
+  <li>\(X\) ~ \(Poisson(\lambda)\)
+    <ul>
+      <li>\(\lambda\) = average number that an event happens per a unit of time</li>
+      <li>Ex: number of clicks of a Geiger counter, how many times the bus comes within the hour, how many fish are caught in an hour</li>
+    </ul>
+  </li>
+  <li>
+\[P[X=i] = \frac{\lambda^i}{i!}e^{-\lambda}\]
+  </li>
+  <li>
+\[E[X] = \lambda\]
+  </li>
+  <li>
+\[Var(X) = \lambda\]
+  </li>
+  <li>The <strong>sum of independent poisson random variables</strong> becomes a bell curve as \(\lambda\) increases
+    <ul>
+      <li>if we have \(X\) ~ \(Poisson(\lambda)\) and \(Y\) ~\(Poisson(\mu)\), then \(X + Y\) ~ \(Poisson(\lambda + \mu)\)</li>
+      <li>a poisson distribution is the limit of the binomial distribution</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Exponential Distribution</strong></p>
+
+<ul>
+  <li>\(X\) ~ \(Exp(\lambda)\)
+    <ul>
+      <li>\(\lambda\) is the success rate per unit of time</li>
+    </ul>
+  </li>
+  <li>
+\[E[X] = \frac{1}{\lambda}\]
+  </li>
+  <li>
+\[Var(X) = \frac{1}{\lambda^2}\]
+  </li>
+  <li>an event can happen at any time, what is the time until the event happens?
+    <ul>
+      <li>Ex: a system to fail, a clock to ring, a train to reach the station</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-14%20at%202.21.03%20PM.png" alt="Screen Shot 2021-12-14 at 2.21.03 PM" style="zoom:50%;" align="left" /></p>
+
+<p>continuous version of the geometric distribution</p>
+
+<ul>
+  <li>since the exponential distrubution is time-dependent, it’s like taking a geometric distribution and performing 1 trial every \(\delta\) seconds, and our success probability is \(p = \lambda\delta\), since the first success will be at the end of the time it takes for the event to occur, which is the success rate per unit of time * the number of trials, or \(\lambda\delta\).</li>
+</ul>
+
+<p><strong>Normal Distribution (Gaussian Distribution)</strong></p>
+
+<ul>
+  <li>
+    <p>\(X\) ~ \(N(\mu,\sigma^2)\)</p>
+
+    <ul>
+      <li>
+        <p>\(\mu\) is the mean/expectation</p>
+      </li>
+      <li>
+        <p>\(\sigma^2\) is the variance with the pdf:</p>
+
+        <p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-14%20at%202.43.49%20PM.png" alt="Screen Shot 2021-12-14 at 2.43.49 PM" style="zoom:50%;" align="left" /></p>
+      </li>
+    </ul>
+  </li>
+  <li>in the special case that \(X\) ~ \(N(0, 1)\), this means that X has a <strong>standard normal distribution</strong></li>
+  <li><strong>Standard Normal Distribution Lemma</strong>
+    <ul>
+      <li>if \(X\) ~ \(N(\mu,\sigma^2)\), then Y = \(\frac{X - \mu}{\sigma}\) ~ \(N(0,1)\)</li>
+      <li>equivalently, \(X\) is just \(X = \sigma Y + \mu\), which means that X is translated into a standard normal distribution (\(Y\)) just by shifing the origin to the expectation/mean (\(\mu\)) and scaling by the standard deviation (\(\sigma\))</li>
+    </ul>
+  </li>
+  <li>
+    <p>The <strong>sum of independent normal random variables</strong> <strong>are also</strong> <strong>normally distributed!</strong></p>
+
+    <ul>
+      <li>
+        <p>Since we know that \(X\) and \(Y\) are independent, the joint density of \((X, Y)\) is \(f(x,y) = f(x)f(y) = \frac{1}{2\pi} e^{\frac{x^2+y^2}{2}} .\)</p>
+      </li>
+      <li>
+        <p>Therefore, for any constants \(a, b \in \R\), the random variable \(Z = aX + bY\) is normally distributed:</p>
+
+        <ul>
+          <li>
+\[\mu = E[Z] = a\mu_x + b\mu_y\]
+          </li>
+          <li>
+\[\sigma^2 = Var(Z) = a^2\sigma_x^2 + b^2\sigma_y^2\]
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><strong>Key Observation:</strong> the function is rotationally symmetric around the origin (like a dome), which means that \(f(x,y)\) only depends on the value \(x^2 + y^2\), which is the distance of the point \((x, y)\) from the origin</p>
+
+        <p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-14%20at%203.02.14%20PM.png" alt="Screen Shot 2021-12-14 at 3.02.14 PM" style="zoom:20%;" align="left" /></p>
+      </li>
+    </ul>
+  </li>
+  <li>this can also be thought of as \(f(T(x, y)) = f(x, y)\) where \(T\) is any rotation of the plane \(\R^2\) about the origin
+    <ul>
+      <li>this would follow that for any set of \(A \subseteq \R^2\), we have \(P[(X,Y) \in A] = P[(X,Y) \in T(A)]\), which means that the probability of \((X, Y)\) in any part of the plane is the same as the probability of \((X, Y)\) in any part of the joint normal distribution.</li>
+      <li>if we take any rotation in \(\R\), we will still get that the probability is the same in \(t\) vs \(A\), so we know that the boundary line \(ax + by = t\) lies at a distance \(d = \frac{t}{\sqrt{z^2+b^2}}\)</li>
+    </ul>
+  </li>
+  <li>therefore, Z has the same distribution as \(\sqrt{a^2 + b^2}X\) and the expectation and variance are combinations of the two distributions.</li>
+</ul>
+
+<h3 id="multiple-random-variables-and-independence">Multiple Random Variables and Independence</h3>
+
+<p><strong>Joint Distribution</strong></p>
+
+<ul>
+  <li>the collection of values \(\{((a,b),P[X = a,Y = b]) : a \in A , b \in B\}\),</li>
+  <li>A = the set of all possible values taken by X</li>
+  <li>B = the set of all possible values taken by Y</li>
+  <li>Sum over B to find the marginal distribution for X
+    <ul>
+      <li>
+\[P[X = a] = \sum_{b \in B} P[X=a, Y=b]\]
+      </li>
+      <li>independent if you can multiply them together to find the joint distribution</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="expectation">Expectation</h3>
+
+<ul>
+  <li>
+\[E[X] = \sum_{a \in A} a \times P[X=a]\]
+  </li>
+  <li>basically sum over all the values of A * P(a)</li>
+  <li>basically the mean or average</li>
+</ul>
+
+<p><strong>Linearity of Expectation</strong></p>
+
+<p>For any two random variables X and Y on the same probability space:</p>
+
+<ul>
+  <li>
+\[E[X + Y] = E[X] + E[Y]\]
+  </li>
+</ul>
+
+<p>For any constant c</p>
+
+<ul>
+  <li>
+\[E[cX] = c \times E[X]\]
+  </li>
+</ul>
+
+<h3 id="quick-facts">Quick Facts</h3>
+
+<ul>
+  <li>graphs
+    <ul>
+      <li>when talking about components, it means the number of collections of nodes</li>
+      <li>if you have a graph with n vertices with exactly one cycle and m edges, the number of connected components is \(n - m + 1\)</li>
+    </ul>
+  </li>
+  <li>law of large numbers</li>
+  <li>central limit theorem</li>
+</ul>
+
+<h3 id="picking-k-items">Picking k items</h3>
+
+<p><strong>exact number with replacement</strong></p>
+
+<ul>
+  <li>we have to take into account what we want AND what we don’t want</li>
+  <li><strong>Ex</strong>: if we have a bucket with 30 red balls and 70 blue balls
+    <ul>
+      <li>pick 20 balls with replacement, what is the probability of getting exactly k red balls</li>
+      <li><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-07%20at%202.20.09%20PM.png" alt="Screen Shot 2021-12-07 at 2.20.09 PM" style="zoom:50%;" align="left" /></li>
+      <li>you can pick any 20 balls \(100^{20}\) different ways</li>
+      <li>if you want to k out of 20 to be red, then you do \({20 \choose k} * 30^k * 70^{20-k}\)</li>
+      <li>aka you want the exact number so you have to specify what the other 20-k balls will be</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>exact number without replacement</strong></p>
+
+<ul>
+  <li>still take into account what we want and don’t want</li>
+  <li><strong>Ex</strong>: if we have a bucket with 30 red balls and 70 blue balls
+    <ul>
+      <li>now there are \({100 \choose 20}\) ways to choose 20 balls since there is no replacement anymore</li>
+      <li><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-07%20at%202.28.23%20PM.png" alt="Screen Shot 2021-12-07 at 2.28.23 PM" style="zoom:50%;" align="left" /></li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>at least one value is observed more than once</strong></p>
+
+<ul>
+  <li>take into account the values already seen by k roll</li>
+  <li><strong>Ex:</strong> roling a 6-sided dice 5 times
+    <ul>
+      <li>there are \(6^5\) ways to get a value since there is “replacement”</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="vocab">Vocab</h3>
+
+<ul>
+  <li>mean = \(\mu\)</li>
+  <li>variance = \(\omicron\)</li>
+  <li>Geometric Random Variable
+    <ul>
+      <li>X ~ Geom(p)
+        <ul>
+          <li>where X is the number of trials UNTIL something occurs with p probability</li>
+        </ul>
+      </li>
+      <li>\(P[X=i] = (1-p)^{i-1}p^1\)$$</li>
+    </ul>
+  </li>
+  <li>Binomial Random Variable
+    <ul>
+      <li>X ~ Binom(n, p)
+        <ul>
+          <li>where n is the number of trials and p is the probability of something occuring</li>
+        </ul>
+      </li>
+      <li>
+\[\sum_{i=0}^n P[X = i]=1\]
+      </li>
+      <li>implies that \(\sum_{i=0}^n {n \choose i} p^i (1-p)^{n-i}=1\)</li>
+      <li>which basically means that if you are choosing \(i\) cases to succeed, you would need to find how many different ways there are to choose i out of n, find the p probability i times, and the (1-p) probability the remainding times out of n</li>
+    </ul>
+  </li>
+  <li><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-07%20at%208.20.01%20PM.png" alt="Screen Shot 2021-12-07 at 8.20.01 PM" style="zoom:40%;" align="left" /></li>
+</ul>
+
+<h3 id="to-add">to add</h3>
+
+<ul>
+  <li>
+    <p>Law of large nums = as u sample more, it will get closer to the expectation</p>
+  </li>
+  <li>
+    <p>Central Limit theorem = if we take a group of samples, the expection stays the same but the variance will decrease by a factor of n</p>
+
+    <ul>
+      <li>the distribution of the <em>sample average</em> \(\frac{S_n}{n}\)</li>
+      <li>
+\[Var(cX) = \frac{1}{c^2} Var(X)\]
+      </li>
+      <li>
+\[E[cX] = \frac{1}{c} E[X]\]
+      </li>
+      <li><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-15%20at%201.24.28%20AM.png" alt="Screen Shot 2021-12-15 at 1.24.28 AM" style="zoom:50%;" align="left" /></li>
+      <li>the power of the CLT is that you can take a non-normal distribution and retrieve a normal-looking average</li>
+      <li>standard deviation is the sqrt of the variance</li>
+    </ul>
+  </li>
+  <li>
+    <p>there are \(\frac{m(m-1)}{2}\) possible pairs for \(m\) keys</p>
+  </li>
+  <li>
+    <p>a PDF has to satisfy the following cases:</p>
+
+    <ol>
+      <li>f is non-negative: f(x)</li>
+      <li>The total integral of f is equal to 1: \(\int_{-\infin}^\infin f(x)dx = 1\).</li>
+    </ol>
+
+    <p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-15%20at%201.43.08%20AM.png" alt="Screen Shot 2021-12-15 at 1.43.08 AM" style="zoom:50%;" align="left" /></p>
+
+    <ul>
+      <li>basically the cdf is the riemann sum; the distribution THUS FAR until a certain point. the pdf is the derivative of this, aka how fast the probability is growing.</li>
+    </ul>
+  </li>
+  <li>
+    <p>a CDF has to satisfy the following cases:</p>
+
+    <p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-03%20at%206.29.57%20PM.png" alt="Screen Shot 2021-12-03 at 6.29.57 PM" style="zoom:50%;" align="left" /></p>
+
+    <ul>
+      <li>find the PDF by taking the derivative of the CDF</li>
+      <li><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-15%20at%201.44.49%20AM.png" alt="Screen Shot 2021-12-15 at 1.44.49 AM" style="zoom:50%;" align="left" /></li>
+    </ul>
+  </li>
+  <li>
+    <p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-15%20at%201.45.37%20AM.png" alt="Screen Shot 2021-12-15 at 1.45.37 AM" style="zoom:50%;" /></p>
+  </li>
+  <li>
+    <p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-15%20at%201.45.53%20AM.png" alt="Screen Shot 2021-12-15 at 1.45.53 AM" style="zoom:50%;" /></p>
+  </li>
+  <li>
+    <p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-15%20at%201.46.17%20AM.png" alt="Screen Shot 2021-12-15 at 1.46.17 AM" style="zoom:50%;" /></p>
+  </li>
+  <li>
+    <p>a joint density function makes a surface, and the integral of that is the <em>volume</em></p>
+  </li>
+  <li></li>
+  <li>covariance and correlation</li>
+</ul>
+
+
+</div>
+  </main>
+
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <!-- <i class="fas fa-code"></i> with <i class="fas fa-heart"></i> -->
+    Designed by <strong>Jillian Goldberg</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:jilliangoldberg@berkeley.edu"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-2x"></i>
+    </a><a class="social mx-1"  href="https://www.facebook.com/jillian.goldberg.71"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#3b5998'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-facebook fa-2x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/jilliangoldberg"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-2x"></i>
+    </a><a class="social mx-1"  href="https://www.linkedin.com/in/jilliangoldberg"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#007bb5'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-2x"></i>
+    </a><a class="social mx-1"  href="https://www.youtube.com/JillianGoldberg"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#ff0000'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-youtube fa-2x"></i>
+    </a>
+
+</div><small id="attribution">
+    <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+  
+</footer>
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+
+</body>
+
+</html>

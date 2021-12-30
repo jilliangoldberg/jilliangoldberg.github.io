@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fall 2021: CS 61C Midterm">
+  <meta property="og:description" content="">
+
+  <title>Fall 2021: CS 61C Midterm</title>
+  <meta name="description" content="">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Math Latex Support -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+  <!-- Theme style -->
+  <script src="/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <!-- <a class="navbar-brand" href="/"><h5><b> Jillian Goldberg </b></h5></a> -->
+  <a class="navbar-brand" href="/"> <img src="../images/jilliangoldberg-logo.png" alt="Jillian Goldberg" > </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link " href="https://berkeley.zoom.us/my/jilliangoldberg"target="_blank"></a>
+
+      <a class="nav-item nav-link " href="/about/">about</a>
+
+      <a class="nav-item nav-link " href="/blog/">blog</a>
+
+      <a class="nav-item nav-link active" href="/notes/">notes</a>
+
+      <a class="nav-item nav-link " href="/projects/">projects</a>
+
+      <a class="nav-item nav-link " href="/experience/">experience</a>
+
+      <a class="nav-item nav-link " href="https://drive.google.com/file/d/1nxD0JIPxPSoM7pxtSQ-0P4EegFgnIoks/view?usp=sharing"target="_blank">resume</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <div class="row">
+      <a class="m-1 btn btn-outline-primary btn-2 " href="../pages/notes">
+  Back to Notes
+</a>
+      <a class="m-1 btn btn-outline-primary btn-2 " href="../pages/notes">
+  Next
+</a> 
+  </div>
+
+  <h1 id="cs-61c-midterm-review"><strong>CS 61C Midterm Review</strong></h1>
+
+<h3 id="logistics">Logistics</h3>
+
+<p><strong>Scope</strong></p>
+
+<ul>
+  <li>all lectures up to CALL (Mon 9/27)</li>
+  <li>disc 1-5</li>
+  <li>labs 1-4</li>
+  <li>hw 1-4</li>
+  <li>1 and 2a</li>
+</ul>
+
+<p><strong>Topical Review with Questions</strong></p>
+
+<ul>
+  <li>Number Representation (Avi)</li>
+  <li>C (Ryan)
+    <ul>
+      <li>Basics</li>
+      <li>Pointers</li>
+      <li>Arrays</li>
+    </ul>
+  </li>
+  <li>Memory Management (Ryan)</li>
+  <li>Floating Point (Ryan)</li>
+  <li>RISC-V Basics (Avi)</li>
+  <li>RISC-V Coding (Avi)</li>
+  <li>Instruction Formats (Avi)</li>
+  <li>CALL (Avi)</li>
+</ul>
+
+<h3 id="number-representation">Number Representation</h3>
+
+<ul>
+  <li>common questions are just converting between bases</li>
+  <li>Fall 2018 Q1b
+    <ul>
+      <li>binary to decimal: 0b01101101 –&gt; 109</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Example</strong></p>
+
+<ul>
+  <li>\(26_{10}\) to binary
+    <ul>
+      <li>16+8+2 so 0b11010</li>
+    </ul>
+  </li>
+  <li>\(26_{10}\) to hex
+    <ul>
+      <li>pad binary with leading 0s to fill nibble</li>
+      <li>0b0001+1010 = 0x1A</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Quick Tricks</strong></p>
+
+<ul>
+  <li>how to represent power of two in binary
+    <ul>
+      <li>only 1 bit is 1, the rest are 0</li>
+    </ul>
+  </li>
+  <li>representing one less than a power of 2
+    <ul>
+      <li>all ones up to the next power of 2</li>
+    </ul>
+  </li>
+  <li>Two’s Complement
+    <ul>
+      <li>like normal except you start with all 1s and use 0s to negate</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Two’s Complement: Negative Nums</strong></p>
+
+<ul>
+  <li>treat most sig bit (leftmost_ as adding a negative power of two</li>
+</ul>
+
+<p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-10-17%20at%202.31.47%20PM.png" alt="Screen Shot 2021-10-17 at 2.31.47 PM" style="zoom:50%;" align="left" /></p>
+
+<p><strong>Converting Binary to Hex</strong></p>
+
+<p>0b10100</p>
+
+<ul>
+  <li>hex is implicitly unsigned</li>
+  <li>so converting a negative number to hexadecimal is hard</li>
+  <li>-64, first convert to binary, then convert binary to hex</li>
+  <li>just (mod 16) and take the remainders!
+    <ul>
+      <li>fill in from least significant bit to most</li>
+      <li><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-10-18%20at%2012.31.02%20PM.png" alt="Screen Shot 2021-10-18 at 12.31.02 PM" style="zoom:50%;" align="left" /></li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Bias Notation</strong></p>
+
+<ul>
+  <li>fixes the problem of converting negative nums to hex</li>
+  <li>in bias notation we shift the unsigned interpretation of the number</li>
+  <li>8-bit with a bias of -253
+    <ul>
+      <li>smallest representatable num = 0b0000_0000 is 0-252 = -252</li>
+      <li>largest num = 0b1111_1111 = 255 - 252 = 3</li>
+    </ul>
+  </li>
+  <li>we don’t have to put the bias in the middle!</li>
+  <li>bias of 0 is just a regular unsigned bit</li>
+</ul>
+
+<p><strong>Fall 2019 Q1</strong></p>
+
+<p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-10-17%20at%202.37.53%20PM.png" alt="Screen Shot 2021-10-17 at 2.37.53 PM" style="zoom:50%;" aign="left" /></p>
+
+<ul>
+  <li>0xF = 15 so out of range!</li>
+  <li>0b0100 = 8, bias of -7 = 0b1010</li>
+</ul>
+
+<p><strong>==CHEAT SHEET STUFF==</strong></p>
+
+<p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-10-17%20at%202.39.54%20PM.png" alt="Screen Shot 2021-10-17 at 2.39.54 PM" style="zoom:50%;" aign="left" /></p>
+
+<h3 id="bitwise-operations">Bitwise Operations</h3>
+
+<ul>
+  <li>&amp; = AND = turns bits ON</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>= OR = turns bits OFF</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>^ = XOR = flips bits</li>
+</ul>
+
+<h3 id="c-types">C Types</h3>
+
+<ul>
+  <li>C is weakly typed (casting is hard)</li>
+</ul>
+
+<p><strong>Types</strong></p>
+
+<ul>
+  <li>char (8 bits, 1 byte)</li>
+  <li>int (32 bits, 4 bytes)
+    <ul>
+      <li>int32_1, uint8_t, etc. have explicit sizes given by <code class="language-plaintext highlighter-rouge">&lt;stdint.h&gt;</code></li>
+    </ul>
+  </li>
+  <li>int* (always either 32 bit of 64 bit based on operating system)</li>
+</ul>
+
+<p><strong>False Values</strong></p>
+
+<ul>
+  <li>’‘\0’ = null terminator of char</li>
+  <li>0</li>
+  <li>NULL pointer</li>
+</ul>
+
+<p><strong>Pointer Arithmetic</strong></p>
+
+<p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-10-17%20at%202.43.20%20PM.png" alt="Screen Shot 2021-10-17 at 2.43.20 PM" style="zoom:50%;" align="left" /></p>
+
+<p><strong>Bit Manipulation</strong></p>
+
+<ul>
+  <li>==review lab 2 exercise 3!!==</li>
+</ul>
+
+<p><strong>Example (Fa19 Q3)</strong></p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">ConvertTo2sArray</span><span class="p">(</span><span class="kt">int32_t</span> <span class="o">*</span><span class="n">A</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">while</span> <span class="p">(</span><span class="o">*</span><span class="n">A</span><span class="p">)</span> <span class="p">{</span>						<span class="c1">// checks if A != 0x00000000 (terminator)</span>
+		<span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="n">A</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>					<span class="c1">// checks if value in A is negative</span>
+			<span class="n">ConvertTo2s</span><span class="p">(</span><span class="n">A</span><span class="p">);</span>			<span class="c1">// calls other function on address</span>
+		<span class="p">}</span>
+		<span class="n">A</span> <span class="o">=</span> <span class="n">A</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>						<span class="c1">// increments A's address by 1</span>
+<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">ConvertTo2s</span><span class="p">(</span><span class="kt">int32_t</span> <span class="o">*</span><span class="n">B</span><span class="p">)</span> <span class="p">{</span>
+	<span class="o">*</span><span class="n">B</span> <span class="o">=</span> <span class="p">(</span><span class="o">*</span><span class="n">B</span> <span class="o">&amp;</span> <span class="mh">0x7FFF</span><span class="n">_FFFF</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>		<span class="c1">// converts to 2s complement</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p><strong>Structs</strong></p>
+
+<ul>
+  <li>kinda like classes</li>
+  <li>also just some sequence of bits</li>
+</ul>
+
+<p><strong>sizeof</strong></p>
+
+<ul>
+  <li>
+    <p>returns num of bits being occupied</p>
+  </li>
+  <li>
+    <p>sizeof an array and sizeof a pointer are diff based on the size of the array and the platform you are on</p>
+
+    <ul>
+      <li>
+        <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">char</span> <span class="n">x</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">};</span>
+<span class="kt">char</span> <span class="o">*</span><span class="n">y</span> <span class="o">=</span> <span class="n">calloc</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span><span class="p">));</span>
+<span class="c1">//size of</span>
+<span class="o">--&gt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span> <span class="o">*</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span><span class="p">)</span> <span class="o">==</span> <span class="mi">5</span>
+<span class="o">--&gt;</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="o">==</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span> <span class="o">==</span> <span class="mi">4</span> 
+<span class="c1">// (or 8 depending on your platform)</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="memory">Memory</h3>
+
+<p><strong>Endianness</strong></p>
+
+<ul>
+  <li>
+    <p>bucket of buckets!</p>
+  </li>
+  <li>
+    <p>if we have data 0x01020304:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Address</th>
+          <th>0x100</th>
+          <th>0x101</th>
+          <th>0x102</th>
+          <th>0x103</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Little Endian</td>
+          <td>0x04</td>
+          <td>0x03</td>
+          <td>0x02</td>
+          <td>0x01</td>
+        </tr>
+        <tr>
+          <td>Big Endian</td>
+          <td>0x01</td>
+          <td>0x02</td>
+          <td>0x03</td>
+          <td>0x04</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+<p><strong>Types</strong></p>
+
+<ul>
+  <li><strong>Stack =</strong> function local variables, strings allocated as arrays</li>
+  <li><strong>Heap =</strong> dynamically allocated memory (with malloc, calloc, realloc)</li>
+  <li><strong>Static =</strong> global variables, statically allocated strings</li>
+  <li><strong>Code =</strong> machine instructions</li>
+</ul>
+
+<p><strong>Example</strong></p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+	<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="kt">char</span><span class="o">*</span> <span class="n">s1</span> <span class="o">=</span> <span class="err">“</span><span class="n">cs61c</span><span class="err">”</span><span class="p">;</span>	
+	<span class="kt">char</span> <span class="n">s2</span><span class="p">[]</span> <span class="o">=</span> <span class="err">“</span><span class="n">cs61c</span><span class="err">”</span><span class="p">;</span>
+	<span class="kt">char</span> <span class="o">*</span><span class="n">c</span> <span class="o">=</span> <span class="n">malloc</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">);</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>s1 = stack</li>
+  <li>s2 = stack</li>
+  <li>s1[0] = static</li>
+  <li>s2[0] = stack</li>
+  <li>c[0] = heap</li>
+  <li>a = static</li>
+</ul>
+
+<p><strong>Practice</strong></p>
+
+<p><img src="/Users/jilliangoldberg/Downloads/Screen%20Shot%202021-10-18%20at%206.07.59%20PM.png" alt="Screen Shot 2021-10-18 at 6.07.59 PM" style="zoom:100%;" align="left" /></p>
+
+<h3 id="floating-point">Floating Point</h3>
+
+<p>==<strong>Practice Problems</strong>==</p>
+
+<ul>
+  <li>What’s the largest representable number?</li>
+  <li>What’s the smallest representable number?</li>
+  <li>What’s the smallest unrepresentable number?</li>
+  <li>What’s the largest unrepresentable numbers?</li>
+  <li>What’s the smallest distance between two numbers? What about denorms?</li>
+  <li>How do you represent a particular number in floating point?
+    <ul>
+      <li>It basically reduces to these last two (see discussion 3 for practice with other types of problems)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Conversion</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sign</th>
+      <th>Exponent</th>
+      <th>Mantissa/Significand/Fraction</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>8</td>
+      <td>23</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li><strong>Normalized</strong> = \((-1)^{Sign} * 2^{Exp+Bias} * 1.significand_2\)</li>
+  <li><strong>Denormalized</strong> = \((-1)^{Sign} * 2^{Exp+Bias+1} * 0.significand_2\)</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Exponent</th>
+      <th>Significand</th>
+      <th>Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>any</td>
+      <td>denorm</td>
+    </tr>
+    <tr>
+      <td>255</td>
+      <td>0</td>
+      <td>+ or – \(\infin\)</td>
+    </tr>
+    <tr>
+      <td>255</td>
+      <td>nonzero</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <td>1-254</td>
+      <td>any</td>
+      <td>norm</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Example Fa18 Q1</strong></p>
+
+<ul>
+  <li>
+    <p><strong>minifloat</strong> = 8-bits with 1sign, 5exp, 2mantissa, bias -15</p>
+
+    <ul>
+      <li>SEEEEEEMM</li>
+    </ul>
+  </li>
+  <li>
+    <p>how many NaNs do we have?</p>
+
+    <ul>
+      <li>we have <strong>6</strong> because we need max exponent and nonzero mantissa bits
+        <ul>
+          <li>
+\[2 * (2^2 -1) = 6\]
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>bit rep in hex of next minifloat bigger than 0x3F</strong></p>
+
+    <ul>
+      <li>0x3F = 0b0011_0111</li>
+      <li>which is SEEEEEEMM</li>
+      <li>increasing mantissa would cause overflow, so we need to increment the exponent once and wrap mantissa back to 0!</li>
+      <li>we get 0b0100_0000 = \(0x40\) (or just \(0x3F + 1\))</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>bit rep of encoding \(-2.5\)</strong></p>
+
+    <ul>
+      <li>convert to binary: \(-2.5 = -10.1_2\)</li>
+      <li>sign = 1</li>
+      <li>exp + bias = exp - 15 = 1, so exp = 16 = 10000</li>
+      <li>.5 = 10</li>
+    </ul>
+
+    <ol>
+      <li>represent num in binary
+        <ol>
+          <li>
+\[-2.5 = -10.1_2\]
+          </li>
+        </ol>
+      </li>
+      <li>normalize so that one number is before the binary point
+        <ol>
+          <li>\(-10.1 = -1.01 * 21\) → MM = 01</li>
+          <li>Ex: \(1101\) –&gt; \(1.101 * 2^3\)</li>
+        </ol>
+      </li>
+      <li>calculate exp bits
+        <ol>
+          <li>1 = EEEEE - 15 = 10000 (we need 16)</li>
+        </ol>
+      </li>
+      <li>sign bit
+        <ol>
+          <li>1 = negative</li>
+          <li>0 = positive</li>
+        </ol>
+      </li>
+      <li>Put it together!
+        <ol>
+          <li>
+\[1100_0001 = 0xC1\]
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p><strong>What does this return?</strong></p>
+  </li>
+</ul>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// NOTE: always round down to 0</span>
+<span class="n">minifloat</span> <span class="nf">should_be_a_billion</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">minifloat</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">1000000000</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">sum</span> <span class="o">=</span> <span class="n">sum</span> <span class="o">+</span> <span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>if you have a really big number, the FP can’t represent too small or too big of a number
+    <ul>
+      <li>you need to find the largest number that the minifloat can represent</li>
+    </ul>
+  </li>
+  <li>
+    <p>once the exp = 3, you would need to increase the sum by 2.0 to actually change the number</p>
+  </li>
+  <li>When does incrementing mantissa increment by 1.0?
+    <ul>
+      <li>at \(1.11 * 2^2 = 111 = 7\), so we would need the exponent to be 2</li>
+      <li>if the exponent gets larger, the represented number is \(1.00 * 2^3 = 1000 = 8\)</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>shorthand way</strong> = once the exponent is greater than the number of mantissa bits, the number will start increasing by more than just 1.0 every time.</p>
+  </li>
+  <li>so 8.0 is returned!</li>
+</ul>
+
+<h3 id="risc-v">RISC-V</h3>
+
+<p><strong>C to RISC-V</strong></p>
+
+<ul>
+  <li>C contructs are translated to assembly</li>
+  <li>like while loops!</li>
+</ul>
+
+<p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-10-17%20at%203.42.38%20PM.png" alt="Screen Shot 2021-10-17 at 3.42.38 PM" style="zoom:50%;" /></p>
+
+<ul>
+  <li>sw saves registers to memory</li>
+  <li>lw loads memory to registers</li>
+</ul>
+
+<p><strong>Jumping</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center">labels</th>
+      <th style="text-align: center">registers</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>no linking</strong></td>
+      <td style="text-align: center">j</td>
+      <td style="text-align: center">jr</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>linking</strong></td>
+      <td style="text-align: center">jal</td>
+      <td style="text-align: center">jar</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Calling Convention</strong></p>
+
+<ul>
+  <li>make sure that when you are writing a function, you HAVE TO save your save registers and then restore them!</li>
+  <li>temp variables can CHANGE if you jal to something else :’)</li>
+  <li>you need to save ur return address (ra) to the stack so you know how to get back when you jump to a different function</li>
+</ul>
+
+<p><strong>Example Su19 Q5</strong></p>
+
+<ul>
+  <li>implement strlcpy in RISC-V
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">char* strncpy(char* destination, char* source, unsigned int n);</code></li>
+      <li>takes in two char* args and copies up to the first n characters</li>
+      <li>if it reaches a null terminator, it copies that value into the destination and then stops</li>
+      <li>returns a pointer to the destination string</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># iterative python-ish pseudocode:
+</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">!=</span> <span class="n">n</span><span class="p">):</span>
+	<span class="n">copy_one_char_from_source_to_dest</span>
+	<span class="k">if</span> <span class="n">source_is_null_terminator</span><span class="p">:</span>
+		<span class="k">return</span> <span class="n">dest</span>
+	<span class="n">increment</span> <span class="n">source</span> <span class="n">pointer</span>
+<span class="k">return</span> <span class="n">dest</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># iterative RISC-V solution
+# a0 = dest, a1 = source, a2 = n
+</span><span class="n">strncpy</span><span class="p">:</span>
+	<span class="n">li</span> <span class="n">t0</span><span class="p">,</span> <span class="mi">0</span>		<span class="c1"># initialize counter
+</span>	<span class="n">mv</span> <span class="n">t2</span><span class="p">,</span> <span class="n">a0</span>		<span class="c1"># store a0 in t2 as a temp
+</span><span class="n">loop</span><span class="p">:</span>
+	<span class="n">beq</span> <span class="n">t0</span><span class="p">,</span> <span class="n">a2</span><span class="p">,</span> <span class="n">end</span>	<span class="c1"># check end of while loop
+</span>	<span class="n">lb</span> <span class="n">t1</span><span class="p">,</span> <span class="mi">0</span><span class="p">(</span><span class="n">a1</span><span class="p">)</span>	<span class="c1"># read char from source
+</span>	<span class="n">sb</span> <span class="n">t1</span><span class="p">,</span> <span class="mi">0</span><span class="p">(</span><span class="n">a0</span><span class="p">)</span>	<span class="c1"># copy char to dest
+</span>	<span class="n">beq</span> <span class="n">t1</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">end</span>	<span class="c1"># check null terminator
+</span>	<span class="n">addi</span> <span class="n">t0</span><span class="p">,</span> <span class="n">t0</span><span class="p">,</span> <span class="mi">1</span>	<span class="c1"># increment counter
+</span>	<span class="n">addi</span> <span class="n">a1</span><span class="p">,</span> <span class="n">a1</span><span class="p">,</span> <span class="mi">1</span>	<span class="c1"># increment source
+</span>	<span class="n">addi</span> <span class="n">a0</span><span class="p">,</span> <span class="n">a0</span><span class="p">,</span> <span class="mi">1</span>	<span class="c1"># increment dest
+</span>	<span class="n">j</span> <span class="n">loop</span>		<span class="c1"># go back to top of loop
+</span><span class="n">end</span><span class="p">:</span>
+	<span class="n">mv</span> <span class="n">a0</span><span class="p">,</span> <span class="n">t2</span>		<span class="c1"># t2 contains the original dest
+</span>	<span class="n">ret</span>
+</code></pre></div></div>
+
+<ul>
+  <li>since we are loading and saving ints, we just need to do lb and sb since ints are just 1 byte
+    <ul>
+      <li>lw and sw depend on the system</li>
+    </ul>
+  </li>
+  <li>there’s also a way to do it recursively!</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># recursive solution
+# a0 = dest, a1 = source, a2 = n
+</span><span class="n">strncpy</span><span class="p">:</span>
+  <span class="c1"># missing! we need to save the return address and s0
+</span>  <span class="n">addi</span> <span class="n">sp</span> <span class="n">sp</span> <span class="o">-</span><span class="mi">8</span>
+  <span class="n">sw</span> <span class="n">ra</span> <span class="mi">0</span><span class="p">(</span><span class="n">sp</span><span class="p">)</span>
+  <span class="n">sw</span> <span class="n">s0</span> <span class="mi">4</span><span class="p">(</span><span class="n">sp</span><span class="p">)</span>
+  
+	<span class="n">beq</span> <span class="n">a2</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">end</span>	<span class="c1"># n == 0
+</span>	<span class="n">lb</span> <span class="n">s0</span><span class="p">,</span> <span class="mi">0</span><span class="p">(</span><span class="n">a1</span><span class="p">)</span>	<span class="c1"># read *source
+</span>	<span class="n">sb</span> <span class="n">s0</span><span class="p">,</span> <span class="mi">0</span><span class="p">(</span><span class="n">a0</span><span class="p">)</span>	<span class="c1"># copy to *destination
+</span>	<span class="n">beq</span> <span class="n">s0</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">end</span>	<span class="c1"># check if *source == 0
+</span>	<span class="c1"># set up recursive call
+</span>	<span class="n">addi</span> <span class="n">a0</span><span class="p">,</span> <span class="n">a0</span><span class="p">,</span> <span class="mi">1</span>
+	<span class="n">addi</span> <span class="n">a1</span><span class="p">,</span> <span class="n">a1</span><span class="p">,</span> <span class="mi">1</span>
+	<span class="n">addi</span> <span class="n">a2</span><span class="p">,</span> <span class="n">a2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span>
+	<span class="n">jal</span> <span class="n">strncpy</span>
+	<span class="n">addi</span> <span class="n">a0</span><span class="p">,</span> <span class="n">a0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span>			<span class="c1"># decrements the address back to the destination
+</span><span class="n">end</span><span class="p">:</span>
+  <span class="c1"># missing!
+</span>  <span class="n">lw</span> <span class="n">ra</span> <span class="mi">0</span><span class="p">(</span><span class="n">sp</span><span class="p">)</span>					<span class="c1"># restores ra and s0
+</span>  <span class="n">lw</span> <span class="n">s0</span> <span class="mi">4</span><span class="p">(</span><span class="n">sp</span><span class="p">)</span>
+  <span class="n">addi</span> <span class="n">sp</span> <span class="n">sp</span> <span class="mi">8</span>
+  
+	<span class="n">ret</span>			<span class="c1"># return (a0 is already dest)
+# Q: What’s missing?
+# A: Calling convention (need to save s0 and ra)!
+</span></code></pre></div></div>
+
+<ul>
+  <li>CC contract
+    <ul>
+      <li>says that ra = contains the address to jump back to</li>
+      <li>and that sp is the same before AND after a function call</li>
+      <li>as long as these two rules are followed, everything works!</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="instruction-formats">Instruction Formats</h3>
+
+<ul>
+  <li>SB = (B)ranches = conditional jumps</li>
+  <li>U = (U)pper Immediates = long immediates</li>
+  <li>UG = (J)umps = unconditional jumps</li>
+  <li>R = (R)egister</li>
+  <li>I = (I)mmediate + loads from memory</li>
+  <li>S = (S)tores to memory</li>
+</ul>
+
+<p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-10-17%20at%204.13.24%20PM.png" alt="Screen Shot 2021-10-17 at 4.13.24 PM" /></p>
+
+<p><strong>Practice Problem</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">lw t5, 17(t6)</code></p>
+
+<ul>
+  <li>lw = 0b0000011 (I-type)</li>
+  <li>funct3 = 010</li>
+  <li>t5 = x30 = 0b11110</li>
+  <li>t6 = x31 = 0b11111
+    <ul>
+      <li>17 (in 12 bits) = 0b0000_0001_0001</li>
+    </ul>
+  </li>
+  <li>For I types
+    <ul>
+      <li>​     <strong>imm[11:0]			 rs1	funct3	rd		opcode</strong></li>
+      <li>0000_0001_0001     11111   010     11110     0000011</li>
+      <li>0b0000_0001_0001_1111_1010_1111_0000_0011</li>
+      <li>or 0x011FAF03</li>
+    </ul>
+  </li>
+  <li>==DON’T mess up converting to hex!!!!==</li>
+</ul>
+
+<h3 id="call">CALL</h3>
+
+<p><strong>C = Compile</strong></p>
+
+<ul>
+  <li>C -&gt; risc or other assembly languages</li>
+  <li>produced assembly is similar to what you might write by hand</li>
+</ul>
+
+<p><strong>A = Assemble</strong></p>
+
+<ul>
+  <li>RISC-V –&gt; object files</li>
+  <li>expands psuedo instructions</li>
+  <li>requires 2 passes to resolve labels within files</li>
+  <li>produces machine code with relocation tables (identifies labels defined in <em>other</em> files) and symbol tables (identifies labels/addresses that <em>this</em> file defines)</li>
+</ul>
+
+<p><strong>L = Link</strong></p>
+
+<ul>
+  <li>combines object files together into binary executable</li>
+  <li>fulfills missing labels/addresses required by examining relocation and symbol tables</li>
+</ul>
+
+<p><strong>L = Load</strong></p>
+
+<ul>
+  <li>part of operating system</li>
+  <li>loads machine code into memory for execution</li>
+</ul>
+
+<h4 id="summary-of-call"><strong>Summary of CALL</strong></h4>
+
+<p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-10-18%20at%2012.13.10%20AM.png" alt="Screen Shot 2021-10-18 at 12.13.10 AM" style="zoom:50%;" align="left" /></p>
+
+<h3 id="lecture-13-call-notes">Lecture 13: CALL Notes</h3>
+
+<h4 id="interpretation-vs-translation">Interpretation vs Translation</h4>
+
+<ul>
+  <li><strong>Interpreter</strong> = runs and executes program directly
+    <ul>
+      <li>python, java, c++ = easy to program, inefficient to interpret</li>
+      <li>assembly, machine code, bytes = difficult to program, efficient!</li>
+      <li>easier to write interpreter
+        <ul>
+          <li>closer to high-level, so better error and debugging messages</li>
+        </ul>
+      </li>
+      <li>interpreters are slower and smaller</li>
+      <li>provides instruction set independence (runs on any machine)</li>
+      <li>usually open source</li>
+    </ul>
+  </li>
+  <li><strong>Translator</strong> = converts a program from source language to equivalent program in another language and then runs it
+    <ul>
+      <li>helps to “hide” the program/intellectual property from its users</li>
+      <li>translates and compiles to a different machine!</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Full Picture</strong></p>
+
+<p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-10-17%20at%204.30.44%20PM.png" alt="Screen Shot 2021-10-17 at 4.30.44 PM" style="zoom:50%;" align="left" /></p>
+
+<ul>
+  <li>see the big picture by doing <code class="language-plaintext highlighter-rouge">gcc -O2 -S -c foo.c</code>, the <code class="language-plaintext highlighter-rouge">-S</code> makes it verbose</li>
+</ul>
+
+<h4 id="compiler"><strong>Compiler</strong></h4>
+
+<ul>
+  <li>
+    <p>input = high-level language code (like foo.c)</p>
+  </li>
+  <li>
+    <p>output = assembly language code (like foo.s for RISC-V)</p>
+  </li>
+  <li>
+    <p>output may contain pseudo-instructions</p>
+
+    <ul>
+      <li>instructions that assembler understands but not machine (like “copy value from t2 to t1”)</li>
+      <li>
+        <p><code class="language-plaintext highlighter-rouge">mv t1 t2</code> –&gt;<code class="language-plaintext highlighter-rouge">addi t1 t2 0</code></p>
+      </li>
+      <li>assembler added things like <code class="language-plaintext highlighter-rouge">mv</code> so we don’t have to use simple commands like <code class="language-plaintext highlighter-rouge">addi</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="assembler"><strong>Assembler</strong></h4>
+
+<ul>
+  <li>input = assembly code (like foo.s for RISC-V)</li>
+  <li>output = object code, info tables (true assembly only)
+    <ul>
+      <li>e.g., foo.o for RISC-V</li>
+    </ul>
+  </li>
+  <li>reads and uses directives</li>
+  <li>replaces pseudo-instructions with machine language and then creates object file</li>
+</ul>
+
+<p><strong>Assember Directives</strong></p>
+
+<p><em>gives directions to assembler, but doesn’t produce machine instructions</em></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.text</code> = subsequent items put in user text segment (machine code)</li>
+  <li><code class="language-plaintext highlighter-rouge">.data</code> = subseqent items put in user data segment (source file data in binary)</li>
+  <li><code class="language-plaintext highlighter-rouge">.global sym</code> = declares sym global and can be references from other files</li>
+  <li><code class="language-plaintext highlighter-rouge">.string str</code> = stores string str in memory and null-terminates it</li>
+  <li><code class="language-plaintext highlighter-rouge">.word w1...wn</code> = store the n 32-bit quantities in successive memory words</li>
+</ul>
+
+<p><strong>Pseudo-instruction Replacement</strong></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">neg t0 t1</code> is the same as <code class="language-plaintext highlighter-rouge">sub t0 zero t1</code></li>
+  <li><code class="language-plaintext highlighter-rouge">la t0 str</code>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">lui t0 str[31:12]</code> then <code class="language-plaintext highlighter-rouge">addi t0 t0 str[11:0]</code> (STATIC addressing)</li>
+      <li><code class="language-plaintext highlighter-rouge">auipc t0 str[31:12</code> then <code class="language-plaintext highlighter-rouge">addi t0 t0 str[11:0]</code>  (PC-relative addressing)</li>
+    </ul>
+  </li>
+  <li>don’t forget!!!!
+    <ul>
+      <li>sign extended immediates
+        <ul>
+          <li>machine code can only do operations on 32 bits, so if you have 12 bits, you have to sign-extend it to 32 bits</li>
+        </ul>
+      </li>
+      <li>Branch imms count halfwords
+        <ul>
+          <li>each line is a “word”, so if we wanted to travel back 3 lines, we would go back 6 halfwords</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Producing Machine Code</strong></p>
+
+<ul>
+  <li>
+    <p>simple case</p>
+
+    <ul>
+      <li>arithmetic, logical, shifts, etc.</li>
+    </ul>
+  </li>
+  <li>
+    <p>branches and jumps are PC-relative (e.g., beq/bne, jal)</p>
+  </li>
+  <li>
+    <p>once pseudo-instructions are replaced by real ones, we know by how many instructions to branch/jump over</p>
+  </li>
+  <li>
+    <p>“Forward Reference” problem</p>
+
+    <ul>
+      <li>branch instructions sometimes branch to labels that are forward in the problem (like a loop)</li>
+      <li>SOLVED: take two passes over the program
+        <ul>
+          <li>first = remember position of labels</li>
+          <li>second = use label positions to generate the code</li>
+        </ul>
+      </li>
+      <li>Example of halfwords and remembering label positions:</li>
+    </ul>
+
+    <p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-10-17%20at%209.11.00%20PM.png" alt="Screen Shot 2021-10-17 at 9.11.00 PM" style="zoom:60%;" /></p>
+  </li>
+  <li>for PC-relative jumps (jal) and branches (bne, ben, etc)
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">j offset</code> (pseudo-instructions that expands to <code class="language-plaintext highlighter-rouge">jal zero, offset</code>)</li>
+      <li>count the number of instruction “half words” between the target and jump to determine the offset (position-independent code aka PIC)</li>
+    </ul>
+  </li>
+  <li>references to static data
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">la</code> gets broken into <code class="language-plaintext highlighter-rouge">lui</code> and <code class="language-plaintext highlighter-rouge">addi</code></li>
+      <li>requires the full 32-bit address of data</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Tables</strong></p>
+
+<ul>
+  <li><strong>Symbol table</strong> = list of “items” in this file that may be used by other files
+    <ul>
+      <li>labels = function calling</li>
+      <li>data = anything in the .data section, variables that may be accessed across files</li>
+    </ul>
+  </li>
+  <li><strong>Relocation table</strong> = list of “items” whose address this file needs
+    <ul>
+      <li>basically saying here’s something to fill in the blank, what do we need to remember/store?</li>
+      <li>any absolute label jumped to (using <code class="language-plaintext highlighter-rouge">jal</code>, <code class="language-plaintext highlighter-rouge">jalr</code>)
+        <ul>
+          <li>internal</li>
+          <li>external (like lib files)</li>
+          <li>EX: the <code class="language-plaintext highlighter-rouge">la</code> instruction (e.g., for <code class="language-plaintext highlighter-rouge">jalr</code> base register)</li>
+        </ul>
+      </li>
+      <li>any piece of data in static section</li>
+      <li>EX: the <code class="language-plaintext highlighter-rouge">la</code> instruction (e.g., for <code class="language-plaintext highlighter-rouge">lw</code>/<code class="language-plaintext highlighter-rouge">sw</code> base register)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Object File Format</strong></p>
+
+<ul>
+  <li><strong>object file header</strong> = size and position of the other pieces of the object file</li>
+  <li><strong>text segment</strong> = the machine code</li>
+  <li><strong>data segment</strong> = binary representation of the static data in the source file</li>
+  <li><strong>relocation information</strong> = identifies lines of code that need to be fixed up later</li>
+  <li><strong>symbol table</strong> = list of this file’s labels and static data that can be referenced</li>
+  <li><strong>debugging information</strong></li>
+</ul>
+
+<h4 id="linker">Linker</h4>
+
+<p><strong>General Info</strong></p>
+
+<ul>
+  <li>input = object code files, info tables (like foo.o, libc.o)</li>
+  <li>output = executable code (a.out for RISC)</li>
+  <li>combines several object (.o) files into a sngle executable aka “linking” them together</li>
+  <li>compiles files, BUT doesn’t have to recompile if you change one file!</li>
+</ul>
+
+<p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-10-17%20at%2011.40.50%20PM.png" alt="Screen Shot 2021-10-17 at 11.40.50 PM" style="zoom:50%;" align="left" /></p>
+
+<p><strong>Steps</strong></p>
+
+<ol>
+  <li>take <em>text</em> segment from each .o file and put them together</li>
+  <li>take <em>data</em> segment from each .o file, put them together, and concatenate onto the end of text segments</li>
+  <li>resolve references (i.e., handle each entry from reloc table, fill in all absolute addresses)</li>
+</ol>
+
+<p><strong>4 Types of Addresses</strong></p>
+
+<ul>
+  <li>PC-Relative Addressing
+    <ul>
+      <li>ben, bne, jal, auipc/addi</li>
+      <li>never need to relocate (cuz PIC aka Position-Independent Code)</li>
+    </ul>
+  </li>
+  <li>Absolute Function Address
+    <ul>
+      <li>auipc/jalr</li>
+      <li>always relocate</li>
+    </ul>
+  </li>
+  <li>External Function Reference
+    <ul>
+      <li>auipc/jalr</li>
+      <li>always relocate</li>
+    </ul>
+  </li>
+  <li>Static Data Reference
+    <ul>
+      <li>lui/addi</li>
+      <li>always relocate</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Relocation Editing</strong></p>
+
+<ul>
+  <li>J-format = jump/jump and link
+    <ul>
+      <li>the upper bits need to be modified</li>
+    </ul>
+  </li>
+  <li>I-, S- = loads and stores to variables in static area
+    <ul>
+      <li>all relative to global pointer so all the upper bits need to be modified based on where the static area begins</li>
+    </ul>
+  </li>
+  <li>conditional branches don’t need to be modified since they are PC-relative!</li>
+</ul>
+
+<p><strong>Resolving References</strong></p>
+
+<ul>
+  <li>the linker assumes the first word of the first text segment is at 0x10000</li>
+  <li>it knows the length and ordering of each text and data segment</li>
+  <li>it calculates the absolute address of each label to be jumped to and each data being referenced</li>
+  <li>to resolve!
+    <ul>
+      <li>search for reference (data or label) in all user <em>symbol tables</em></li>
+      <li>if not, search the library files</li>
+      <li>once absolute address is determined, fill in the machine code appropriately</li>
+    </ul>
+  </li>
+  <li><em>conflicting symbol type</em> = occurs when the machine finds two of the same symbol</li>
+  <li>output = executable file containing text, data, and header</li>
+</ul>
+
+<p><strong>Static vs Dynamically Linked Libraries</strong></p>
+
+<ul>
+  <li>what we just described is statically linked
+    <ul>
+      <li>library is part of the executable (“baked in”)</li>
+    </ul>
+  </li>
+  <li>dynamically-linked libraries (DLL)
+    <ul>
+      <li>executable doesn’t have to recompile every time</li>
+      <li>puts the responsibility on the loader to get the library when it runs</li>
+      <li>space/time issues
+        <ul>
+          <li>storing a program requires less disk space</li>
+          <li>sending a program requires less time</li>
+          <li>2 programs requires less memory since they share a library</li>
+        </ul>
+      </li>
+      <li>upgrades
+        <ul>
+          <li>replacing one library file upgrades every program that uses the library</li>
+          <li>but now the executable isn’t enough! :’)</li>
+        </ul>
+      </li>
+      <li>prevailing approach to dynamic linking uses macine code as the “lowest common denominator” aka linking code only at the machine level</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="loader">Loader</h4>
+
+<p><strong>General</strong></p>
+
+<ul>
+  <li>Input = executable code</li>
+  <li>output = running programs</li>
+  <li>executable files are stored on disk</li>
+  <li>loader’s job is essentially to load the file onto memory and start running it (aka loader = OS)</li>
+</ul>
+
+<p><strong>How it works</strong></p>
+
+<p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-10-18%20at%2012.07.53%20AM.png" alt="Screen Shot 2021-10-18 at 12.07.53 AM" style="zoom:50%;" align="left" /></p>
+
+<h3 id="sdsboolean-algebrafsm">SDS/Boolean Algebra/FSM</h3>
+
+<p><strong>Hold Time</strong></p>
+
+<p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-12-08%20at%2011.16.40%20PM.png" alt="Screen Shot 2021-12-08 at 11.16.40 PM" style="zoom:50%;" align="left" /></p>
+
+<ul>
+  <li>look for the shortest combinatorial path</li>
+  <li>the longest that the path can be stable</li>
+</ul>
+
+
+</div>
+  </main>
+
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <!-- <i class="fas fa-code"></i> with <i class="fas fa-heart"></i> -->
+    Designed by <strong>Jillian Goldberg</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:jilliangoldberg@berkeley.edu"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-2x"></i>
+    </a><a class="social mx-1"  href="https://www.facebook.com/jillian.goldberg.71"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#3b5998'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-facebook fa-2x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/jilliangoldberg"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-2x"></i>
+    </a><a class="social mx-1"  href="https://www.linkedin.com/in/jilliangoldberg"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#007bb5'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-2x"></i>
+    </a><a class="social mx-1"  href="https://www.youtube.com/JillianGoldberg"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#ff0000'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-youtube fa-2x"></i>
+    </a>
+
+</div><small id="attribution">
+    <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+  
+</footer>
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+
+</body>
+
+</html>

@@ -1,6 +1,7 @@
 ---
 layout: note
-permalink: /notes/cs61c-m
+title: "Fall 2021: CS 61C Midterm"
+permalink: /notes/_cs61c-m
 ---
 
 # **CS 61C Midterm Review**

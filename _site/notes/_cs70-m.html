@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="CS 70 Midterm Review">
+  <meta property="og:description" content="">
+
+  <title>CS 70 Midterm Review</title>
+  <meta name="description" content="">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Math Latex Support -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+  <!-- Theme style -->
+  <script src="/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <!-- <a class="navbar-brand" href="/"><h5><b> Jillian Goldberg </b></h5></a> -->
+  <a class="navbar-brand" href="/"> <img src="../images/jilliangoldberg-logo.png" alt="Jillian Goldberg" > </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link " href="https://berkeley.zoom.us/my/jilliangoldberg"target="_blank"></a>
+
+      <a class="nav-item nav-link " href="/about/">about</a>
+
+      <a class="nav-item nav-link " href="/blog/">blog</a>
+
+      <a class="nav-item nav-link active" href="/notes/">notes</a>
+
+      <a class="nav-item nav-link " href="/projects/">projects</a>
+
+      <a class="nav-item nav-link " href="/experience/">experience</a>
+
+      <a class="nav-item nav-link " href="https://drive.google.com/file/d/1nxD0JIPxPSoM7pxtSQ-0P4EegFgnIoks/view?usp=sharing"target="_blank">resume</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <div class="row">
+      <a class="m-1 btn btn-outline-primary btn-2 " href="../pages/notes">
+  Back to Notes
+</a>
+      <a class="m-1 btn btn-outline-primary btn-2 " href="../pages/notes">
+  Next
+</a> 
+  </div>
+
+  <h1 id="cs-70-midterm-review"><strong>CS 70 Midterm Review</strong></h1>
+
+<h3 id="number-sets-and-notation">Number Sets and Notation</h3>
+
+<p><strong>Subsets</strong></p>
+
+<ul>
+  <li><strong>Intersection</strong> = \(A \cap B\) = all elements that are in A <strong>and</strong> B</li>
+  <li><strong>Union</strong> = \(A \cup B\) = all elements in A <strong>or</strong> B</li>
+  <li><strong>Disjoint</strong> = no similar elements in a or B</li>
+  <li><strong>Relative Complement</strong> or <strong>Set Difference</strong> = \(B - A\) or \(B\) \ \(A\) = set of elements in B but not A</li>
+</ul>
+
+<p><strong>Significant Sets</strong></p>
+
+<p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-10-14%20at%2012.02.48%20PM.png" alt="Screen Shot 2021-10-14 at 12.02.48 PM" style="zoom:40%;" align="left" /></p>
+
+<h3 id="propositions">Propositions</h3>
+
+<ul>
+  <li>
+\[P \implies Q \equiv \lnot P \or Q\]
+  </li>
+  <li>
+\[\lnot (P \implies Q) \equiv (P \and \lnot Q)\]
+  </li>
+  <li>
+\[\lnot (P \and \lnot Q) \equiv (\lnot P \or Q)\]
+  </li>
+</ul>
+
+<h3 id="proofs">Proofs</h3>
+
+<p><strong>Types</strong></p>
+
+<ul>
+  <li>Direct proof
+    <ul>
+      <li>assume P is true, then prove Q</li>
+    </ul>
+  </li>
+  <li>Proof by contraposition
+    <ul>
+      <li>assume notQ is true, then prove notP</li>
+    </ul>
+  </li>
+  <li>proof by contradiction
+    <ul>
+      <li>assume the claim (P –&gt; Q) is false, then prove that it leads to a contradiction</li>
+    </ul>
+  </li>
+  <li>Proof by cases
+    <ul>
+      <li>split the claim up into cases which, when combined, encompass the entire domain of the claim</li>
+      <li>prove that the claim (P –&gt; Q) holds true in every case</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Tips</strong></p>
+
+<ul>
+  <li>prove something is true, try to find a counterexample and think about why you can’t find one</li>
+  <li>plug in the definition of any symbol or operator</li>
+  <li>if and only if = prove that P–&gt; Q and Q –&gt; P</li>
+</ul>
+
+<p><strong>Example</strong></p>
+
+<p>Prove that there are no positive integer solutions that satisfy the equation: \(x^2 - y^2 = 1\)</p>
+
+<ul>
+  <li>
+    <p>if we are trying to prove something is impossible, choose proof by contradiction</p>
+  </li>
+  <li>
+    <p>solution:</p>
+    <ul>
+      <li>assume that there are two positive integers</li>
+      <li>by factoring, \((x - y)(x + y) = 1\), so
+        <ul>
+          <li>\((x - y) = 1\) AND \((x + y) = 1\)</li>
+          <li>OR \((x - y) = -1\) AND \((x + y) = -1\)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="induction">Induction</h3>
+
+<p><strong>Steps</strong></p>
+
+<ul>
+  <li>Base Case: prove that the proposition is true for P(0)</li>
+  <li>Inductive Hypothesis: Assume that the P(k) is true (for some k)</li>
+  <li>Inductive Step: Prove that P(k+1) is true using P(k)</li>
+</ul>
+
+<p><strong>Key Idea</strong></p>
+
+<ul>
+  <li>domino effect!</li>
+  <li>
+    <p>if we prove the induction step, then P(0) =&gt; P(1), P(1) &gt;= P(2), and so on</p>
+  </li>
+  <li>ALWAYS reference the inductive hypothesis in your inductive step
+    <ul>
+      <li>how does it help the proof? CITE it!</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Strong Induction</strong></p>
+
+<ul>
+  <li>In standard induction, assuming P(k) enables you to prove P(k+1)
+    <ul>
+      <li>assume some combo of P(1), P(2), …, P(k) to prove P(k + 1)</li>
+      <li>this is still equivalent to simple induction!</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>The Game of Nim</strong></p>
+
+<ul>
+  <li>there are two non-empty piles of matches and two players, on each turn a player can remove any nonzero number of matches from any of the two piles
+    <ul>
+      <li>whoever removes the last match wins</li>
+      <li>What are the conditions under which each player can force a win?</li>
+    </ul>
+  </li>
+</ul>
+
+<p>==FILL IN==</p>
+
+<p><strong>Interesting Sequence</strong></p>
+
+<p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-10-10%20at%2012.36.19%20PM.png" alt="Screen Shot 2021-10-10 at 12.36.19 PM" style="zoom:50%;" align="left" /></p>
+
+<p><em>How to solve: strengthen hypothesis!</em></p>
+
+<ul>
+  <li>we can try to prove that \(X_n = 2^n - 1\) for all natural numbers!</li>
+  <li>Base Case
+    <ul>
+      <li>\(X_0 = 0 = 2^0 - 1\), \(X_1 = 1 = 2^1 - 1\)</li>
+    </ul>
+  </li>
+  <li>Inductive Hypothesis
+    <ul>
+      <li>assume that this holds to \(X_{n-1} = 2^{n-1} - 1\)</li>
+    </ul>
+  </li>
+  <li>Inductive Step
+    <ul>
+      <li><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-10-10%20at%2012.41.07%20PM.png" alt="Screen Shot 2021-10-10 at 12.41.07 PM" style="zoom:50%;" align="left" /></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="stable-matching">Stable Matching</h3>
+
+<p><strong>Overview</strong></p>
+
+<ul>
+  <li>two sides (i.e., not the roommates problem)
+    <ul>
+      <li>J = Jobs, C = Candidates</li>
+    </ul>
+  </li>
+  <li>ranked preference lists</li>
+  <li>create stable pairing, aka no rogue couples
+    <ul>
+      <li>rogue couple (J, C) exists if both J and C prefer each other to their current partner</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Propose and Reject Algorithm</strong></p>
+
+<ul>
+  <li>Job optimal and candidate pessimal
+    <ul>
+      <li>aka works in favor of the job preferences (prove this by contradiction)</li>
+      <li>a candidate could never get proposed to by their top choice job because the jobs could have been accepted by a diff candidate</li>
+    </ul>
+  </li>
+  <li>How it works:
+    <ol>
+      <li>Every job proposes to their fav candidate who hasn’t already rejected it</li>
+      <li>Each candidate rejects all but their most preferred job and saves that job</li>
+      <li>Each rejectd job removes the candidate who rejected it</li>
+    </ol>
+  </li>
+  <li>
+    <p>Once no job is rejected, and everyone has one proposal, they accept!</p>
+  </li>
+  <li>Halts = n elements on 2 lists has finite combos</li>
+  <li>Improvment Lemma
+    <ul>
+      <li>once a candidate gets proposed to, they will only ever stay the same or improve</li>
+      <li>Proof by Well-Ordering or Induction (on the days during the matching)</li>
+    </ul>
+  </li>
+  <li>Terminates with everyone paired by improvement lemma</li>
+  <li>Produces stable pairings
+    <ul>
+      <li>uses improvement lemma: one rogue couple member rejected in favor of stable partner</li>
+    </ul>
+  </li>
+  <li>Rogue Couple = there is a man and a woman who prefer each other to their current partners</li>
+</ul>
+
+<p><strong>Notes about SMP and Propose-and-Reject</strong></p>
+
+<ul>
+  <li>for Stable Matching Problem
+    <ul>
+      <li>it helps to argue for rogue couples</li>
+      <li>does NOT prove anything for overall pairs</li>
+    </ul>
+  </li>
+  <li>Propose and Reject
+    <ul>
+      <li>use the algorithm with your proof, with induction or the well-ordering principle</li>
+      <li>well-ordering principle = there is always a “least element”</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="graphs">Graphs</h3>
+
+<ul>
+  <li><strong>Walk</strong> - A sequence of vertices and edges, where the edges connect the adjacent vertices in the sequence</li>
+  <li><strong>Tour</strong> - a walk with no repeated <strong>edges</strong> and ends where it began</li>
+  <li><strong>Path</strong> - a walk with no repeated <strong>vertices</strong> (and thus no repeated edges either)If a walk or path has \(v_0 = v_n\), it is <strong>closed</strong>, else it is <strong>open</strong></li>
+  <li><strong>Cycle</strong> = A walk with no repeated vertices except for \(v_0 = v_n\)</li>
+</ul>
+
+<p><strong>Summary</strong></p>
+
+<ul>
+  <li>Paths and Cycles <strong>cannot</strong> repeat edges; Walks and Tours <strong>can</strong> repeat edges.</li>
+  <li>Paths and Walks start and end at <strong>different</strong> places; Cycles and Tours start and end at the <strong>same</strong> place.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Can Repeat Edges</th>
+      <th>Cannot Repeat Edges</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Start and End at Diff Places</strong></td>
+      <td>Walk</td>
+      <td>Path</td>
+    </tr>
+    <tr>
+      <td><strong>Start and End at Same Places</strong></td>
+      <td>Tour</td>
+      <td>Cycle</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li><strong>Hamiltonian walk</strong> = a walk that visits each <strong>vertex</strong> in a graph exactly once.
+    <ul>
+      <li>If it ends where it began (is closed), it’s a <strong>Hamiltonian</strong> <strong>tour</strong></li>
+    </ul>
+  </li>
+  <li><strong>Eulerian walk</strong> = visits every <strong>edge</strong> exactly once
+    <ul>
+      <li>If it ends at the same vertex, it’s a <strong>Eulerian tour</strong></li>
+    </ul>
+  </li>
+  <li>If it is a straight line, it is <strong>both</strong> a Eulerian and Hamiltonian walk!</li>
+</ul>
+
+<p><strong>Graphs</strong></p>
+
+<ul>
+  <li>in a disconnected graph, with k vertices in one group and n-k in the other, the maximum edges they can have is \(\frac{k(k−1)}{2} + \frac{(n−k)(n−k−1)}{2}\)</li>
+</ul>
+
+<p><strong>Trees</strong></p>
+
+<ul>
+  <li>every path has 2 leaves</li>
+  <li>To translate a n-dimensional hypercube to a tree, trees must have \(2^n-1\) edges</li>
+</ul>
+
+<p><strong>Planarity</strong></p>
+
+<ul>
+  <li>a graph is planar if you can draw it in a plane (draw it on paper without crossing edges)</li>
+  <li><strong>Euler’s Formula:</strong> v + f - e = 2</li>
+  <li>Planar graphs with v &gt;= 3 satisfy Euler’s formula (\(v + f = e + 2\))
+    <ul>
+      <li>Euler’s formula cannot verify of a graph is planar, because nonplanar graphs don’t have faces!</li>
+    </ul>
+  </li>
+  <li><strong>Euler’s Corollary</strong> = all planar graphs satisfy <em>e</em> ≤ 3<em>v</em> - 6, but the converse is <em>not</em> true.</li>
+  <li><strong>Kuratowski’s theorem</strong> = a graph is planar if and only if it doesn’t “contain” \(K_5\) or \(K_{3,3}\)</li>
+</ul>
+
+<p><strong>Hypercubes</strong></p>
+
+<ul>
+  <li>generalization of cubes in higher dimensions</li>
+  <li>\((n+1)\)-dimensional hypercube generated by combining two n-dimensional hypercubes
+    <ul>
+      <li>2 connected lines = square</li>
+      <li>2 connected squares = cube</li>
+    </ul>
+  </li>
+  <li>each edge can only connect vertices that differ by one bit
+    <ul>
+      <li>x = 0000 and y = 1000 are neighbors</li>
+      <li>x = 000 and y = 101 are not neighbors</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/Users/jilliangoldberg/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-10-11%20at%204.55.13%20PM.png" alt="Screen Shot 2021-10-11 at 4.55.13 PM" style="zoom:50%;" /></p>
+
+<h3 id="modular-arithmetic">Modular Arithmetic</h3>
+
+<p><strong>Properties</strong></p>
+
+<ul>
+  <li>in mod n space, all objects are in {0, 1, 2, … , n - 1}</li>
+  <li>DEFINITION: \(a \equiv b\) (mod n) <strong>iff</strong> \(a = kn + b\) for some integer k</li>
+  <li>you can add, subtract, and multiple, but NOT divide</li>
+  <li>for all integers x and y, there exists a, b where ax + by = d where d = gcd(x, y)</li>
+  <li>when x, n are coprime
+    <ul>
+      <li>x has an inverse mod n</li>
+    </ul>
+  </li>
+  <li>when n is prime
+    <ul>
+      <li>all nonzero elements in mod n space have an inverse</li>
+      <li>this space is a field –&gt; GF(n)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Example 1</strong></p>
+
+<p>==FILL IN==</p>
+
+<p><strong>Extended Euclid Example</strong></p>
+
+<p>==FILL IN==</p>
+
+<p><strong>Fermat’s Little Theorem (FLT)</strong></p>
+
+<ul>
+  <li>huge powers? how to do this using mod</li>
+  <li>if \(a\) = # of colors and \(p\) = length
+    <ul>
+      <li>there are \(a^p - a\) number of strings, since we need to subtract the strings with only 1 type of \(a\)</li>
+      <li>each string can be rotated \(p\) times to get the same string if the number is <strong>prime</strong>, so we know that \(a^p - a\) is divisible by p</li>
+    </ul>
+  </li>
+  <li>modular arithmetic
+    <ul>
+      <li>\(\frac{a^p}{p} = x\) remainder \(a\)</li>
+      <li>aka ==\(a^p \equiv a\) (mod \(p\))==</li>
+    </ul>
+  </li>
+  <li>if p is prime, p does not divide a, and a &gt; 0
+    <ul>
+      <li>\(a^{p-1} \equiv 1\) (mod \(p\))</li>
+      <li>By FLT, we have \(a^x \equiv a^{x(mod (p-1))}\) (mod p)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Chinese Remainder Theorem</strong></p>
+
+<ul>
+  <li>Given <em>x =</em> 13 (mod 15), we can convert it to <em>x</em> = (3, 1)</li>
+  <li>Can we convert back from <em>x</em> = (3, 1) (mod 5, mod 3) to <em>x =</em> 13 (mod 15)?</li>
+  <li>Solve:
+    <ul>
+      <li>mod 15 is a vector space</li>
+      <li>we need to convert (3, 1) to mod 15 space</li>
+      <li>use basis vectors 6 (0 mod 3, 1 mod 5) and 10 (1 mod 3, 0 mod 5)
+        <ul>
+          <li>==look at how tf to dO tHIS==</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Chinese Remainder Theorem</strong></p>
+
+<ul>
+  <li>first make sure that all nums we are mod-ing by (mod __) have a gcd = 1 when compared to each other</li>
+  <li></li>
+</ul>
+
+<h3 id="rsa">RSA</h3>
+
+<p><strong>Terminology</strong></p>
+
+<ul>
+  <li>
+\[N = pq\]
+  </li>
+  <li>
+\[E(x) = x^e (mod N)\]
+  </li>
+  <li>\(D(x) = x^d (mod N)\), \(d = e^{-1} (mod (p-1)(q-1))\)</li>
+  <li>Public key: (N, e)</li>
+  <li>Private key: d</li>
+  <li>How it works
+    <ul>
+      <li>Alice calculates N by picking 2 prime numbers and multiplying them together to get N</li>
+      <li>then calculate \(\phi (N)\) which we know is \((p-1)(q-1)\) which is how many numbers from 1 to N are relatively prime to \(N\)
+        <ul>
+          <li>whenever p and q are prime, the phi of \(N = (p-1)(q-1)\)</li>
+        </ul>
+      </li>
+      <li>then she picks a public exponent \(e\), which must be an odd number that does not share a factor with \(\phi (N)\)</li>
+      <li>find the value of the private key \(d =(2 * (3016) + 1)/3 = 2011\)</li>
+      <li>then Alice hides everything except (N, e)</li>
+      <li>send this to Bob as an open lock and let him put the message in</li>
+      <li>Bob calculates his encrpted message \(m\) by doing \(m^e\) (mod \(N\)) and sends it back to alice</li>
+      <li>Since Alice has her key d, she can do \(m^d\) (mod N) = the original message!</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Example</strong></p>
+
+<p>==practice this bruh==</p>
+
+<h3 id="polynomials">Polynomials</h3>
+
+<p><strong>Terminology</strong></p>
+
+<ul>
+  <li>
+\[p(x) = a_dx^d + a_{d-1}x^{d-1} … + a_0\]
+  </li>
+  <li>If \(a_d ≠ 0\), d is the degree of p(x)</li>
+  <li>c is a zero of polynomial p if p(c)=0</li>
+  <li>Can be mod q - GF(q)</li>
+</ul>
+
+<p><strong>Properties</strong></p>
+
+<ul>
+  <li>if p is not the zero polynomial and is of degree d, it has at most d roots</li>
+  <li>a degree d polynomial is uniquely defined by d + 1 points
+    <ul>
+      <li>like \((x, p(x))\)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Interpolation</strong></p>
+
+<ul>
+  <li>Say we have (d + 1) points of a polynomial p</li>
+  <li>How do we construct a polynomial that fits these points?</li>
+  <li>Let the points and evaluations be \((a_i, p(a_i))\), where i can go from 0 to d.</li>
+</ul>
+
+<p><strong>Lagrange Interpolation</strong></p>
+
+<p>==REVIEW AND PRACTICE THIS==</p>
+
+<p><strong>Example</strong></p>
+
+<ul>
+  <li>Two non-zero polynomials \(p(x)\) and \(q(x)\) of degree d over \(GF(m)\) have r unique roots and s unique roots respectively.
+    <ul>
+      <li>What is the maximum number of unique roots for the polynomial \(p(x)q(x)\)? Answer may include d, r, and s.</li>
+    </ul>
+  </li>
+  <li>Answer: \(min(m, r + s)\). There can’t be more than m roots, or any new roots that are not roots of p and q.</li>
+</ul>
+
+<p><strong>Polynomial Applications</strong></p>
+
+<ul>
+  <li>Secret sharing</li>
+  <li>Error-correcting codes</li>
+</ul>
+
+<p><strong>Secret Sharing</strong></p>
+
+<ul>
+  <li>Say we have a secret that we need at least k people to be able recover.</li>
+  <li>We know that we need \((d + 1)\) points to recover a polynomial of degree d.</li>
+</ul>
+
+<p>==pick up at slide 145!==</p>
+
+<h3 id="counting">Counting</h3>
+
+<p><em>Sampling k items from n choices:</em></p>
+
+<p><strong>Order matters</strong></p>
+
+<ul>
+  <li>with replacement = \(n^k\)</li>
+  <li>without replacement = \(\frac{n!}{(n-k)!}\)</li>
+</ul>
+
+<p><strong>Order doesn’t matter</strong></p>
+
+<ul>
+  <li>with replacement = \((n + k - 1\) choose \(n-1\) )</li>
+  <li>without replacement = \(\frac{n!}{(n-k)!k!}\)</li>
+</ul>
+
+<p><strong>Example</strong></p>
+
+<ul>
+  <li>balls and bins! the dividers are the 1s and balls are 0s so u just have to figure out where to put the 1s!!!! THIS MAKES SENSE OMFG</li>
+</ul>
+
+<h3 id="gcd-algorithm">GCD Algorithm</h3>
+
+<ul>
+  <li>
+    <p>Algorithm:</p>
+
+    <ul>
+      <li>
+        <p>If A = 0 then GCD(A,B)=B, since the GCD(0,B)=B, and we can stop.</p>
+      </li>
+      <li>
+        <p>If B = 0 then GCD(A,B)=A, since the GCD(A,0)=A, and we can stop.</p>
+      </li>
+      <li>
+        <p>Write A in quotient remainder form (A = B⋅Q + R)</p>
+      </li>
+      <li>
+        <p>Find GCD(B,R) using the Euclidean Algorithm since GCD(A,B) = GCD(B,R)</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+\[x - y &lt; x/2\]
+    <ul>
+      <li>so \(y &gt; x/2\)</li>
+    </ul>
+  </li>
+  <li>if \(gcd(x, y) = 1\) then a and b are coprime</li>
+  <li>proves that the gcd algorithm’s first argument decreases by a factor of two every other iteration</li>
+  <li>How it works:
+    <ul>
+      <li>\(gcd(m,n) = gcd(n, m\) mod \(n)\)</li>
+      <li>continue computing until there is a remainder of 0</li>
+    </ul>
+  </li>
+</ul>
+
+
+</div>
+  </main>
+
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <!-- <i class="fas fa-code"></i> with <i class="fas fa-heart"></i> -->
+    Designed by <strong>Jillian Goldberg</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:jilliangoldberg@berkeley.edu"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-2x"></i>
+    </a><a class="social mx-1"  href="https://www.facebook.com/jillian.goldberg.71"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#3b5998'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-facebook fa-2x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/jilliangoldberg"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-2x"></i>
+    </a><a class="social mx-1"  href="https://www.linkedin.com/in/jilliangoldberg"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#007bb5'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-2x"></i>
+    </a><a class="social mx-1"  href="https://www.youtube.com/JillianGoldberg"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#ff0000'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-youtube fa-2x"></i>
+    </a>
+
+</div><small id="attribution">
+    <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+  
+</footer>
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+
+</body>
+
+</html>
