@@ -1,9 +1,9 @@
 ---
-title: A better Hello World
+title: Placeholder
 tags: [Software Development]
 style: fill
-color: dark
-description: A different “hello world” to demonstrate language features better.
+color: info
+description: Placeholder
 ---
 
 Source: [RICO STA. CRUZ](https://ricostacruz.com/til/a-better-hello-world)

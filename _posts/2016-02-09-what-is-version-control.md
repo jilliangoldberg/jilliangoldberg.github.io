@@ -1,10 +1,10 @@
 ---
-title: What is version control?
+title: Placeholder
 tags: [Version Control]
 style: fill
 color: secondary
 comments: true
-description: Benefits of version control and version control systems.
+description: Placeholder
 ---
 
 Source: [atlassian](https://www.atlassian.com/git/tutorials/what-is-version-control)

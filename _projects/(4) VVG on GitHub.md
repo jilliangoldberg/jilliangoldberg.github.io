@@ -1,7 +1,7 @@
 ---
-name: Coding Like Vincent Van Gogh
+name: Placeholder
 tools: [Support, Author, VVG]
 image:
-description: Show some support by following me!
+description: placeholder
 external_url: https://github.com/YoussefRaafatNasry
 ---

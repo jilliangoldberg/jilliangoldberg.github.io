@@ -9,7 +9,7 @@ weight: 2
 <h2></h2>
 
 #### **[Winter 2021: Machine Learning Scikit/Tensorflow](../notes/ml-book)**
-My notes for [Hands-On Machine Learning with Scikit and Tensorflow], written by Aurélien Geron. 
+My notes for [Hands-On Machine Learning with Scikit and Tensorflow](https://www.amazon.com/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/1492032646), written by Aurélien Geron. Highly recommend! Ranked #1 Best Seller in NLP books and goes through the various types of machine learning types and tools.
 <br/><br/> 
 
 #### **[Fall 2021: CS 70 Final](../notes/cs70-f)**
@@ -21,7 +21,7 @@ My final notes for [CS 61C, Great Ideas in Computer Archictecture](https://cs61c
 <br/><br/> 
 
 #### **[Fall 2021: Chinese 1A](../notes/chinese-1a)**
-My midterm notes for Chinese 1A, taught by 张老师. This course covers topics such as greetings, hobbies, date/time, food, travel, and more.
+My midterm notes for [Chinese 1A](https://ealc.berkeley.edu/courses/detail/fall-2018/1a/1/elementary-chinese), taught by [张老师 (Lihua Zhang)](https://ealc.berkeley.edu/people/zhang-lihua), aka the sweetest professor! This course covers topics such as greetings, hobbies, date/time, food, travel, and more.
 <br/><br/> 
 
 #### **[Fall 2021: CS 70 Midterm](../notes/cs70-m)**

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Winter 2021: Machine Learning Scikit/Tensorflow">
+  <meta property="og:description" content="">
+
+  <title>Winter 2021: Machine Learning Scikit/Tensorflow</title>
+  <meta name="description" content="">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Math Latex Support -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+  <!-- Theme style -->
+  <script src="/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <!-- <a class="navbar-brand" href="/"><h5><b> Jillian Goldberg </b></h5></a> -->
+  <a class="navbar-brand" href="/"> <img src="../images/jilliangoldberg-logo.png" alt="Jillian Goldberg" > </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link " href="https://berkeley.zoom.us/my/jilliangoldberg"target="_blank"></a>
+
+      <a class="nav-item nav-link " href="/about/">about</a>
+
+      <a class="nav-item nav-link " href="/blog/">blog</a>
+
+      <a class="nav-item nav-link active" href="/notes/">notes</a>
+
+      <a class="nav-item nav-link " href="/projects/">projects</a>
+
+      <a class="nav-item nav-link " href="/experience/">experience</a>
+
+      <a class="nav-item nav-link " href="https://drive.google.com/file/d/1nxD0JIPxPSoM7pxtSQ-0P4EegFgnIoks/view?usp=sharing"target="_blank">resume</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <div class="row">
+      <a class="m-1 btn btn-outline-primary btn-2 " href="../notes">
+  Back to Notes
+</a>
+      <a class="m-1 btn btn-outline-primary btn-2 " href="../notes">
+  Next
+</a> 
+  </div>
+
+  <h1 id="machine-learning-scikittensorflow"><strong>Machine Learning Scikit/Tensorflow</strong></h1>
+
+<h2 id="chapter-1-the-machine-learning-landscape"><strong>Chapter 1: The Machine learning Landscape</strong></h2>
+
+<h3 id="what-is-it"><strong>What is it?</strong></h3>
+<p>Machine learning is the science and art of programming computers so they can <strong>learn from data.</strong> It automatically (or is told to) learn patterns from data by detecting the frequency at which certain events occur.</p>
+
+<p><img src="ml-book-images/1.png" align="left" style="zoom:40%" /></p>
+
+<p><strong>Machine learning is great for:</strong></p>
+<ol>
+  <li><strong>Simplifying</strong> the solution to complex problems</li>
+  <li><strong>Identifying</strong> a solution for complex problems that have yet to find a solution</li>
+  <li><strong>Adapting</strong> to dynamic environments and new data</li>
+  <li><strong>Getting</strong> insights and drawing patterns from large amounts of data</li>
+</ol>
+
+<h3 id="types-of-machine-learning"><strong>Types of Machine Learning</strong></h3>
+<p><strong>Supervised Learning</strong> is when you give an algorithm training data, which include labels, to train a model to recognize certain patterns. A common example of this is <strong>classification</strong>, such as the spam filter that learns how to sort emails into their respective classes (spam or ham). <strong>Regression</strong> is another typical task, where a model can be trained to predict a target number, such as the price of a car or house.</p>
+
+<p><strong>Supervised Learning Algorithms:</strong></p>
+<ul>
+  <li>k-Nearest Neighbor</li>
+  <li>Linear Regression</li>
+  <li>Logistic Regression</li>
+  <li>Support Vector Machines (SVMs)</li>
+  <li>Decision Trees and Random Forests</li>
+  <li>Neural networks</li>
+</ul>
+
+<p><strong>Unsupervised Learning</strong> is the opposite; the training data is unlabeled and it’s up to the model to learn and identify patterns. One example of this is clustering users of an app based on their behavior and demographics. An important task within unsupervised learning is <strong>dimensionality reduction</strong>, which is to simplify data without losing too much information; this is done by looking at which correlated features can be merged into one all-encompassing feature.</p>
+
+<p><strong>Unsupervised Learning Algorithms</strong>:</p>
+<ul>
+  <li>Clustering
+    <ul>
+      <li>k-Means</li>
+      <li>Hierarchical Cluster Analysis (HCA)</li>
+      <li>Expectation Maximization</li>
+    </ul>
+  </li>
+  <li>Visualization and dimensionality reduction
+    <ul>
+      <li>Principal Component Analysis (PCA)</li>
+      <li>Kernel PCA</li>
+      <li>Locally-Linear Embedding (LLE)</li>
+      <li>t-distributed Stochastic Neighbor Embedding (t-SNE)</li>
+    </ul>
+  </li>
+  <li>Association rule learning
+    <ul>
+      <li>Apriori</li>
+      <li>Eclat</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Reinforcement Learning</strong>, on the other hand, depends on an <em>agent</em> in an environment. It takes a trial and error strategy, allowing the agent to select and perform actions and receive corresponding rewards, encouraging it to learn the <strong>best policy</strong> to get the highest reward overtime.</p>
+
+<p><strong>Batch Learning</strong>, also called offline learning is a type of machine learning that requires all information at one time to make conclustions on patterns. In contrast, <strong>Online Learning</strong> allows a system to be trained incrementally, making it able to grasp new insights as it trains.Online learning is much faster, cheaper, and great for systems that are continuously receiving new data.</p>
+
+<p><strong>Instance-Based Learning</strong> uses similarity metrics to flag similar occurances based on certain features. For example, with a spam filter, an instance-based learning would identify a new occurance based on (a very basic example) the number of mispelled words and how similar it is to a known email occurance</p>
+
+<p><img src="ml-book-images/2.png" align="left" style="zoom:40%" /></p>
+
+<p>In contrast, <strong>Model-Based Learning</strong> builds a model, such as linear, quadratic, exponential, etc. with these examples based on features and categorizes new instances based on where it falls in the model. The model-based learning model would use the previous features and identify the new instance based on where it falls in the model.</p>
+
+<p><img src="ml-book-images/3.png" align="left" style="zoom:40%" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import matplotlib
+import matplotlib.pyplot as plt import numpy as np
+import pandas as pd
+import sklearn
+# Load the data
+oecd_bli = pd.read_csv("oecd_bli_2015.csv", thousands=',')
+gdp_per_capita = pd.read_csv("gdp_per_capita.csv",thousands=',',delimiter='\t',
+encoding='latin1', na_values="n/a")
+# Prepare the data
+country_stats = prepare_country_stats(oecd_bli, gdp_per_capita) X = np.c_[country_stats["GDP per capita"]]
+y = np.c_[country_stats["Life satisfaction"]]
+# Visualize the data
+country_stats.plot(kind='scatter', x="GDP per capita", y='Life satisfaction') plt.show()
+# Select a linear model
+lin_reg_model = sklearn.linear_model.LinearRegression() # Train the model
+ 
+lin_reg_model.fit(X, y)
+# Make a prediction for Cyprus
+X_new = [[22587]] # Cyprus' GDP per capita print(lin_reg_model.predict(X_new)) # outputs [[ 5.96242338]]
+</code></pre></div></div>
+
+<h3 id="challenges-in-machine-learning">Challenges in Machine Learning</h3>
+
+<p><strong>Bad Data</strong></p>
+<ul>
+  <li>insufficient quality of training data</li>
+  <li>nonrepresentative training data</li>
+  <li>poor quality data with outliers and noise</li>
+  <li>irrelevent features
+<strong>Bad Model</strong></li>
+</ul>
+
+<h3 id="testing-and-validating">Testing and Validating</h3>
+
+<p>It is common to have an <strong>80/20 split</strong> for training and testing data. However, a more rigorous way to test for the most optimal model is to have a second holdout set called a <strong>validation set</strong>, which would aid in selecting the correct model.</p>
+
+<h2 id="chapter-2-end-to-end-machine-learning-project"><strong>Chapter 2: End-to-End Machine Learning Project</strong></h2>
+
+<p><strong>Main Steps:</strong></p>
+<ol>
+  <li>Look at the big picture.</li>
+  <li>Get the data.</li>
+  <li>Discover and visualize the data to gain insights.</li>
+  <li>Prepare the data for Machine Learning algorithms.</li>
+  <li>Select a mode land train it.</li>
+  <li>Fine-tune your model.</li>
+  <li>Present your solution.</li>
+  <li>Launch, monitor, and maintain your system.</li>
+</ol>
+
+<h2 id="chapter-4-training-models">Chapter 4: Training Models</h2>
+
+<h3 id="linear-regression-model">Linear Regression Model</h3>
+<p>There are two different ways to train a linear regression model: using a direct <strong>“closed-form” equation</strong> or an iterative optimization approach, or <strong>Gradient Descent</strong> (GD).</p>
+
+<h4 id="closed-form">Closed-Form</h4>
+<p>The linear model makes a prediction through a weighted sum of different input features, plus a bias term (the y-intercept):</p>
+
+<p>$y = \theta_0 + \theta_1x_1 + \theta_2x_2 + … + \theta_{n}x_n$</p>
+
+<p>y = predicted value, n = # of features, $x_i$ is the ith feature value, and $\theta_{j}$ is the jth model parameter aka feature weights ($\theta_0$ is the bias).</p>
+
+<p><strong>Vectorized Form</strong>
+Simplified in vectorized form: $y = h_\theta(x) = \theta^T * x$. This equation turns the $\theta^T$ into a parameter row vector, and x is the feature column vector (x_0 = 1 for the bias). The dot product of the two is the hypothesis function $h_{\theta}$.</p>
+
+<p><strong>Training</strong>
+The most common performance of a regression model is the Root Mean Squares Error (RMSE), which can be found with the Mean Square Error, which converges easier than the RMSE and leads to the same result.</p>
+
+<p>$MSE(X, h_{\theta}) = \frac{1}{m} \sum^m_{i=1} (\theta^T * x^i - y^i)^2$</p>
+
+<p><strong>The Normal Equation</strong>
+We can get the minimizing $\theta$ value with a closed-form solution called the normal equation: $\theta = (X^T * X)^{-1} * X^T * y$, where $y$ is a vector of target values.</p>
+
+<p><strong>Raw Example</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; import numpy as np
+&gt;&gt;&gt; X_b = np.c_[np.ones((100, 1)), X]   # add x0 = 1 to each instance
+&gt;&gt;&gt; theta_best = np.linalg.inv(X_b.T.dot(X_b)).dot(X_b.T).dot(y)
+&gt;&gt;&gt; theta_best
+array([[ 4.21509616], [ 2.77011339]])
+&gt;&gt;&gt; X_new = np.array([[0], [2]])
+&gt;&gt;&gt; X_new_b = np.c_[np.ones((2, 1)), X_new]   # add x0 = 1 to each instance 
+&gt;&gt;&gt; y_predict = X_new_b.dot(theta_best)
+&gt;&gt;&gt; y_predict
+array([[ 4.21509616], [ 9.75532293]])
+</code></pre></div></div>
+
+<p><strong>Scikit Example</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; from sklearn.linear_model import LinearRegression 
+&gt;&gt;&gt; lin_reg = LinearRegression()
+&gt;&gt;&gt; lin_reg.fit(X, y)
+&gt;&gt;&gt; lin_reg.intercept_, lin_reg.coef_
+(array([ 4.21509616]), array([[ 2.77011339]])) 
+&gt;&gt;&gt; lin_reg.predict(X_new)
+array([[ 4.21509616],[ 9.75532293]])
+</code></pre></div></div>
+<p><strong>Complexity</strong>
+Since the Normal Equation computes the inverse of an $n \times n$ matrix, it gets more computationally complex, typically $O(n^{2.4}) -O(n^3)$. But, it is linear with the number of instances in the training set $(O(m))$, so it can handle large memory well.</p>
+
+<h4 id="gradient-descent">Gradient Descent</h4>
+<p>Gradient descent is an optimization algorithm, designed to iterate on its parameters until it finds a minimum.</p>
+
+<p><strong>Here’s how it goes:</strong>
+Start with <em>random initialization</em> by filling $\theta$ with random values. Then improve the $\theta$ values gradually by taking baby steps (determined by the <em>learning rate</em>) to decrease the cost function (the MSE) until the algorithm converges to a minimum.</p>
+
+<p><img src="ml-book-images/4.png" align="left" style="zoom:40%" /></p>
+
+<p><strong>Challenges</strong></p>
+
+<p>It’s important to choose a learning rate carefully; too small and it will take too long to converge, but too high and it might jump accross the valley – missing the minimum completely. While not all cost ufunctions look like nice quadratic functions, the MSE cost function for the Linear Regression model <em>is</em> a <strong>convex function</strong>, which means that Gradient Descent is <strong>guaranteed</strong> to eventually find a global minimum.</p>
+
+<p><strong>Tip:</strong> When using gradient descent, all features should have a similar scale (such as using Scikit’s <code class="language-plaintext highlighter-rouge">StandardScaler</code> class).</p>
+
+<h4 id="batch-gradient-descent">Batch Gradient Descent</h4>
+<p>To implement Gradient Descent, we need the gradient of the cost function with regards to each model parameter $\theta_j$ to quantify how much the cost function would change by changing that one parameter – the partial derivative. Essentially, we are finding the slope of the mountain</p>
+
+
+</div>
+  </main>
+
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <!-- <i class="fas fa-code"></i> with <i class="fas fa-heart"></i> -->
+    Designed by <strong>Jillian Goldberg</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:jilliangoldberg@berkeley.edu"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-2x"></i>
+    </a><a class="social mx-1"  href="https://www.facebook.com/jillian.goldberg.71"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#3b5998'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-facebook fa-2x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/jilliangoldberg"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-2x"></i>
+    </a><a class="social mx-1"  href="https://www.linkedin.com/in/jilliangoldberg"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#007bb5'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-2x"></i>
+    </a><a class="social mx-1"  href="https://www.youtube.com/JillianGoldberg"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#ff0000'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-youtube fa-2x"></i>
+    </a>
+
+</div><small id="attribution">
+    <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+  
+</footer>
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+
+</body>
+
+</html>

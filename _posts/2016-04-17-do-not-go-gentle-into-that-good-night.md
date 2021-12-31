@@ -1,9 +1,9 @@
 ---
-title: Do not go gentle into that good night
+title: Placeholder
 tags: [Poetry]
 style: fill
 color: light
-description: 
+description: Placeholder
 ---
 
 Do not go gentle into that good night,  
