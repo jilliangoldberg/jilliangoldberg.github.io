@@ -1,6 +1,6 @@
 ### Site Settings ###
 title               : Jillian Goldberg
-header-logo          : ../images/jilliangoldberg-logo.png
+header-logo          : ../media/jilliangoldberg-logo.png
 
 description         : 
 baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
@@ -26,11 +26,14 @@ nav_exclude:                                            # The following paths ar
   - pages/notes/chinese-1a.md
   - pages/notes/cs188-m.md
   - pages/notes/ml-book.md
+  - pages/notes/eecs16a-m1.md
+  - pages/notes/eecs16a-m2.md
+  - pages/notes/eecs16a-f.md
 
 ### Author Info ###
 author:
   name              : Jillian Goldberg
-  image             : images/headshot-sp21.jpg
+  image             : media/headshot-sp21.jpg
   email             : jilliangoldberg@berkeley.edu
   facebook          : jillian.goldberg.71
   github            : jilliangoldberg

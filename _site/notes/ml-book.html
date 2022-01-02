@@ -57,7 +57,7 @@
     <nav class="navbar navbar-expand-lg navbar-themed">
 
   <!-- <a class="navbar-brand" href="/"><h5><b> Jillian Goldberg </b></h5></a> -->
-  <a class="navbar-brand" href="/"> <img src="../images/jilliangoldberg-logo.png" alt="Jillian Goldberg" > </a>
+  <a class="navbar-brand" href="/"> <img src="../media/jilliangoldberg-logo.png" alt="Jillian Goldberg" > </a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <i class="fas fa-1x fa-bars text-themed"></i>
@@ -65,6 +65,14 @@
 
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto"><a class="nav-item nav-link " href="https://berkeley.zoom.us/my/jilliangoldberg"target="_blank"></a>
+
+      <a class="nav-item nav-link " href="/archives/2016-04-17-do-not-go-gentle-into-that-good-night">Placeholder</a>
+
+      <a class="nav-item nav-link " href="/archives/2016-07-23-a-better-hello-world">Placeholder</a>
+
+      <a class="nav-item nav-link " href="/archives/2017-01-01-github-flow">GitHub Flow</a>
+
+      <a class="nav-item nav-link " href="/archives/2016-02-09-what-is-version-control">Placeholder</a>
 
       <a class="nav-item nav-link " href="/about/">about</a>
 
@@ -102,7 +110,7 @@
 <h3 id="what-is-it"><strong>What is it?</strong></h3>
 <p>Machine learning is the science and art of programming computers so they can <strong>learn from data.</strong> It automatically (or is told to) learn patterns from data by detecting the frequency at which certain events occur.</p>
 
-<p><img src="ml-book-images/1.png" align="left" style="zoom:40%" /></p>
+<p><img src="../media/ml-book-images/1.png" style="zoom:30%" /></p>
 
 <p><strong>Machine learning is great for:</strong></p>
 <ol>
@@ -158,14 +166,16 @@
 
 <p><strong>Instance-Based Learning</strong> uses similarity metrics to flag similar occurances based on certain features. For example, with a spam filter, an instance-based learning would identify a new occurance based on (a very basic example) the number of mispelled words and how similar it is to a known email occurance</p>
 
-<p><img src="ml-book-images/2.png" align="left" style="zoom:40%" /></p>
+<p><img src="../media/ml-book-images/2.png" style="zoom:30%" /></p>
 
 <p>In contrast, <strong>Model-Based Learning</strong> builds a model, such as linear, quadratic, exponential, etc. with these examples based on features and categorizes new instances based on where it falls in the model. The model-based learning model would use the previous features and identify the new instance based on where it falls in the model.</p>
 
-<p><img src="ml-book-images/3.png" align="left" style="zoom:40%" /></p>
+<p><img src="../media/ml-book-images/3.png" style="zoom:30%" /></p>
 
+<p><strong>Example of Model Based Learning Implemented</strong></p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import matplotlib
-import matplotlib.pyplot as plt import numpy as np
+import matplotlib.pyplot as plt 
+import numpy as np
 import pandas as pd
 import sklearn
 # Load the data
@@ -185,7 +195,7 @@ lin_reg_model.fit(X, y)
 X_new = [[22587]] # Cyprus' GDP per capita print(lin_reg_model.predict(X_new)) # outputs [[ 5.96242338]]
 </code></pre></div></div>
 
-<h3 id="challenges-in-machine-learning">Challenges in Machine Learning</h3>
+<h3 id="challenges-in-machine-learning"><strong>Challenges in Machine Learning</strong></h3>
 
 <p><strong>Bad Data</strong></p>
 <ul>
@@ -196,7 +206,7 @@ X_new = [[22587]] # Cyprus' GDP per capita print(lin_reg_model.predict(X_new)) #
 <strong>Bad Model</strong></li>
 </ul>
 
-<h3 id="testing-and-validating">Testing and Validating</h3>
+<h3 id="testing-and-validating"><strong>Testing and Validating</strong></h3>
 
 <p>It is common to have an <strong>80/20 split</strong> for training and testing data. However, a more rigorous way to test for the most optimal model is to have a second holdout set called a <strong>validation set</strong>, which would aid in selecting the correct model.</p>
 
@@ -214,28 +224,28 @@ X_new = [[22587]] # Cyprus' GDP per capita print(lin_reg_model.predict(X_new)) #
   <li>Launch, monitor, and maintain your system.</li>
 </ol>
 
-<h2 id="chapter-4-training-models">Chapter 4: Training Models</h2>
+<h2 id="chapter-4-training-models"><strong>Chapter 4: Training Models</strong></h2>
 
-<h3 id="linear-regression-model">Linear Regression Model</h3>
+<h3 id="linear-regression-model"><strong>Linear Regression Model</strong></h3>
 <p>There are two different ways to train a linear regression model: using a direct <strong>“closed-form” equation</strong> or an iterative optimization approach, or <strong>Gradient Descent</strong> (GD).</p>
 
-<h4 id="closed-form">Closed-Form</h4>
+<h4 id="closed-form"><strong>Closed-Form</strong></h4>
 <p>The linear model makes a prediction through a weighted sum of different input features, plus a bias term (the y-intercept):</p>
 
-<p>$y = \theta_0 + \theta_1x_1 + \theta_2x_2 + … + \theta_{n}x_n$</p>
+\[y = \theta_0 + \theta_1x_1 + \theta_2x_2 + ... + \theta_{n}x_n\]
 
-<p>y = predicted value, n = # of features, $x_i$ is the ith feature value, and $\theta_{j}$ is the jth model parameter aka feature weights ($\theta_0$ is the bias).</p>
+<p>y = predicted value, n = # of features, \(x_i\) is the ith feature value, and \(\theta_{j}\) is the jth model parameter aka feature weights (\(\theta_0\) is the bias).</p>
 
-<p><strong>Vectorized Form</strong>
-Simplified in vectorized form: $y = h_\theta(x) = \theta^T * x$. This equation turns the $\theta^T$ into a parameter row vector, and x is the feature column vector (x_0 = 1 for the bias). The dot product of the two is the hypothesis function $h_{\theta}$.</p>
+<p><strong>Vectorized Form</strong> <br />
+Simplified in vectorized form: \(y = h_\theta(x) = \theta^T * x\). This equation turns the \(\theta^T\) into a parameter row vector, and x is the feature column vector (x_0 = 1 for the bias). The dot product of the two is the hypothesis function \(h_{\theta}\).</p>
 
-<p><strong>Training</strong>
+<p><strong>Training</strong> <br />
 The most common performance of a regression model is the Root Mean Squares Error (RMSE), which can be found with the Mean Square Error, which converges easier than the RMSE and leads to the same result.</p>
 
-<p>$MSE(X, h_{\theta}) = \frac{1}{m} \sum^m_{i=1} (\theta^T * x^i - y^i)^2$</p>
+\[MSE(X, h_{\theta}) = \frac{1}{m} \sum^m_{i=1} (\theta^T * x^i - y^i)^2\]
 
 <p><strong>The Normal Equation</strong>
-We can get the minimizing $\theta$ value with a closed-form solution called the normal equation: $\theta = (X^T * X)^{-1} * X^T * y$, where $y$ is a vector of target values.</p>
+We can get the minimizing \(\theta\) value with a closed-form solution called the normal equation: \(\theta = (X^T * X)^{-1} * X^T * y\), where \(y\) is a vector of target values.</p>
 
 <p><strong>Raw Example</strong></p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;&gt;&gt; import numpy as np
@@ -259,16 +269,16 @@ array([[ 4.21509616], [ 9.75532293]])
 &gt;&gt;&gt; lin_reg.predict(X_new)
 array([[ 4.21509616],[ 9.75532293]])
 </code></pre></div></div>
-<p><strong>Complexity</strong>
-Since the Normal Equation computes the inverse of an $n \times n$ matrix, it gets more computationally complex, typically $O(n^{2.4}) -O(n^3)$. But, it is linear with the number of instances in the training set $(O(m))$, so it can handle large memory well.</p>
+<p><strong>Complexity</strong> <br />
+Since the Normal Equation computes the inverse of an \(n \times n\) matrix, it gets more computationally complex, typically \(O(n^{2.4}) -O(n^3)\). But, it is linear with the number of instances in the training set \((O(m))\), so it can handle large memory well.</p>
 
-<h4 id="gradient-descent">Gradient Descent</h4>
+<h4 id="gradient-descent"><strong>Gradient Descent</strong></h4>
 <p>Gradient descent is an optimization algorithm, designed to iterate on its parameters until it finds a minimum.</p>
 
 <p><strong>Here’s how it goes:</strong>
-Start with <em>random initialization</em> by filling $\theta$ with random values. Then improve the $\theta$ values gradually by taking baby steps (determined by the <em>learning rate</em>) to decrease the cost function (the MSE) until the algorithm converges to a minimum.</p>
+Start with <em>random initialization</em> by filling \(\theta\) with random values. Then improve the \(\theta\) values gradually by taking baby steps (determined by the <em>learning rate</em>) to decrease the cost function (the MSE) until the algorithm converges to a minimum.</p>
 
-<p><img src="ml-book-images/4.png" align="left" style="zoom:40%" /></p>
+<p><img src="../media/ml-book-images/4.png" style="zoom:30%" /></p>
 
 <p><strong>Challenges</strong></p>
 
@@ -276,8 +286,8 @@ Start with <em>random initialization</em> by filling $\theta$ with random values
 
 <p><strong>Tip:</strong> When using gradient descent, all features should have a similar scale (such as using Scikit’s <code class="language-plaintext highlighter-rouge">StandardScaler</code> class).</p>
 
-<h4 id="batch-gradient-descent">Batch Gradient Descent</h4>
-<p>To implement Gradient Descent, we need the gradient of the cost function with regards to each model parameter $\theta_j$ to quantify how much the cost function would change by changing that one parameter – the partial derivative. Essentially, we are finding the slope of the mountain</p>
+<h4 id="batch-gradient-descent"><strong>Batch Gradient Descent</strong></h4>
+<p>To implement Gradient Descent, we need the gradient of the cost function with regards to each model parameter \(\theta_j\) to quantify how much the cost function would change by changing that one parameter – the partial derivative. Essentially, we are finding the slope of the mountain</p>
 
 
 </div>

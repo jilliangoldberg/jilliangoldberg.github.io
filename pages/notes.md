@@ -30,5 +30,16 @@ My midterm notes for [CS 70, Discrete Mathematics and Probability Theory](https:
 
 #### **[Fall 2021: CS 188 Midterm](../notes/cs188-m)**
 My midterm notes for [CS 188, Introduction to Artificial Intelligence](https://inst.eecs.berkeley.edu/~cs188/su21/), taught by Mesut Yang and Carl Qi. This course covers topics such as search algorithms, exploration functions, multi-agent search, reinforcement learning, and machine learning.
+<br/><br/> 
 
+#### **[Spring 2021: EECS 16A Final Cheat Sheet](../notes/eecs16a-f)**
+My Final notes for [EECS 16A, Desiging Information Devices and Systems](https://eecs16a.org/), taught by Laura Waller. This course covers topics such as linear algebra, signal processing, system control, and circuit design.
+<br/><br/> 
+
+#### **[Spring 2021: EECS 16A Midterm 2 Cheat Sheet](../notes/eecs16a-m2)**
+My Final notes for [EECS 16A, Desiging Information Devices and Systems](https://eecs16a.org/), taught by Laura Waller. This course covers topics from circuit analysis to op amps and circuit design.
+<br/><br/> 
+
+#### **[Spring 2021: EECS 16A Midterm 1 Cheat Sheet](../notes/eecs16a-m1)**
+My Final notes for [EECS 16A, Desiging Information Devices and Systems](https://eecs16a.org/), taught by Laura Waller. This cheat sheet covers topics up to eigenvalues and eigenspaces.
 

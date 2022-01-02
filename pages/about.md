@@ -43,6 +43,14 @@ In the meantime, I'm doing my best to learn as much as I can about the things I 
 {% include about/skills.html title="Data Science/ML Tools" source=site.data.data-tools %}
 </div>
 
+<!-- ##### **What do I look like?**
+
+{% capture carousel_images %}
+../images/1.JPG
+../images/2.jpeg
+{% endcapture %}
+{% include elements/carousel.html %} -->
+
 <!-- # **Past Experience**
 
 <div class="row">

@@ -11,7 +11,7 @@ permalink: /notes/ml-book
 ### **What is it?**
 Machine learning is the science and art of programming computers so they can **learn from data.** It automatically (or is told to) learn patterns from data by detecting the frequency at which certain events occur. 
 
-<img src="ml-book-images/1.png" align="left" style="zoom:40%">
+<img src="../media/ml-book-images/1.png" style="zoom:30%">
 
 **Machine learning is great for:**
 1. **Simplifying** the solution to complex problems
@@ -52,15 +52,17 @@ Machine learning is the science and art of programming computers so they can **l
 
 **Instance-Based Learning** uses similarity metrics to flag similar occurances based on certain features. For example, with a spam filter, an instance-based learning would identify a new occurance based on (a very basic example) the number of mispelled words and how similar it is to a known email occurance
 
-<img src="ml-book-images/2.png" align="left" style="zoom:40%">
+<img src="../media/ml-book-images/2.png" style="zoom:30%">
  
 In contrast, **Model-Based Learning** builds a model, such as linear, quadratic, exponential, etc. with these examples based on features and categorizes new instances based on where it falls in the model. The model-based learning model would use the previous features and identify the new instance based on where it falls in the model.
 
-<img src="ml-book-images/3.png" align="left" style="zoom:40%">
+<img src="../media/ml-book-images/3.png" style="zoom:30%">
 
+**Example of Model Based Learning Implemented**
 ```
 import matplotlib
-import matplotlib.pyplot as plt import numpy as np
+import matplotlib.pyplot as plt 
+import numpy as np
 import pandas as pd
 import sklearn
 # Load the data
@@ -80,7 +82,7 @@ lin_reg_model.fit(X, y)
 X_new = [[22587]] # Cyprus' GDP per capita print(lin_reg_model.predict(X_new)) # outputs [[ 5.96242338]]
 ```
 
-### Challenges in Machine Learning
+### **Challenges in Machine Learning**
 
 **Bad Data**
 - insufficient quality of training data
@@ -89,7 +91,7 @@ X_new = [[22587]] # Cyprus' GDP per capita print(lin_reg_model.predict(X_new)) #
 - irrelevent features
 **Bad Model**
 
-### Testing and Validating
+### **Testing and Validating**
 
 It is common to have an **80/20 split** for training and testing data. However, a more rigorous way to test for the most optimal model is to have a second holdout set called a **validation set**, which would aid in selecting the correct model.
 
@@ -105,28 +107,28 @@ It is common to have an **80/20 split** for training and testing data. However, 
 7. Present your solution.
 8. Launch, monitor, and maintain your system.
 
-## Chapter 4: Training Models
+## **Chapter 4: Training Models**
 
-### Linear Regression Model
+### **Linear Regression Model**
 There are two different ways to train a linear regression model: using a direct **"closed-form" equation** or an iterative optimization approach, or **Gradient Descent** (GD).
 
-#### Closed-Form
+#### **Closed-Form**
 The linear model makes a prediction through a weighted sum of different input features, plus a bias term (the y-intercept):
 
-$y = \theta_0 + \theta_1x_1 + \theta_2x_2 + ... + \theta_{n}x_n$
+$$y = \theta_0 + \theta_1x_1 + \theta_2x_2 + ... + \theta_{n}x_n$$
 
-y = predicted value, n = # of features, $x_i$ is the ith feature value, and $\theta_{j}$ is the jth model parameter aka feature weights ($\theta_0$ is the bias).
+y = predicted value, n = # of features, $$x_i$$ is the ith feature value, and $$\theta_{j}$$ is the jth model parameter aka feature weights ($$\theta_0$$ is the bias).
 
-**Vectorized Form**
-Simplified in vectorized form: $y = h_\theta(x) = \theta^T * x$. This equation turns the $\theta^T$ into a parameter row vector, and x is the feature column vector (x_0 = 1 for the bias). The dot product of the two is the hypothesis function $h_{\theta}$. 
+**Vectorized Form** \\
+Simplified in vectorized form: $$y = h_\theta(x) = \theta^T * x$$. This equation turns the $$\theta^T$$ into a parameter row vector, and x is the feature column vector (x_0 = 1 for the bias). The dot product of the two is the hypothesis function $$h_{\theta}$$. 
 
-**Training**
+**Training** \\
 The most common performance of a regression model is the Root Mean Squares Error (RMSE), which can be found with the Mean Square Error, which converges easier than the RMSE and leads to the same result. 
 
-$MSE(X, h_{\theta}) = \frac{1}{m} \sum^m_{i=1} (\theta^T * x^i - y^i)^2$
+$$MSE(X, h_{\theta}) = \frac{1}{m} \sum^m_{i=1} (\theta^T * x^i - y^i)^2$$
 
 **The Normal Equation**
-We can get the minimizing $\theta$ value with a closed-form solution called the normal equation: $\theta = (X^T * X)^{-1} * X^T * y$, where $y$ is a vector of target values.
+We can get the minimizing $$\theta$$ value with a closed-form solution called the normal equation: $$\theta = (X^T * X)^{-1} * X^T * y$$, where $$y$$ is a vector of target values.
 
 **Raw Example**
 ```
@@ -152,16 +154,16 @@ array([[ 4.21509616], [ 9.75532293]])
 >>> lin_reg.predict(X_new)
 array([[ 4.21509616],[ 9.75532293]])
 ```
-**Complexity**
-Since the Normal Equation computes the inverse of an $n \times n$ matrix, it gets more computationally complex, typically $O(n^{2.4}) -O(n^3)$. But, it is linear with the number of instances in the training set $(O(m))$, so it can handle large memory well.
+**Complexity** \\
+Since the Normal Equation computes the inverse of an $$n \times n$$ matrix, it gets more computationally complex, typically $$O(n^{2.4}) -O(n^3)$$. But, it is linear with the number of instances in the training set $$(O(m))$$, so it can handle large memory well.
 
-#### Gradient Descent
+#### **Gradient Descent**
 Gradient descent is an optimization algorithm, designed to iterate on its parameters until it finds a minimum. 
 
 **Here's how it goes:**
-Start with *random initialization* by filling $\theta$ with random values. Then improve the $\theta$ values gradually by taking baby steps (determined by the *learning rate*) to decrease the cost function (the MSE) until the algorithm converges to a minimum.
+Start with *random initialization* by filling $$\theta$$ with random values. Then improve the $$\theta$$ values gradually by taking baby steps (determined by the *learning rate*) to decrease the cost function (the MSE) until the algorithm converges to a minimum.
 
-<img src="ml-book-images/4.png" align="left" style="zoom:40%">
+<img src="../media/ml-book-images/4.png" style="zoom:30%">
 
 **Challenges**
 
@@ -169,8 +171,8 @@ It's important to choose a learning rate carefully; too small and it will take t
 
 **Tip:** When using gradient descent, all features should have a similar scale (such as using Scikit's `StandardScaler` class).
 
-#### Batch Gradient Descent 
-To implement Gradient Descent, we need the gradient of the cost function with regards to each model parameter $\theta_j$ to quantify how much the cost function would change by changing that one parameter – the partial derivative. Essentially, we are finding the slope of the mountain 
+#### **Batch Gradient Descent** 
+To implement Gradient Descent, we need the gradient of the cost function with regards to each model parameter $$\theta_j$$ to quantify how much the cost function would change by changing that one parameter – the partial derivative. Essentially, we are finding the slope of the mountain 
 
 
 
