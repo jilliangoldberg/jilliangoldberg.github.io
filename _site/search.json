@@ -6,6 +6,38 @@
       "tags"     : "2022, New Years, Resolutions",
       "url"      : "/blog/2022-resolutions",
       "date"     : "2022-01-01 00:00:00 -1000"
+    } ,
+  
+    {
+      "title"    : "GitHub Flow",
+      "category" : "",
+      "tags"     : "GitHub, Workflow",
+      "url"      : "/blog/github-flow",
+      "date"     : "2017-01-01 00:00:00 -1000"
+    } ,
+  
+    {
+      "title"    : "Placeholder",
+      "category" : "",
+      "tags"     : "Software Development",
+      "url"      : "/blog/a-better-hello-world",
+      "date"     : "2016-07-23 00:00:00 -1000"
+    } ,
+  
+    {
+      "title"    : "Placeholder",
+      "category" : "",
+      "tags"     : "Poetry",
+      "url"      : "/blog/do-not-go-gentle-into-that-good-night",
+      "date"     : "2016-04-17 00:00:00 -1000"
+    } ,
+  
+    {
+      "title"    : "Placeholder",
+      "category" : "",
+      "tags"     : "Version Control",
+      "url"      : "/blog/what-is-version-control",
+      "date"     : "2016-02-09 00:00:00 -1000"
     } 
   
 ]
