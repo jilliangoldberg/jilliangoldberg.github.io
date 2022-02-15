@@ -15,7 +15,7 @@ Learn more about my [📊projects](../projects/), read my [✍️blog](../blog/)
 <br/><br/> 
 <!-- :bear: -->
 ##### **What do I do?**
-On campus, I'm a project leader, account manager, and senior advisor for [Voyager Consulting](voyagerconsulting.org), and I teach UC Berkeley's [CS 61A](cs61a.org) as an Academic Intern and through [Computer Science Mentors](csmentors.berkeley.edu). I play on the [Cal Women's Club Volleyball](instagram.com/calclubvolleyball) team and I'm a mentor in the [Engineering Berkeley Mentorship Cohort](https://engineering.berkeley.edu/students/programs/mentor-programs/berkeley-mentorship-cohort/).
+On campus, I'm a Project Leader and Account Manager for [Voyager Consulting](voyagerconsulting.org), where I'm leading a consumer-focused data science project for [Venmo](https://venmo.com/). I love teaching; I'm a reader for UC Berkeley's [Introduction to Artificial Intelligence (CS 188)](https://inst.eecs.berkeley.edu/~cs188/sp22/) and I teach [CS 61A](cs61a.org) through [Computer Science Mentors](csmentors.berkeley.edu). I also play on the [Cal Women's Club Volleyball](instagram.com/calclubvolleyball) team and I'm a mentor in the [Engineering Berkeley Mentorship Cohort](https://engineering.berkeley.edu/students/programs/mentor-programs/berkeley-mentorship-cohort/).
 
 Previously, I led DEI initiatives in the [Society of Women Engineers](https://swe.berkeley.edu) and was involved in [Girls Who Code](https://girlswhocode.com/). I developed a passion for teaching when growing [Gold Tutoring](https://goldtutoring.dudaone.com/) since 2017, and gave college apps advice through [YouTube videos](https://www.youtube.com/c/JillianGoldberg) and [Gold College Essays](https://bit.ly/3d88PDc).
 
