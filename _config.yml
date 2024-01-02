@@ -18,7 +18,9 @@ plugins:
 nav_exclude:                                            # The following paths are excluded from navbar
   - pages/tags.html
   - pages/404.html
+  - pages/blog.html
   - pages/index.md
+  - pages/experience.md
   - pages/chinese.html
   - pages/notes/cs61c-m.md
   - pages/notes/cs70-m.md
@@ -29,11 +31,15 @@ nav_exclude:                                            # The following paths ar
   - pages/notes/eecs16a-m1.md
   - pages/notes/eecs16a-m2.md
   - pages/notes/eecs16a-f.md
+  - pages/notes/stat20-final.md
+  - pages/notes/stat20-mt.md
+  - pages/notes/cs162-mt1.md
+  - pages/notes/cs162-mt2.md
 
 ### Author Info ###
 author:
   name              : Jillian Goldberg
-  image             : media/headshot-sp21.jpg
+  image             : media/jillian_fa22.jpg
   email             : jilliangoldberg@berkeley.edu
   facebook          : jillian.goldberg.71
   github            : jilliangoldberg
@@ -42,7 +48,7 @@ author:
 
 
 ### Posts ###
-permalink: /blog/:title
+# permalink: /blog/:title
 
 ### Collections ###
 collections:

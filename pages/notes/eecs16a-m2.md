@@ -1,6 +1,6 @@
 ---
 layout: note
-title: "Winter 2021: EECS 16A Midterm 2 Cheat Sheet"
+title: "Spring 2021: EECS 16A Midterm 2 Cheat Sheet"
 permalink: /notes/eecs16a-m2
 ---
 

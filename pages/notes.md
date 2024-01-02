@@ -8,12 +8,28 @@ weight: 2
 # **Course Notes**
 <h2></h2>
 
+#### **[Fall 2022: CS 162 Midterm 2](../notes/cs162-mt2)**
+My midterm 2 notes for [CS 162, Operating Systems](https://inst.eecs.berkeley.edu/~cs162/fa22/), taught by Natacha Crooks. Hardest class I've taken at Berkeley, proceed with caution! But hopefully these notes can help :)
+<br/><br/> 
+
+#### **[Fall 2022: CS 162 Midterm 1](../notes/cs162-mt1)**
+My midterm 1 notes for [CS 162, Operating Systems](https://inst.eecs.berkeley.edu/~cs162/fa22/), taught by Natacha Crooks. Hardest class I've taken at Berkeley, proceed with caution! But hopefully these notes can help :)
+<br/><br/> 
+
+#### **[Spring 2022: Stat 20 Final](../notes/stat20-final)**
+My final notes for [Stat 20, Intro to Probability and Statistics](https://www.stat20.org/), taught by Andrew Bray. Great class and learned a lot of R! Not sure if I'll ever use it again, but liked the class and structured so well.
+<br/><br/> 
+
+#### **[Spring 2022: Stat 20 Midterm](../notes/stat20-mt)**
+My midterm notes for [Stat 20, Intro to Probability and Statistics](https://www.stat20.org/), taught by Andrew Bray.
+<br/><br/> 
+
 #### **[Winter 2021: Machine Learning Scikit/Tensorflow](../notes/ml-book)**
 My notes for [Hands-On Machine Learning with Scikit and Tensorflow](https://www.amazon.com/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/1492032646), written by Aurélien Geron. Highly recommend! Ranked #1 Best Seller in NLP books and goes through the various types of machine learning types and tools.
 <br/><br/> 
 
 #### **[Fall 2021: CS 70 Final](../notes/cs70-f)**
-My final notes for [CS 70, Discrete Mathematics and Probability Theory](https://www.eecs70.org/), taught by John Wawrzynek and Nicholas Weaver. But if you want *good* notes, take a look at [Rachel Lawrence's notes](https://rlaw.me/) (aka the best GSI ever).
+My final notes for [CS 70, Discrete Mathematics and Probability Theory](https://www.eecs70.org/), taught by John Wawrzynek and Nicholas Weaver. But if you want *good* notes, take a look at [Rachel Lawrence's notes](https://rlaw.me/?page_id=818) (aka the best GSI ever).
 <br/><br/>
 
 #### **[Fall 2021: CS 61C Midterm](../notes/cs61c-m)**

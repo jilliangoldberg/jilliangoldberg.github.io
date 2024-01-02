@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fall 2022: CS 162 Midterm 2">
+  <meta property="og:description" content="">
+
+  <title>Fall 2022: CS 162 Midterm 2</title>
+  <meta name="description" content="">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Math Latex Support -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+  <!-- Theme style -->
+  <script src="/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <!-- <a class="navbar-brand" href="/"><h5><b> Jillian Goldberg </b></h5></a> -->
+  <a class="navbar-brand" href="/"> <img src="../media/jilliangoldberg-logo.png" alt="Jillian Goldberg" > </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link " href="https://berkeley.zoom.us/my/jilliangoldberg"target="_blank"></a>
+
+      <a class="nav-item nav-link " href="/about/">about</a>
+
+      <a class="nav-item nav-link active" href="/notes/">notes</a>
+
+      <a class="nav-item nav-link " href="/projects/">projects</a>
+
+      <a class="nav-item nav-link " href="../pages/resume.pdf"target="_blank">resume</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <div class="row">
+      <a class="m-1 btn btn-outline-primary btn-2 " href="../notes">
+  Back to Notes
+</a>
+      <a class="m-1 btn btn-outline-primary btn-2 " href="../notes">
+  Next
+</a> 
+  </div>
+
+  <h1 id="cs-162-midterm-2-review"><strong>CS 162 Midterm 2 Review</strong></h1>
+
+<h1 id="lecture-10-scheduling">lecture 10: scheduling</h1>
+
+<p><strong>thread life cycle</strong></p>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3de5c83b-fc5e-4226-a65e-f02993a0ed69/Screen_Shot_2022-10-23_at_10.19.03_PM.png" alt="Screen Shot 2022-10-23 at 10.19.03 PM.png" /></p>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4347bd59-8025-4c39-828f-2f9585b6b985/Screen_Shot_2022-10-23_at_10.20.36_PM.png" alt="Screen Shot 2022-10-23 at 10.20.36 PM.png" /></p>
+
+<p><strong>performance metrics</strong></p>
+
+<ul>
+  <li><strong>response time (latency)</strong> = user perceived time to do some task</li>
+  <li><strong>throughput</strong> = the rate at which tasks are completed</li>
+  <li><strong>scheduling overhead</strong> = the time to switch from one task to another</li>
+  <li><strong>predictability</strong> = variance in response times for repeated requests</li>
+  <li><strong>fairness</strong> = equality in performance perceived by one task</li>
+  <li><strong>starvation</strong> = lack of progress for one task, due to resources being allocated to different tasks</li>
+</ul>
+
+<p><strong>other useful metrics</strong></p>
+
+<ul>
+  <li>waiting time for P = time before P is scheduled</li>
+  <li>average waiting time = average of all processes’ wait time</li>
+  <li>completion time = waiting time + run time</li>
+  <li>average completion time = average of all processes’ completion time</li>
+</ul>
+
+<p><strong>assumptions</strong></p>
+
+<ul>
+  <li>threads are independent and only one user</li>
+  <li>only look at a work-conserving scheduler (never leave processor idle)</li>
+  <li>workload = set of tasks and how long</li>
+  <li>compute bound = tasks that primarily perform compute
+    <ul>
+      <li>fully utilize CPU</li>
+    </ul>
+  </li>
+  <li>IO bound = waits for IO, limited compute
+    <ul>
+      <li>often in the Blocked state</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>scheduling policies</strong></p>
+
+<ul>
+  <li><strong>first come, first serve (FCFS)</strong>
+    <ul>
+      <li>runs tasks in order of arrival until completion (or blocks on IO) no preemption</li>
+      <li>dmv model</li>
+      <li>aka FIFO</li>
+      <li><strong>convoy effect</strong> = short process stuck behind long processes, lots of small tasks build up, FIFO is non-preemptible (as in, tasks cannot overtake each other)</li>
+    </ul>
+  </li>
+  <li><strong>shortest job first</strong>
+    <ul>
+      <li>minimize average completion time by scheduling shorter jobs over longer jobs</li>
+      <li>can lead to starvation</li>
+      <li>is subject to the convoy effect since it doesn’t interrupt</li>
+      <li>*requires knowing the duration of the jobs</li>
+    </ul>
+  </li>
+  <li><strong>shortest time to completion first (STCF)</strong>
+    <ul>
+      <li>introduces <strong>**</strong><strong>**</strong><strong>**</strong>preemption<strong>**</strong><strong>**</strong><strong>**</strong> = <strong>**</strong><strong>**</strong><strong>**</strong><strong>**</strong><strong>**</strong><strong>**</strong>current running task can be de-scheduled</li>
+      <li>schedule task with least amount of time left</li>
+      <li>requires a ton of switching</li>
+      <li>can lead to starvation!</li>
+      <li>no convoy effect tho :)</li>
+    </ul>
+  </li>
+  <li><strong>round robin scheduling</strong>
+    <ul>
+      <li>runs each job for a time slice called <strong>**</strong><strong>**</strong><strong>quantum</strong><strong>**</strong><strong>**</strong></li>
+      <li><strong>**</strong><strong>**</strong><strong>**</strong><strong>**</strong><strong>**</strong>time-slicing<strong>**</strong><strong>**</strong><strong>**</strong><strong>**</strong><strong>**</strong> = switch to the next job in ready queue when time is up</li>
+      <li>switching takes a lot of time
+        <ul>
+          <li>small quantas have lots of overhead</li>
+        </ul>
+      </li>
+      <li>RR can’t lead to starvation and no convoy effect!</li>
+      <li>no process waits more than (n-1)q time</li>
+      <li>completion time can be high because it stretches out longer jobs</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/27fd8186-4654-4492-86a7-5af3d57f1847/Screen_Shot_2022-10-25_at_3.39.08_PM.png" alt="Screen Shot 2022-10-25 at 3.39.08 PM.png" /></p>
+
+<h1 id="lecture-11-scheduling">lecture 11: scheduling</h1>
+
+<p><strong>scheduling policy goals</strong></p>
+
+<ol>
+  <li>minimize average waiting time for IO/interactive tasks (tasks with short CPU bursts)</li>
+  <li>minimize average completion time</li>
+  <li>maximize throughput (including minimizing context switching)</li>
+  <li>remain fair/starvation-free</li>
+</ol>
+
+<p><strong>nice</strong></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">int nice(int inc)</code></li>
+  <li>adds inc to the nice value for the current thread</li>
+  <li>higher nice value = lower priority</li>
+</ul>
+
+<p><strong>strict priority scheduling</strong></p>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b7780b00-84ca-4598-96ef-e8eaeef29f6e/Screen_Shot_2022-10-25_at_10.03.53_PM.png" alt="Screen Shot 2022-10-25 at 10.03.53 PM.png" /></p>
+
+<ul>
+  <li>split jobs by priority into n different queues and process the highest queue</li>
+  <li><strong>priority inversion =</strong> when a high priority thread can become starved by waiting on a low priority thread to release a resource they need
+    <ul>
+      <li>medium priority task gets scheduled instead because the low priority one is blocking the high priority</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/85ec4ff7-a867-4399-8c45-1574f45a87f5/Screen_Shot_2022-10-25_at_10.12.30_PM.png" alt="Screen Shot 2022-10-25 at 10.12.30 PM.png" /></p>
+
+<p><strong>multi-level feedback queue</strong></p>
+
+<ul>
+  <li>create distinct queues for ready jobs, each assigned a diff priority level</li>
+</ul>
+
+<p>rules:</p>
+
+<ol>
+  <li>if priority(a) &gt; priority(b), a runs</li>
+  <li>if == priority, a and b run RR using quantum of queue</li>
+  <li>a new job always starts at the top of the queue</li>
+  <li>once the job uses up the time allotment, it moves down a priority (regardless of how many times it gave up the CPU)
+    <ol>
+      <li>prevents gaming the system by inserting IO request just before time quanta to stay on that priority level/queue</li>
+    </ol>
+  </li>
+  <li>after some time, move all the jobs back to the topmost queue (prevents starvation)</li>
+</ol>
+
+<h1 id="lec-12-scheduling---core-concepts-and-classic-policies">lec 12: scheduling - core concepts and classic policies</h1>
+
+<p><strong>Linux O(n)</strong></p>
+
+<ul>
+  <li>at every context switch = scan list of processes, compute priorities, select processes to run</li>
+  <li>issues = context switch costs increase with num processes, single queue in multi-core systems</li>
+</ul>
+
+<p><strong>Linux O(1)</strong></p>
+
+<ul>
+  <li>run in constant time with priority based scheduler</li>
+  <li>140 diff priorities = 0-99 real time or kernel tasks, user tasks 100 to 139 (100 highest)</li>
+  <li>2 ready queues
+    <ul>
+      <li>active queue for tasks that haven’t used up the quanta</li>
+      <li>expired queue for processes that have</li>
+    </ul>
+  </li>
+  <li>timeslices computed when jobs finish timeslice (depends on priority)</li>
+  <li>priority adjustments
+    <ul>
+      <li>user-task priority adjust +-5 based on sleep_avg (= sleep_time - run_time)</li>
+      <li>higher sleep avg = more IO bound the tasks, more reward (and vice versa)</li>
+    </ul>
+  </li>
+  <li>“interactive credit” can be earned if the task is asleep or run for a long time, used to avoid changing interactivity when there are temporary changes in behavior
+    <ul>
+      <li>maintains interactivity because they continue to get placed back into the queue</li>
+    </ul>
+  </li>
+  <li>real tasks
+    <ul>
+      <li>SCHED_FIFO = preempt/’//s other tasks, no time slice</li>
+      <li>SCHED_RR = preempts normal tasks, RR sheduling amongst tasks with the same priority</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Real Time Scheduling</strong></p>
+
+<ul>
+  <li>goal = predictability of performance</li>
+  <li>CFS = completely fair scheduler
+    <ul>
+      <li>share CPU proportionally according to priority</li>
+      <li>no starvation cuz every job makes SOME process, low priority goes less</li>
+    </ul>
+  </li>
+  <li>ex: lottery scheduling
+    <ul>
+      <li>each job gets at least one ticket but some get more
+        <ul>
+          <li>like hunger games!</li>
+        </ul>
+      </li>
+      <li>no starvation cuz each job at least has some chance to get chosen</li>
+      <li>no priority inversion - priority WILL be honored with randomness</li>
+    </ul>
+  </li>
+  <li>temporary unfairness
+    <ul>
+      <li>we have less control over who gets to run</li>
+      <li>more unfair to shorter jobs cuz they have really low priority</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cbe15440-fe51-4e24-8bf7-f8e82e03426f/Screen_Shot_2022-10-06_at_4.12.34_PM.png" alt="Screen Shot 2022-10-06 at 4.12.34 PM.png" /></p>
+
+<p><strong>stride scheduling</strong></p>
+
+<ul>
+  <li>deterministic proportional fair sharing</li>
+  <li>stride of job = `big#W/N_i
+    <ul>
+      <li>larger your share of tickets N_i, the smaller your stride is</li>
+    </ul>
+  </li>
+  <li>each job is a pass counter, scheduler picks lowest pass job, run it, add stride to its pass</li>
+  <li>low-stride jobs (lots of tickets/high priority) run more often</li>
+  <li>with larger ticket jobs, they look like they are getting less of the CPU with lower strides, so they end up getting scheduled more often</li>
+</ul>
+
+<p><strong>completely fair scheduler (cfs)</strong></p>
+
+<ul>
+  <li>cfs models an ideal multi-taking CPU</li>
+  <li>each process gets an equal share of the CPU
+    <ul>
+      <li>N threads simultaneously execute on 1/N of the CPU</li>
+      <li>optimize GLOBAL PARAMETER not individual decision</li>
+    </ul>
+  </li>
+  <li>HOW IT WORKS
+    <ul>
+      <li>track the cpu time per thread and then “repair” the threads to fairness by choosing to run the thread with the minimum cpu time</li>
+      <li>stored in a Red-Black tree with scheduling cost O(log n)</li>
+      <li>captures <strong>interactivity</strong> cuz sleeping threads don’t advance their CPU time, so auto get a boost when they wake up
+        <ul>
+          <li>interactivity = when you can interact with the OS when there are 1+ programs already running</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>responsiveness
+    <ul>
+      <li>AKA low response time and starvation freedom</li>
+      <li>constraint of target latency
+        <ul>
+          <li>period of time over which every process gets service</li>
+          <li><code class="language-plaintext highlighter-rouge">Quanta = target latency / n</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>throughput
+    <ul>
+      <li>AKA avoiding excessive overhead</li>
+      <li>constraint of minimum granularity
+        <ul>
+          <li>minimum length of any time slice</li>
+        </ul>
+      </li>
+      <li>target latency 20 ms, min granularity 1 ms 200 processes
+        <ul>
+          <li>SO each process gets 1 ms time slice</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>BUT we want to <strong>incorporate</strong> <strong>priorities</strong> still</li>
+</ul>
+
+<p><strong>CFS: proportional fair sharing</strong></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">nice</code> values range from -20 to 19
+    <ul>
+      <li>negative values are evil</li>
+    </ul>
+  </li>
+  <li>allow diff threads to have <strong>diff RATES of execution</strong> by using weights to compute the switching quanta
+    <ul>
+      <li>basic equal share: <code class="language-plaintext highlighter-rouge">Q_i = target latency * 1/N</code></li>
+      <li>weighted share: <code class="language-plaintext highlighter-rouge">Q_i = (w_i/SUMp(w_p)) * target latency</code></li>
+    </ul>
+  </li>
+  <li>reuses nice priority
+    <ul>
+      <li>CFS uses <code class="language-plaintext highlighter-rouge">nice</code> values to scale weights exponentionally</li>
+      <li>weight = $1024/(1.25)^{nice}$</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="lecture-13-deadlock">lecture 13: deadlock</h1>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0bcdd084-5581-4ab7-8e17-ce452fe0c21a/Screen_Shot_2022-10-26_at_4.54.33_PM.png" alt="Screen Shot 2022-10-26 at 4.54.33 PM.png" /></p>
+
+<p><strong>definition</strong></p>
+
+<ul>
+  <li><strong>deadlock</strong> = cyclic waiting for resources
+    <ul>
+      <li>starvation waits indefinitely but CAN end</li>
+      <li>deadlock needs external intervention to be solved</li>
+    </ul>
+  </li>
+  <li>lock pattern exhibits non-deterministic deadlock</li>
+  <li>a system is subject to deadlock if it has at least one execution pattern that can lead to deadlock</li>
+  <li>threads block waiting for resources
+    <ul>
+      <li>locks, terminals, printers, cd drives, meory</li>
+    </ul>
+  </li>
+  <li>threads often block waiting for other threads
+    <ul>
+      <li>pipes, sockets</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>deadlock example</strong></p>
+
+<ul>
+  <li>deadlock implies starvation!</li>
+  <li>starvation does not mean deadlock
+    <ul>
+      <li>deadlock requires external intervention to fix, while starvation will eventually fix itself</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>four requirements</strong></p>
+
+<ol>
+  <li>mutual exclusion and bounded resources
+    <ol>
+      <li>only one thread at a time can use a resource</li>
+    </ol>
+  </li>
+  <li>hold and wait
+    <ol>
+      <li>thread holding at least one resource is waiting to acquire additional resources held by other threads</li>
+    </ol>
+  </li>
+  <li>no preemption
+    <ol>
+      <li>resources are released only voluntarily by the thread holding the resource, after thread is finished with it</li>
+    </ol>
+  </li>
+  <li>circular wait
+    <ol>
+      <li>there exists a set ${T_1, …, T_n}$ of waiting threads, where T1 waits on T2, T2 waits on T3, …, Tn waits on T1</li>
+    </ol>
+  </li>
+</ol>
+
+<p><strong>resource allocation graph</strong></p>
+
+<p>set of threads: $T_1, T_2, …, T_n$</p>
+
+<p>resource types: $R_1, R_2, …, Rn$ with $W_i$ instances</p>
+
+<p>each thread uses:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Request(), Use(), or Release()</code></li>
+</ul>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9a107725-a525-46ec-b7ec-6aafa9905d79/Screen_Shot_2022-10-26_at_5.31.36_PM.png" alt="Screen Shot 2022-10-26 at 5.31.36 PM.png" /></p>
+
+<p><strong>deadlock detection algorithm</strong></p>
+
+<ul>
+  <li>let [X] represent an m-aray vector of non-negative integers (quantities of resources of each type)
+    <ul>
+      <li>[freeResources] = current free resources each type</li>
+      <li>[request_x] = current requests from thread X</li>
+      <li>[alloc_x] = current resources held by thread X</li>
+    </ul>
+  </li>
+  <li>see if tasks can eventually terminate on their own
+    <ul>
+      <li>threads left in UNFINISHED = deadlocked</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f14e8a96-7da2-47f0-831a-f6e9cf25a5d4/Screen_Shot_2022-10-26_at_5.53.37_PM.png" alt="Screen Shot 2022-10-26 at 5.53.37 PM.png" /></p>
+
+<p><strong>deadlock solutions</strong></p>
+
+<ul>
+  <li><strong>deadlock prevention</strong> = write code in a way that isn’t prone to deadlock
+    <ul>
+      <li>best way to go!</li>
+    </ul>
+  </li>
+  <li><strong>deadlock recovery</strong> = let deadlock happen and then figure out how to recover from it</li>
+  <li><strong>deadlock avoidance</strong> = dynamically delay resource requests so deadlock doesn’t happen
+    <ul>
+      <li>expensive cuz you have to track all your resources</li>
+    </ul>
+  </li>
+  <li><strong>deadlock denial</strong> = ignore the possibility of deadlock
+    <ul>
+      <li>means you need to find other ways to find deadlock prevention</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>deadlock prevention</strong></p>
+
+<p>conditions for success!</p>
+
+<ol>
+  <li>provide sufficient resources (mutual exclusion and bounded resources)
+    <ol>
+      <li>virtually infinite memory</li>
+    </ol>
+  </li>
+  <li>abort requests or acquire requests atomically (hold and wait)
+    <ol>
+      <li>
+        <p>request resources atomically</p>
+
+        <p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/74b04d1a-d8aa-4dc3-8bdb-94288264edc2/Screen_Shot_2022-10-26_at_5.59.18_PM.png" alt="Screen Shot 2022-10-26 at 5.59.18 PM.png" /></p>
+      </li>
+    </ol>
+  </li>
+  <li>preempt threads (no preemption)
+    <ol>
+      <li>force threads to give up resources</li>
+      <li>use database aborts (all of the actions are undone and the transaction is retried) or just retry at a new time</li>
+    </ol>
+  </li>
+  <li>order resources and always acquire resources in the same way (circular wait)
+    <ol>
+      <li>force threads to always request resources in the same order, like x.Acquire() THEN y.Acquire()</li>
+    </ol>
+  </li>
+</ol>
+
+<p><strong>deadlock avoidance</strong></p>
+
+<p>three states</p>
+
+<ul>
+  <li><strong>safe state</strong> = system can delay resource acquisition to prevent deadlock</li>
+  <li><strong>unsafe state</strong> = no deadlock yet but its possible to request resources in a way that will unavoidably lead to deadlock</li>
+  <li><strong>deadlocked state</strong> = there exists a current deadlock</li>
+</ul>
+
+<p><strong>banker’s algorithm</strong></p>
+
+<ul>
+  <li>ensures never enter an unsafe state by evaluating each request and grant if some ordering of threads is still safe after</li>
+  <li>HOW IT WORKS
+    <ul>
+      <li>pretend each request is granted, then run deadlock detection algo</li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+  </main>
+
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <!-- <i class="fas fa-code"></i> with <i class="fas fa-heart"></i> -->
+    Designed by <strong>Jillian Goldberg</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:jilliangoldberg@berkeley.edu"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-2x"></i>
+    </a><a class="social mx-1"  href="https://www.facebook.com/jillian.goldberg.71"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#3b5998'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-facebook fa-2x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/jilliangoldberg"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-2x"></i>
+    </a><a class="social mx-1"  href="https://www.linkedin.com/in/jilliangoldberg"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#007bb5'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-2x"></i>
+    </a><a class="social mx-1"  href="https://www.youtube.com/JillianGoldberg"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#ff0000'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-youtube fa-2x"></i>
+    </a>
+
+</div><small id="attribution">
+    <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+  
+</footer>
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+
+</body>
+
+</html>

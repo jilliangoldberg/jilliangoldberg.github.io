@@ -1,6 +1,6 @@
 ---
 layout: note
-title: "Winter 2021: EECS 16A Final Cheat Sheet"
+title: "Spring 2021: EECS 16A Final Cheat Sheet"
 permalink: /notes/eecs16a-f
 ---
 

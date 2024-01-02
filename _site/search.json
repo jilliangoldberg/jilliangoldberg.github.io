@@ -1,19 +1,19 @@
 [
   
     {
-      "title"    : "21 Lessons I learned in 2021",
-      "category" : "",
-      "tags"     : "2021, Lessons, Learned",
-      "url"      : "/blog/lessons",
-      "date"     : "2022-01-09 00:00:00 -0600"
-    } ,
-  
-    {
       "title"    : "My 2022 New Year&#39;s Resolutions",
       "category" : "",
       "tags"     : "2022, New Years, Resolutions",
-      "url"      : "/blog/resolutions",
-      "date"     : "2022-01-01 00:00:00 -0600"
+      "url"      : "/2022/01/01/resolutions.html",
+      "date"     : "2022-01-01 00:00:00 +1100"
+    } ,
+  
+    {
+      "title"    : "100 Days of Swift - Day 1",
+      "category" : "",
+      "tags"     : "Swift, Programming, Learning",
+      "url"      : "/2022/01/01/resolutions-copy.html",
+      "date"     : "2022-01-01 00:00:00 +1100"
     } 
   
 ]

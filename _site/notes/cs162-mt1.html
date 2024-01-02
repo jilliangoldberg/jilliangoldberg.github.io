@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+
+<!--
+  portfolYOU Jekyll theme by Youssef Raafat
+  Free for personal and commercial use under the MIT license
+  https://github.com/YoussefRaafatNasry/portfolYOU
+-->
+
+<html lang="en" class="h-100">
+
+<head>
+
+  
+  
+
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fall 2022: CS 162 Midterm 1">
+  <meta property="og:description" content="">
+
+  <title>Fall 2022: CS 162 Midterm 1</title>
+  <meta name="description" content="">
+
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+
+  <!-- Math Latex Support -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.js" integrity="sha384-9Nhn55MVVN0/4OFx7EE5kpFBPsEMZxKTCnA+4fqDmg12eCTqGi6+BB2LjY8brQxJ" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+  <!-- Theme style -->
+  <script src="/assets/js/theme.js"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.0/css/all.css">
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+
+  <!-- Animate CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+</head>
+
+<body class="h-100 d-flex flex-column">
+
+  <main class="flex-shrink-0 container mt-5">
+    <nav class="navbar navbar-expand-lg navbar-themed">
+
+  <!-- <a class="navbar-brand" href="/"><h5><b> Jillian Goldberg </b></h5></a> -->
+  <a class="navbar-brand" href="/"> <img src="../media/jilliangoldberg-logo.png" alt="Jillian Goldberg" > </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fas fa-1x fa-bars text-themed"></i>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto"><a class="nav-item nav-link " href="https://berkeley.zoom.us/my/jilliangoldberg"target="_blank"></a>
+
+      <a class="nav-item nav-link " href="/about/">about</a>
+
+      <a class="nav-item nav-link active" href="/notes/">notes</a>
+
+      <a class="nav-item nav-link " href="/projects/">projects</a>
+
+      <a class="nav-item nav-link " href="../pages/resume.pdf"target="_blank">resume</a>
+
+      
+
+      <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
+    </div>
+  </div>
+
+</nav>
+    <div class="col-lg-10 mx-auto mt-5 markdown-body">
+  <div class="row">
+      <a class="m-1 btn btn-outline-primary btn-2 " href="../notes">
+  Back to Notes
+</a>
+      <a class="m-1 btn btn-outline-primary btn-2 " href="../notes">
+  Next
+</a> 
+  </div>
+
+  <h1 id="cs-162-midterm-1-review"><strong>CS 162 Midterm 1 Review</strong></h1>
+
+<h1 id="c-review-session">c review session</h1>
+
+<p><strong>basics</strong></p>
+
+<ul>
+  <li>false = 0, NULL, false (with #include <stdbool.h>)</stdbool.h></li>
+  <li>sizeof
+    <ul>
+      <li>(int) = # bytes in an integer, 4 bytes</li>
+      <li>(int*) = # bytes in a pointer, 8 bytes</li>
+      <li>(char) = 1 byt</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>pointers</strong></p>
+
+<ul>
+  <li>memory is one big array, and a memory address is just the index of a memory array</li>
+  <li>each memory address holds one byte of data</li>
+  <li>0x7F368F68 is in a 32-bit system cuz it has 8 bytes * 4 bits per byte</li>
+  <li>&amp; = get the memory address of a variable
+    <ul>
+      <li>NULL is used if a pointer is invalid</li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>= get the value (dereferencing)</li>
+    </ul>
+  </li>
+  <li>array is made like: int array[size] or (int ) malloc(sizeof(int)*3)</li>
+  <li>strings will always end in “\0” null terminator
+    <ul>
+      <li>strncpy, strncat, strcmp</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>memory layout</strong></p>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d0f3263d-9728-4e9e-9f18-0891a740f43f/Screen_Shot_2022-09-25_at_3.27.59_PM.png" alt="Screen Shot 2022-09-25 at 3.27.59 PM.png" /></p>
+
+<ul>
+  <li>text = instructions of the program</li>
+  <li>data (+bss) = statically allocated data aka globa/static variables, Strings, constants
+    <ul>
+      <li>global vars can be accessed by all functions and exist for the projects lifetime</li>
+    </ul>
+  </li>
+  <li>stack = local variables for each function call
+    <ul>
+      <li>stores local arguments and function parameters in a stack frame and removes when the function returns</li>
+    </ul>
+  </li>
+  <li>heap = dynamic memory that persists beyond function calls (malloc)
+    <ul>
+      <li>malloc, calloc, realloc, free</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>data structures</strong></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">struct my_struct { int x; char* y; }</code></li>
+  <li>typedef = creates a new type that has the exact same structure as a data type
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">typedef &lt;data type&gt; &lt;new data type name&gt;</code></li>
+      <li><code class="language-plaintext highlighter-rouge">typedef int my_int;</code></li>
+    </ul>
+  </li>
+  <li>types.h
+    <ul>
+      <li>off_t (signed int for file offsets)</li>
+      <li>pid_t (signed int for process ids)</li>
+      <li>pthread_t (unsighted int for thread identifying)</li>
+      <li>size_t (unsigned int for size of obj)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>useful functions</strong></p>
+
+<ul>
+  <li>strlen, strcpy, strcmp, fprintf, fopen, fclose, fread, fwrite
+    <ul>
+      <li>high level C library function</li>
+      <li><code class="language-plaintext highlighter-rouge">fread()</code> maintains a user level buffer and always reads desired num bytes (read may not)
+        <ul>
+          <li>also fread calls <code class="language-plaintext highlighter-rouge">read()</code> during operation</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>strcmp = 0 equal, &gt;0 if str1 is greater, &lt;0 if str1 is less</li>
+</ul>
+
+<h1 id="lec-1-what-is-an-operating-system">lec 1: what is an operating system</h1>
+
+<ul>
+  <li><strong>operating system</strong> = implements a VM for application whose interface is easier to interact with than the raw hardware</li>
+  <li>three main hats
+    <ul>
+      <li><strong>referee</strong> = manage protection, fault isolation (process, dual execution mode), resource sharing (scheduling), communication (pipes/sockets)</li>
+      <li><strong>illusionist</strong> = provide clean, easy to use abstractions of physical resources</li>
+      <li><strong>glue</strong> = provides a set of common services, make sharing easier, minimuze reuse</li>
+    </ul>
+  </li>
+  <li>evaluation criteria
+    <ul>
+      <li><strong>performance</strong> = implement the abstraction efficiently with low overhead, and equitably
+        <ul>
+          <li>overhead = added resource cost of implementing an abstraction</li>
+          <li>fairness = How “well” are resources distributed across applications</li>
+          <li>response time = how long does it take for a task to complete</li>
+          <li>throughput = Rate at which group of tasks can be completed</li>
+          <li>predictability = Are performance metrics constant over time?</li>
+        </ul>
+      </li>
+      <li><strong>reliability</strong> = system does what it should
+        <ul>
+          <li>availability = mean time to failure + mean time to repair</li>
+        </ul>
+      </li>
+      <li><strong>security</strong> = minimize vulnerability to attack
+        <ul>
+          <li>integrity = computer’s operation cannot be compromised by a malicious attacher</li>
+          <li>privacy = data stored on computer accessible to authorized users</li>
+        </ul>
+      </li>
+      <li><strong>portability</strong> = portable abstraction does not change as the hardware changes</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8bbb3ce1-7493-452b-9422-c04078083ca1/Screen_Shot_2022-09-25_at_4.11.12_PM.png" alt="Screen Shot 2022-09-25 at 4.11.12 PM.png" /></p>
+
+<h1 id="lec-2-processes-and-kernels">lec 2: processes and kernels</h1>
+
+<p><strong>requirements for virtualization</strong></p>
+
+<ul>
+  <li>the OS protects…
+    <ul>
+      <li>applications from other application’s code</li>
+      <li>OS from the applications</li>
+      <li>applications against inequitable resource utilization (memory, CPU time)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>what is a process</strong></p>
+
+<ul>
+  <li>process = instance of a running program</li>
+</ul>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/16d8756a-8ddf-41c1-bda9-3596c2bea5dc/Screen_Shot_2022-09-25_at_4.14.51_PM.png" alt="Screen Shot 2022-09-25 at 4.14.51 PM.png" /></p>
+
+<ul>
+  <li>process life cycle</li>
+</ul>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ef0dac40-2bad-4e52-bd61-a4b350e09046/Screen_Shot_2022-09-25_at_4.17.02_PM.png" alt="Screen Shot 2022-09-25 at 4.17.02 PM.png" /></p>
+
+<ul>
+  <li><strong>process control block</strong> = process management by the OS, stores necessary metadata
+    <ul>
+      <li>PC, stack ptr, registers, pid, uid, list of open files, process state</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>operating system kernel</strong></p>
+
+<ul>
+  <li>lowest level of OS running on system</li>
+  <li>kernel is <strong>trusted</strong> with full access to all hardware capabilities (all others are untrusted)</li>
+  <li><strong>dual mode operation</strong>
+    <ul>
+      <li>fixes the challenge of safe operations</li>
+      <li>use a bit for two modes of execution
+        <ul>
+          <li><strong>user mode</strong> = processor checks each instruction before executing and limited set of safe instructions</li>
+          <li><strong>kernel mode =</strong> executes with protection checks off (faster) and can execute anything</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>user vs kernel</strong></p>
+
+<ul>
+  <li><strong>user</strong> = shell, C standard library
+    <ul>
+      <li><strong>integer overflow</strong> and <strong>fread</strong> can happen here</li>
+    </ul>
+  </li>
+  <li><strong>kernel</strong> = device drivers and scheduler
+    <ul>
+      <li><strong>opening a file</strong> and <strong>dereferencing a NULL pointer</strong> are both procedures that leads to a transfer from user mode to kernel mode</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>hardware will support</strong></p>
+
+<ul>
+  <li>privileged instructions = unsafe instructions cannot be executed in user mode
+    <ul>
+      <li>cannot change mode bit, change address space, disable interrupts, perform IO operations, or halt the processor</li>
+      <li>iret is NOT allowed</li>
+      <li>int $0x30 is how you issue syscalls</li>
+    </ul>
+  </li>
+  <li>memory isolation/protection = memory accesses outside a process’s address space prohibited
+    <ul>
+      <li>OS and application both in memory and cannot read/write kernel memory</li>
+      <li>use <strong>virtualization</strong> for better control
+        <ul>
+          <li>expandable memory, sharable memory (virtual address → phys address), every process’s memory always starts at 0, we can dynamically change VA-PA mappings (no fragmentation!)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>interrupts = ensure kernel can regain control from running process
+    <ul>
+      <li>set to interrupt processer after a specific delay or specified event to regain control</li>
+    </ul>
+  </li>
+  <li>safe transfers = correctly transfer control between modes
+    <ul>
+      <li>system calls and exceptions (synchronous events aka trapping)</li>
+      <li>interrupts = async and can be maskable/nonmaskable</li>
+      <li>system calls = “narrow waste” cuz they ease into the user space and hardware</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>safe control transfer</strong></p>
+
+<ul>
+  <li><strong>exceptions</strong>
+    <ul>
+      <li>any unexpected condition caused by user program will stop executing and enter kernel</li>
+      <li>synchronous and non-maskeable</li>
+      <li>processes missteps, attempted to execute a privileged instruction in user mode, debugger breakpoints</li>
+      <li>ex: division by zero</li>
+    </ul>
+  </li>
+  <li><strong>interrupts</strong>
+    <ul>
+      <li>asynchronous signal to the processor that some external event occured and needs attention</li>
+      <li><strong>how it works =</strong> processor detects interrupt, suspend user program, switch to kernel stack, identify interrupt type, invoke appropriate interrupt handler, restore user program</li>
+      <li>ex: keyboard press!</li>
+    </ul>
+  </li>
+  <li><strong>kernel→user</strong>
+    <ul>
+      <li>new process creation like data structure init or setting registers</li>
+      <li>resuming after exception, interrupt, or syscall</li>
+      <li>switching to a diff process like loading new process state</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/44b9afd5-74b9-40cd-b350-b724dfd187d3/Screen_Shot_2022-09-25_at_4.46.04_PM.png" alt="Screen Shot 2022-09-25 at 4.46.04 PM.png" /></p>
+
+<h1 id="lec-3-processes-cont">lec 3: processes cont.</h1>
+
+<p><strong>stack review</strong></p>
+
+<ul>
+  <li>stack = grows down, contains temp data like methods/function parameters, return address, local vars</li>
+  <li>heap = grows up, dynamically allocated memory</li>
+  <li>stack frame = all info on the stack pertaining to a function call</li>
+</ul>
+
+<p><strong>pointers</strong></p>
+
+<ul>
+  <li>frame pointer (<code class="language-plaintext highlighter-rouge">%ebp</code>) = base address of function’s frame</li>
+  <li>stack pointer (<code class="language-plaintext highlighter-rouge">%esp</code>) = points to the next item on the stack</li>
+  <li>instruction pointer (<code class="language-plaintext highlighter-rouge">%eip</code>) = current address of the program being executed</li>
+  <li>ebx, eax, edx are all general registers for temporary data storage</li>
+</ul>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/84b0ce45-3a8b-46ae-8ae4-be3810f717f8/Screen_Shot_2022-09-25_at_9.12.08_PM.png" alt="Screen Shot 2022-09-25 at 9.12.08 PM.png" /></p>
+
+<ul>
+  <li>it always goes:
+    <ul>
+      <li>frame pointer (ebp), have stack pointer (esp) pointing at the ebp,</li>
+      <li>then create space for x =</li>
+      <li>then load parameters in reverse order</li>
+      <li>then instruction pointer eip gets added to the stack and jumps to the BAR location from “call bar”</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/671ae221-2b3b-4b4d-9dfd-30f067b08ddc/Screen_Shot_2022-09-25_at_9.16.29_PM.png" alt="Screen Shot 2022-09-25 at 9.16.29 PM.png" /></p>
+
+<ul>
+  <li>then jump stack pointer to the new frame pointer ebp for add
+    <ul>
+      <li>do add operation with 12(%ebp) and 8(%ebp)</li>
+      <li>store the result below ebp on the stack (move to eax register)</li>
+    </ul>
+  </li>
+  <li>begin popping local vars of the stack and restore control to EIP (instruction pointer)</li>
+</ul>
+
+<p><strong>big idea</strong></p>
+
+<ul>
+  <li>state of the programs execution is succinctly and completely represented by CPU register state: eip, esp, ebp, eflags/psw</li>
+</ul>
+
+<p><strong>user → kernel mode</strong></p>
+
+<ul>
+  <li>malicious user program (or IO device) cannot corrupt the kernel</li>
+  <li>interrupts, exceptions, or system calls handled similarly → fewer code paths, fewer bugs</li>
+  <li>reqs:
+    <ol>
+      <li><strong>limited entry</strong> = cannot jump to arbitrary code in kernel</li>
+      <li><strong>atomic switch</strong> = switch from process stack to kernel stack</li>
+      <li><strong>transparent execution</strong> = restore prior state to continue program</li>
+    </ol>
+  </li>
+</ul>
+
+<p><strong>1. interrupt detection (hardware)</strong></p>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ee3be8a9-260d-4449-81ba-7ba3ba71bde2/Screen_Shot_2022-09-25_at_9.40.04_PM.png" alt="Screen Shot 2022-09-25 at 9.40.04 PM.png" /></p>
+
+<ol>
+  <li>device sends electric signal over interrupt request line (IRQ) to interrupt controller</li>
+  <li>APIC converts IRQ to a vector number and sends signal to processor</li>
+  <li>processor detects interrupt by the IRQ code</li>
+</ol>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bbb4b1c2-8535-4a7b-bd51-1f58a67bb7e7/Screen_Shot_2022-09-25_at_9.41.06_PM.png" alt="Screen Shot 2022-09-25 at 9.41.06 PM.png" /></p>
+
+<p><strong>2. save recovery state (hardware)</strong></p>
+
+<ul>
+  <li>save register values for process recovery
+    <ul>
+      <li>stack pointer esp</li>
+      <li>program counter eip</li>
+      <li>execution flags/program status word eflags</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>3. switching atomically to kernel stack</strong></p>
+
+<ul>
+  <li>switches stack pointer to base of kernel stack, pushes recovery state onto the new stack (+ optional error code)
+    <ul>
+      <li>hardware needs to save registers before switching to kernel stack bcuz it <strong>overrides</strong> the stack pointer/eip when switching</li>
+      <li>use a separate kernel stack for integrity and privacy</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>4. invoke interrupt handle (hardware)</strong></p>
+
+<ul>
+  <li>interrupt vector is an index into the <strong>Interrupt Vector Table</strong></li>
+  <li>index contains appropriate <strong>Interrupt Handler Routine</strong></li>
+  <li>handler saves all remaining user registers into stack and implements logic</li>
+  <li><strong>PURPOSE</strong> = ensures that we only start executing kernel code at predefined entry points</li>
+</ul>
+
+<p><strong>5. return to program</strong></p>
+
+<ul>
+  <li>pop all user regs from kernel stack</li>
+  <li>invoke iret instruction to pop saved EIP, EFLAGS, and SP regs from kernel’s exception stack to relevant registers</li>
+  <li>return to user mode</li>
+</ul>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/98f1514e-f924-4bfd-82dd-d40341973f69/Screen_Shot_2022-09-25_at_11.26.28_PM.png" alt="Screen Shot 2022-09-25 at 11.26.28 PM.png" /></p>
+
+<p><strong>INTERRUPT SUMMARY</strong></p>
+
+<ol>
+  <li>device sends signal to APIC</li>
+  <li>processor detects interrupt</li>
+  <li>save recovery state and switch to kernel stack</li>
+  <li>jump to interrupt handler table at appropriate vector and invoke interrupt handler</li>
+  <li>restore user program</li>
+</ol>
+
+<p><strong>*syscalls</strong> are handled VERY similarly!</p>
+
+<ul>
+  <li>issue a “trap” instruction (int 0x80)</li>
+  <li>differences for syscalls (AND exceptions!)
+    <ol>
+      <li>extra layer of indirection (syscall table)</li>
+      <li>leverage registers for parameters/values</li>
+      <li>when executing iret, increment EIP by one to go to next instruction</li>
+      <li>usually interrupts not disabled</li>
+    </ol>
+  </li>
+</ul>
+
+<h1 id="lec-4-systems-programming-processes-and-communication">lec 4: systems programming processes and communication</h1>
+
+<ul>
+  <li>processes in Linux form a family tree, with parents and many children starting from init</li>
+</ul>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ce7644db-a094-47ca-8b82-1bf4fe5e8c27/Screen_Shot_2022-09-26_at_9.49.26_AM.png" alt="Screen Shot 2022-09-26 at 9.49.26 AM.png" /></p>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d1147ccb-5444-4a93-bd58-74024135d7cb/Screen_Shot_2022-09-26_at_9.49.17_AM.png" alt="Screen Shot 2022-09-26 at 9.49.17 AM.png" /></p>
+
+<p><strong>process management API</strong></p>
+
+<ul>
+  <li><strong>exit</strong> = terminate a process</li>
+  <li><strong>fork</strong> = copy the current process
+    <ul>
+      <li>creates a new child process (copy) from an original parent process</li>
+      <li>copies address space, code/data segments, registers (including PC+SP), stack, pointers to files/IO
+        <ul>
+          <li>uses copy-on-write, so generally <strong>fast</strong> bcuz the OS doesn’t have to copy the entire address space!</li>
+        </ul>
+      </li>
+      <li>all <strong>processes</strong> <strong>WILL finish</strong> even if the main terminates! separate processes</li>
+      <li>how to <code class="language-plaintext highlighter-rouge">do_fork()</code>:
+        <ol>
+          <li>allocate a new PCB (process control block)</li>
+          <li>duplicate</li>
+          <li>allocate new PID (process id)</li>
+          <li>mark process as the READY state (start instruction pointer at the same fork() instruction in the child process)</li>
+        </ol>
+      </li>
+      <li>fork &gt;0 success, &lt;0 error, =0 child process!
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">fork()</code> returns PID of child to parent, if 0 then we know its a child</li>
+        </ul>
+      </li>
+    </ul>
+
+    <p><strong>fork()</strong></p>
+
+    <ol>
+      <li><code class="language-plaintext highlighter-rouge">fork()</code> invokes int 0x80 instruction - syscall</li>
+      <li>CPU switches to kernel stack and copies recovery state</li>
+      <li>CPU jumps to interrupt vector table (index 128) and invokes <code class="language-plaintext highlighter-rouge">system_call_handler()</code></li>
+      <li>handler identifies fork() using syscall dispatch table, where syscall number is stored in %eax reg</li>
+      <li><code class="language-plaintext highlighter-rouge">do_fork()</code> creates a new child PCB with duplicated memory context and <em>same</em> EIP</li>
+      <li>schedule either child or parent process</li>
+    </ol>
+  </li>
+  <li><strong>exec</strong> = change the program being run by the current proccess
+    <ul>
+      <li>useful to copy entire memory of process but can be pretty fast bcuz of copy-on-write mechanisms</li>
+      <li>interleaved with fork</li>
+      <li>open FDs are preserved across the exec syscall
+        <ol>
+          <li>replace the code and data segment</li>
+          <li>set EIP to point to start of new program reinitialize SP and FP</li>
+          <li>push arguments to program onto stack</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d7b669c6-846d-4b17-969f-d558aab87dbc/Screen_Shot_2022-09-26_at_11.04.50_AM.png" alt="Screen Shot 2022-09-26 at 11.04.50 AM.png" /></p>
+
+<ul>
+  <li><strong>wait</strong> = wait blocks parent process until one of its children processes exits
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">pid_t waitpid(pid_t pid, int *status, int options);</code></li>
+    </ul>
+  </li>
+  <li><strong>kill</strong> = send a signal (interrupt-like notif) to another process
+    <ul>
+      <li>each signal has a default action that can override with signal handler
+        <ul>
+          <li>program jumps to signal handler function and program resumes after</li>
+        </ul>
+      </li>
+      <li>ex: kernel → user mode transition
+        <ol>
+          <li>aims to make process aware that specific event has occurred</li>
+          <li>allow process to execute a signal handler function when event has occurred</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li><strong>sigaction</strong> = set handlers for signals</li>
+</ul>
+
+<p><strong>Input/Output in Linux</strong></p>
+
+<ul>
+  <li>UNIX has the same IO interface for everything! → all files!!!
+    <ul>
+      <li>devices (printers, mouse), read/write files (disk), interprocess communication (pipes, sockets) = all the same!</li>
+      <li>user processes can interact with IO devices as if they are files!</li>
+      <li>read and write to pipe using syscalls</li>
+      <li>HOWEVER…
+        <ul>
+          <li>not everything stored on the disk is part of a file (such as boot loader and free map in pintOS)</li>
+          <li>kernel data structures CAN be stored as memory</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>core tenants of the unix/IO interface</strong></p>
+
+<ul>
+  <li><strong>uniformity</strong> = same set of system calls (<strong><code class="language-plaintext highlighter-rouge">open, create, read, write, close</code>)</strong>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">open</code> = enforces file permission bits</li>
+      <li><code class="language-plaintext highlighter-rouge">read</code> = the first argument is usually not 1 (usually stdin is fd=1 and you usually don’t want to call read on that)</li>
+      <li><code class="language-plaintext highlighter-rouge">write</code> = takes an int, a pointer, and size_t</li>
+      <li><code class="language-plaintext highlighter-rouge">lseek</code> = used to reposition the file offset</li>
+      <li><code class="language-plaintext highlighter-rouge">close</code> = closes a file</li>
+      <li><code class="language-plaintext highlighter-rouge">dup2</code> = duplicates a file descriptor</li>
+    </ul>
+  </li>
+  <li><strong>open before use</strong> = must explicitly open file/device/channel</li>
+  <li><strong>byte-oriented</strong> = all devices, even block devices, are access through byte arrays</li>
+  <li><strong>kernel buffered reads/writes</strong> = data is buffered at kernel to decouple internals from application</li>
+  <li><strong>explicit close</strong> = must explicitly close resource after using it</li>
+</ul>
+
+<p><strong>file descriptor</strong></p>
+
+<ul>
+  <li>number that uniquely identifies an open IO resource in the OS (an index!)
+    <ul>
+      <li>stored in a file descriptor table! each process has a unique FD table and unique address space</li>
+      <li>if you <strong>FORK,</strong> the forked process inherits the FD table!!!!!</li>
+      <li>ALSO if you fork, its not like child and parents – <strong>all the processes are independent and will finish</strong>!</li>
+      <li>you can have multiple FDs→1 file, but not multiple files to 1 FD</li>
+    </ul>
+  </li>
+  <li>FD table stores…
+    <ul>
+      <li>file offset, file access mode and status flags from open(), reference to physical location (inode), and # of times opened</li>
+    </ul>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">open/create</code></strong> = all files explicitly opened via open or create (returns lowest numbered file descriptor not yet assigned and creates new FD)
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">open()</code> will always start at the <strong>0 index</strong> of the file!!!!!!!</li>
+    </ul>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">close</code></strong> = closes FD and allows that num to be reused with a diff file
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">close()</code> does not wait for the buffer if we are also using fwrite/fclose</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dd501c60-ac7e-4f78-8584-1c3f8c3131a1/Screen_Shot_2022-09-27_at_10.12.05_AM.png" alt="Screen Shot 2022-09-27 at 10.12.05 AM.png" /></p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">read</code></strong> = reads data from open file using file descriptor, returns ssize_t</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">write</code></strong> = writes data and returns ssize_t</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">lseek</code></strong> = reposition file offset within kernel, returns off_t</li>
+</ul>
+
+<h1 id="lec-5-threads-and-the-thread-api">lec 5: threads and the thread API</h1>
+
+<p><strong>OS library</strong></p>
+
+<ol>
+  <li><strong>improved programming API</strong> = minimizes glue code and simulates additional functionality</li>
+  <li><strong>performance</strong> = minimizes cost of syscalls</li>
+</ol>
+
+<p><strong>FDs to files</strong></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">FILE*</code> = OS library wrapper for manipulating explicit files
+    <ul>
+      <li>contains FD, buffer array, lock</li>
+      <li>operates on streams (unformatted sequences of bytes)</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">fputc, fputs, fgetc, fread, fwrite, fprintf, fscanf</code>
+    <ul>
+      <li>these commands can make the program show up in a <strong>higher priority</strong> on the queue since they are part of the thread API
+        <ul>
+          <li>only in <strong>MLFQS</strong></li>
+          <li>makes the program run faster!</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>buffered IO</strong> (passes through an intermediate and then passes onto OS when enough data has accumulated to reduce file system calls)
+    <ul>
+      <li>maintains a per-file user-level buffer</li>
+      <li><strong>Write Calls</strong> write to buffer and flushes buffer to disk when full (or on special char)
+        <ul>
+          <li>this makes it so that there’s many smaller writes and then passes to the disk when it has enough accumulated)</li>
+        </ul>
+      </li>
+      <li><strong>Read Calls</strong> read from buffer and reads from disk when the buffer is empty
+        <ul>
+          <li>the read call waits until the buffer is completely flushed before reading</li>
+        </ul>
+      </li>
+      <li>operations on file descriptors are <strong>unbuffered</strong> and visible immediately</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>benefits of API</strong></p>
+
+<ul>
+  <li>syscalls are 25x more expensive than FILE* calls</li>
+  <li><strong>buffering</strong> is the key to supporting diff FILE IO APIs (additional functionality!)
+    <ul>
+      <li>decouples the rate at which the application writes from the speed at which the file system writes (so the user can write to the user level buffer without worrying about the speed of the underlying hardware)</li>
+    </ul>
+  </li>
+  <li>kernel always reads <strong>fixed size block</strong> from disk
+    <ul>
+      <li>buffers into user space</li>
+    </ul>
+  </li>
+  <li>parses buffer to read and write chars/blocks/lines
+    <ul>
+      <li>allows user to write individual chars or lines</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>buffering</strong></p>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9905ffb0-578e-41a3-a110-6dc5ec4a03db/Screen_Shot_2022-09-26_at_12.50.57_PM.png" alt="Screen Shot 2022-09-26 at 12.50.57 PM.png" /></p>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0afda9ff-3c2f-4071-ad3c-ee56b2966468/Screen_Shot_2022-09-26_at_12.54.06_PM.png" alt="Screen Shot 2022-09-26 at 12.54.06 PM.png" /></p>
+
+<p><strong>OS concurrency/parallelism</strong></p>
+
+<ul>
+  <li>efficiently manage…
+    <ul>
+      <li>many different processes</li>
+      <li>concurrent interrupts</li>
+      <li>network interfaces</li>
+    </ul>
+  </li>
+  <li>must provide programmers with abstractions for expressing and managing concurrency</li>
+</ul>
+
+<p><strong>threads</strong></p>
+
+<ul>
+  <li>single execution sequence that represents a task, runs on a dedicated virtual processor with sequential code</li>
+  <li>processes AND threads have a lifecycle:
+    <ul>
+      <li>new, ready, running, waiting, terminated</li>
+    </ul>
+  </li>
+  <li>needed for…
+    <ul>
+      <li><strong>natural program structure</strong> = simultaneously update screen, fetch new data from network, receive keyboard input</li>
+      <li><strong>exploiting parallelism</strong> = split unit of work into n tasks and process tasks in parallel on multiple cores</li>
+      <li><strong>responsiveness</strong> = high priority work should not be delayed by low priority work, you can schedule as separate threads for independence</li>
+      <li><strong>masking IO latency</strong> = continue to do useful work on separate threads while blocked on IO (latency = delay before transfer of data)</li>
+    </ul>
+  </li>
+  <li>threads are not the same as processes!
+    <ul>
+      <li>processes = granularity of isolation and protection for OS, consists of 1+ threads!</li>
+      <li>threads = concurrent sequences of computation, contained in processes</li>
+    </ul>
+  </li>
+  <li>threads inside of the same process are not isolated
+    <ul>
+      <li>they share an address space and IO state (FDs)
+        <ul>
+          <li>meaning they can modify stack variables of another thread in the same process!</li>
+        </ul>
+      </li>
+      <li>they execute disjoint instruction streams tho, so they have an individual stack, register state, etc</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1528cd5a-7762-4b35-b67c-0e980464186c/Screen_Shot_2022-09-26_at_6.00.49_PM.png" alt="Screen Shot 2022-09-26 at 6.00.49 PM.png" /></p>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/14e251b8-680f-4515-a00d-627c866174f4/Screen_Shot_2022-09-26_at_7.14.16_PM.png" alt="Screen Shot 2022-09-26 at 7.14.16 PM.png" /></p>
+
+<p><strong>user threads vs kernel threads</strong></p>
+
+<ul>
+  <li>user threads
+    <ul>
+      <li>one PCB (process control block) for the process
+        <ul>
+          <li>process control block = status, register state, process ID, execution time, memory space, translation</li>
+        </ul>
+      </li>
+      <li>each thread has own TCB (thread control block) stored in heap of process
+        <ul>
+          <li>registers are saved in kernel memory</li>
+          <li>the page table base register would be set to point to the second process’s page tables during a context switch
+            <ul>
+              <li>the kernel rounds down <code class="language-plaintext highlighter-rouge">%esp</code> to the nearest page, so the struct thread is at the bottom of the page that the corresponding kernel stack is on</li>
+            </ul>
+          </li>
+          <li>file descriptor table is in memory</li>
+          <li>buffered data is NOT flushed during a context switch</li>
+        </ul>
+      </li>
+      <li>threads in user-space only, invisible to kernel</li>
+      <li>lower overhead compared to kernel-level threads</li>
+    </ul>
+  </li>
+  <li>kernel threads
+    <ul>
+      <li>essentially kernels know about all the threads happening so they can schedule all of them however they want</li>
+      <li>each thread has own TCB, scheduled individually, and needs mode switch to switch threads</li>
+      <li>PCBs of threads mapped in the same process all share the same process share address space, files, code/data
+        <ul>
+          <li>but they have their own stack and registers</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/10acb25c-f52a-49f6-80b8-12284db3e933/Screen_Shot_2022-09-26_at_6.24.29_PM.png" alt="Screen Shot 2022-09-26 at 6.24.29 PM.png" /></p>
+
+<p><strong>pthreads</strong></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">pthread_create</code> = creates and runs new thread</li>
+  <li><code class="language-plaintext highlighter-rouge">pthread_join</code> = suspends execution of calling thread until target thread terminates
+    <ul>
+      <li>generally you can use this at the end because it will ALWAYS WAIT until the threads finish running before joining!</li>
+      <li>you have to run this on all ur threads tho (like for loop or smthg)</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">pthread_yield</code> = causes thread to yield the CPU to other threads</li>
+  <li><code class="language-plaintext highlighter-rouge">pthread_exit</code> = terminates thread and makes value_ptr available to any successful join
+    <ul>
+      <li>typically this results in DATA LOSS</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>threads vs processes</strong></p>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/521075ab-1eb0-41c2-8b5b-fa1a107a3922/Screen_Shot_2022-09-27_at_9.50.24_AM.png" alt="Screen Shot 2022-09-27 at 9.50.24 AM.png" /></p>
+
+<ul>
+  <li>threads are useful in a process in sockets!</li>
+  <li>you can basically accept a socket and then create a thread with that socket, without worrying about closing the socket each time
+    <ul>
+      <li>then at the end you can close it once</li>
+      <li>this is much easier than the previous process bcuz ur not copying them anywhere</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/034b46f3-c259-41a0-a984-c073878776c3/Screen_Shot_2022-09-26_at_6.50.37_PM.png" alt="Screen Shot 2022-09-26 at 6.50.37 PM.png" /></p>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ee4914d7-5ae9-46d2-872f-e855e3300a73/Screen_Shot_2022-09-26_at_6.49.57_PM.png" alt="Screen Shot 2022-09-26 at 6.49.57 PM.png" /></p>
+
+<p><strong>pthread_create()</strong></p>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5a817aac-434c-4192-bc8d-0c7f96cc0e00/Screen_Shot_2022-09-26_at_6.53.12_PM.png" alt="Screen Shot 2022-09-26 at 6.53.12 PM.png" /></p>
+
+<p><strong>summary</strong></p>
+
+<ul>
+  <li>protection is at the process level → threads are not isolated
+    <ul>
+      <li>threads share an address space and are nondeterministic</li>
+      <li>RACE CONDITION :’)</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="lec-6-synchronization---concurrency-and-mutual-exclusion">lec 6: synchronization - concurrency and mutual exclusion</h1>
+
+<p><strong>sockets vs pipes</strong></p>
+
+<ul>
+  <li>SOCKET = 2 way, PIPE = 1 way
+    <ul>
+      <li>pipe = between processes on the same machine</li>
+      <li>socket = between different OR same machine</li>
+    </ul>
+  </li>
+  <li>establishing a pipe
+    <ul>
+      <li>call pipe syscall, then fork, then close one end of the pipe in the parent process and close other end in child process</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>interprocess communication: pipes</strong></p>
+
+<ul>
+  <li><strong>pipe</strong> implements a <strong>queue abstraction</strong>
+    <ul>
+      <li>implemented as a kernel buffer with two file descriptors, with one for writing to pipe and one for reading</li>
+      <li><strong>block</strong> the queue if the pipe is full OR empty</li>
+    </ul>
+  </li>
+  <li>after the last “write” descriptor is closed, we close the pipe</li>
+  <li>reads return “EOF”
+    <ul>
+      <li>after the last “read” descriptor is closed, writes generate <strong>SIGPIPE</strong> signals which signals a <strong>broken pipe</strong> and ends the process
+        <ul>
+          <li>sigpipe = when you try to output to a socket that isn’t connected</li>
+        </ul>
+      </li>
+      <li>if the process ignores, then the write fails with <strong>EPIPE</strong> error</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>IPC across machines: sockets</strong></p>
+
+<ul>
+  <li>sockets are an abstraction of 2 queues that can read or write in either direction to different machines</li>
+  <li><strong>example</strong>: client and server, like connecting to <a href="http://eecs.berkeley.edu">eecs.berkeley.edu</a> or our VM from the instructional accounts</li>
+</ul>
+
+<p><strong>socket functions</strong></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">socket()</code> = creates the socket</li>
+  <li><code class="language-plaintext highlighter-rouge">bind()</code> = bind the socket to an address</li>
+  <li><code class="language-plaintext highlighter-rouge">listen()</code> = listen for connections</li>
+  <li><code class="language-plaintext highlighter-rouge">accept()</code> = server accepts a new connection (usually blocks until a client connects)
+    <ul>
+      <li>efficient solution would be to create new threads for each new client instead of blocking the new clients while handling the current request</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">connect()</code> = used by the client to connect to a server!</li>
+  <li><code class="language-plaintext highlighter-rouge">send()</code> = send and receive data with send() and receive()</li>
+</ul>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b4854c11-03cc-41e0-a110-5080c5f5a71a/Screen_Shot_2022-09-27_at_9.56.38_AM.png" alt="Screen Shot 2022-09-27 at 9.56.38 AM.png" /></p>
+
+<p><strong>connection setup over TCP/IP (Transmission Control Protocol)</strong></p>
+
+<ul>
+  <li>identify connections with a 5-tuple:
+    <ol>
+      <li>Source IP Address</li>
+      <li>Destination IP Address</li>
+      <li>Source Port Number</li>
+      <li>Destination Port Number</li>
+      <li>Protocol (always TCP here)</li>
+    </ol>
+  </li>
+</ul>
+
+<p><strong>dispatch loop</strong></p>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">RunThread();</code>
+    <ul>
+      <li>load state into cpu, load environment, jump to PC</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">ChooseNextThread();</code></li>
+  <li><code class="language-plaintext highlighter-rouge">SaveStateOfCPU(curTCB);</code></li>
+  <li><code class="language-plaintext highlighter-rouge">LoadStateOfCPU(newTCB);</code></li>
+</ol>
+
+<p><strong>internal events</strong></p>
+
+<ul>
+  <li>blocking on IO = the act of requesting IO implicitly yields the CPU</li>
+  <li>waiting on a signal from other threads</li>
+  <li>thread executes a yield = thread gives CPU to another thread voluntarily</li>
+</ul>
+
+<p><strong>external events</strong></p>
+
+<ul>
+  <li>what happens if thread never does any IO, never waits, and never yields control?
+    <ul>
+      <li>we must find a way for dispatcher to regain control</li>
+    </ul>
+  </li>
+  <li>interrupts and timers</li>
+</ul>
+
+<p><strong>User Level Threading</strong></p>
+
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">threadfork()</code> =</strong> user-level thread create
+    <ul>
+      <li>takes in fcnPtr, fcnArgPtr[], size of stack to alloc)</li>
+    </ul>
+  </li>
+  <li>TCB initialize
+    <ul>
+      <li>initialize register fields, stack pointer points at stack, PC return address at <code class="language-plaintext highlighter-rouge">ThreadRoot()</code>, a0 and a1 are registered to <code class="language-plaintext highlighter-rouge">fcnPtr</code> and <code class="language-plaintext highlighter-rouge">fcnArgPtr</code></li>
+    </ul>
+  </li>
+  <li>stack initialize
+    <ul>
+      <li>minimal - x86 needs to push a return address on stack, nothing else</li>
+      <li>grows down with execution of thread</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fa5fe6a7-9ec6-49ec-96e6-9be964f9c6df/Screen_Shot_2022-09-26_at_8.50.14_PM.png" alt="Screen Shot 2022-09-26 at 8.50.14 PM.png" /></p>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c7f5477c-6963-4438-9c7b-8e884884a918/Screen_Shot_2022-09-26_at_8.50.22_PM.png" alt="Screen Shot 2022-09-26 at 8.50.22 PM.png" /></p>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7ba372ca-e45b-45df-9992-f9baad0ba7cc/Screen_Shot_2022-09-26_at_8.51.29_PM.png" alt="Screen Shot 2022-09-26 at 8.51.29 PM.png" /></p>
+
+<p><strong>multiprocessing vs multiprogramming</strong></p>
+
+<ul>
+  <li><strong>Multiprocessing</strong> = Multiple CPUs</li>
+  <li><strong>Multiprogramming</strong> = Multiple Jobs or Processes</li>
+  <li><strong>Multithreading</strong> = Multiple threads per Process</li>
+</ul>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a1618052-189d-445b-bf98-195d31d0bf24/Screen_Shot_2022-09-26_at_8.52.30_PM.png" alt="Screen Shot 2022-09-26 at 8.52.30 PM.png" /></p>
+
+<p><strong>concurrent threads</strong></p>
+
+<ul>
+  <li>independent threads
+    <ul>
+      <li>no state is shared with other threads</li>
+      <li>deterministic AND reproducible</li>
+    </ul>
+  </li>
+  <li>cooperating threads
+    <ul>
+      <li>shared state between multiple threads, nondet and nonrep :(</li>
+    </ul>
+  </li>
+  <li>advantages of cooperating threads:
+    <ol>
+      <li>share resources</li>
+      <li>speedup cuz overlapping IO, computation, and multiprocessors (parallel)</li>
+      <li>modularity - chop up larger problem into simpler pieces</li>
+    </ol>
+  </li>
+  <li>disadvantages = sensitive to data, interleaving, shared vars can become inconsistent</li>
+</ul>
+
+<h1 id="lec-7-synchronization---concurrency-locks-atomic-instructions">lec 7: synchronization - concurrency, locks, atomic instructions</h1>
+
+<p><strong>timer</strong></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">thread_tick</code> = updates thread counters, if quanta exhausted we set yield flag</li>
+  <li><code class="language-plaintext highlighter-rouge">thread_yield</code> = on path to return from interrupt, sets current thread back to READY, pushes back onto ready_list, selects next thread (upon iret)</li>
+  <li><code class="language-plaintext highlighter-rouge">schedule</code> = selects next thread to run and sets status to RUNNING, if user thread it activates the process, then returns to intr_handler</li>
+</ul>
+
+<p><strong>threads</strong></p>
+
+<ul>
+  <li>yields overlapped IO and computation without deconstructing code into non-blocking fragments</li>
+  <li>requests proceeds to completion, blocking as required (shared state can get corrupted)</li>
+</ul>
+
+<p><strong>atomic operations</strong></p>
+
+<ul>
+  <li>an operation that always runs to completion or not at all (NOT DIVISIBLE!)</li>
+  <li><strong>fundamental building block =</strong> if no atomic oeprations, then no way for threads to work together</li>
+  <li>most instructions aren’t atomic (like ++ and —), but <strong>memory loads/stores</strong> are atomic</li>
+</ul>
+
+<p><strong>definitions</strong></p>
+
+<ul>
+  <li><strong>synchronization</strong>
+    <ul>
+      <li>using atomic operations to ensure cooperation betw threads</li>
+      <li>only load/store is atomic</li>
+    </ul>
+  </li>
+  <li><strong>mutual exclusion</strong>
+    <ul>
+      <li>only one thread can do a particular thing at a time</li>
+    </ul>
+  </li>
+  <li><strong>critical section</strong>
+    <ul>
+      <li>piece of code that only one thread can execute at one time</li>
+      <li>causes <strong>busy-waiting</strong> if the CPU has to wait too long</li>
+    </ul>
+  </li>
+  <li><strong>lock</strong>
+    <ul>
+      <li>used to protect the critical section</li>
+      <li>acquire at the beginning, release at the end</li>
+      <li>alloc: <code class="language-plaintext highlighter-rouge">structure Lock lock</code> or <code class="language-plaintext highlighter-rouge">pthread_mutex_t lock</code></li>
+      <li>init: <code class="language-plaintext highlighter-rouge">lock_init(&amp;lock)</code> or <code class="language-plaintext highlighter-rouge">lock = PTHREAD_MUTEX_INITIALIZE</code></li>
+    </ul>
+  </li>
+  <li>why do we disable interrupts
+    <ul>
+      <li>to avoid interruption between checking and setting the lock value</li>
+      <li>the hardware timer usually generates non-maskable interrupts (not ignored)</li>
+      <li>disadvantages:
+        <ul>
+          <li>does not help prevent multiple processors from accessing the same critical section</li>
+          <li>critical events might be missed since interrupts are disabled</li>
+          <li>user programs don’t have the ability to disable interrupts</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>locks can be implemented using atomic operations
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">test&amp;set</code> or <code class="language-plaintext highlighter-rouge">compare&amp;swap</code></li>
+      <li>this means that we do not need trapping into the kernel</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="lec-8-synchronization---locks-semaphores">lec 8: synchronization - locks, semaphores</h1>
+
+<p><strong>atomic operations</strong></p>
+
+<ul>
+  <li>problem was you can’t give lock implementation to users AND doesn’t work well on multiprocessor</li>
+  <li><strong>solution!</strong> → atomic instruction sequences
+    <ul>
+      <li>read a value and write a new value atomically</li>
+      <li>hardware can do this on uni and multiprocessors</li>
+      <li>use <code class="language-plaintext highlighter-rouge">compare&amp;swap(&amp;address, reg1, reg2)</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>futex aka fast user-space mutex</strong></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">int futex(int *uaddr, int futex_op, int val, const struct timespec *timeout );</code></li>
+  <li>interface to the kernel sleep functionality, includes wait and wake conditionally</li>
+</ul>
+
+<p><strong>semaphores</strong></p>
+
+<ul>
+  <li>generalized lock, non-negative integer value</li>
+  <li><code class="language-plaintext highlighter-rouge">down()</code> (<strong>P</strong>) or <code class="language-plaintext highlighter-rouge">up()</code> (<strong>V</strong>) the semaphore to synch</li>
+  <li><strong>initial value = 1</strong>
+    <ul>
+      <li>“<strong>mutual exclusion</strong>” or “binary semaphore” or “mutex”</li>
+      <li>used like a lock!</li>
+      <li>OR use as a capacity blocker aka sema_init(10000) like game_capacity</li>
+    </ul>
+  </li>
+  <li><strong>initial value = 0</strong>
+    <ul>
+      <li>“<strong>scheduling constraints</strong>”</li>
+      <li>allows thread 1 to wait for a signal from thread 2</li>
+      <li>so “start” ups the semaphore, “finish” downs the semaphore</li>
+    </ul>
+  </li>
+  <li>use a separate semaphore for each constraint you have!
+    <ul>
+      <li>consumer waits for producer to fill buffers (SCHECO), producer waits for consumers to empty buffers (SCHECO), one thread can manipulate buffer queue at once (MUTEX)</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="lec-9-synchronization---semaphores-monitors-readwriters">lec 9: synchronization - semaphores, monitors, read/writers</h1>
+
+<ul>
+  <li>use <strong>locks</strong> for MUTEX and <strong>condition variables</strong> for managing concurrent access to shared data</li>
+  <li><strong>monitor</strong> = a <strong>lock</strong> and zero or more <strong>condition variables</strong> for managing concurrent access to shared data
+    <ul>
+      <li><strong>condition variable</strong> = <strong>queue</strong> of threads waiting for something INSIDE a critical section</li>
+      <li>allows sleeping inside the critical section by atomically releasing lock at the time we go to sleep</li>
+      <li><code class="language-plaintext highlighter-rouge">wait(&amp;lock)</code> = atomically release lock and go to sleep, re-acquire lock later before returning</li>
+      <li><code class="language-plaintext highlighter-rouge">signal()</code> = wake up one waiter if any</li>
+      <li><code class="language-plaintext highlighter-rouge">broadcast()</code> = wake up ALL waiters</li>
+      <li>RULE: must hold lock when doing condition variable operations!</li>
+    </ul>
+  </li>
+  <li><strong>hoare monitors</strong>
+    <ul>
+      <li>signaler gives up lock, CPU to waiter, waiter runs immediately</li>
+      <li>then waiter gives up lock, processor back to signaler when it either exits critical section OR waits again</li>
+    </ul>
+  </li>
+  <li><strong>mesa monitors</strong>
+    <ul>
+      <li>signaler keeps lock and processor</li>
+      <li>waiter/thread placed on ready queue (no priority)</li>
+      <li><strong>practically, we need to check the condition again after the wait</strong>
+        <ul>
+          <li>use <strong>WHILE</strong> (isEmpty(&amp;queue)) { … } instead of an if statement</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>DIFFERENCE</strong>
+    <ul>
+      <li><strong>HOARE</strong> = signaling thread immediately transfers lock and control of the CPU to the waiting thread</li>
+      <li><strong>MESA</strong> = waiting thread will be woken up after being signaled, and may be scheduled to run at a later time</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>example of monitor (lock AND sem) implementation</strong></p>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/de1f21cb-4ad0-4ff3-aa2f-2743d4842eb3/Screen_Shot_2022-09-27_at_10.28.33_AM.png" alt="Screen Shot 2022-09-27 at 10.28.33 AM.png" /></p>
+
+<ul>
+  <li>uses broadcast cuz if someone arrived second that is going in the right direction, we want them to know they can go</li>
+</ul>
+
+<p><strong>Reader/Writers problem</strong></p>
+
+<ul>
+  <li>if we want many readers and only one writer at one time</li>
+</ul>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f2e7abae-23dd-4614-899e-796039599507/Screen_Shot_2022-09-26_at_10.57.21_PM.png" alt="Screen Shot 2022-09-26 at 10.57.21 PM.png" /></p>
+
+<ul>
+  <li>readers <code class="language-plaintext highlighter-rouge">signal()</code> to wake up just ONE writer</li>
+  <li>writers <code class="language-plaintext highlighter-rouge">broadcast()</code> to wake up ALL readers</li>
+</ul>
+
+<p><strong>monitors from semaphores</strong></p>
+
+<ul>
+  <li>with <strong>mesa</strong>, this is possible!</li>
+  <li>wait if necessary and then signal when something changes so waiting threads can proceed</li>
+  <li>make sure to release the lock on an exception/error!</li>
+</ul>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/de512efe-ba6a-4673-86ed-f9f601b78dd8/Screen_Shot_2022-09-26_at_11.03.25_PM.png" alt="Screen Shot 2022-09-26 at 11.03.25 PM.png" /></p>
+
+<h1 id="extras">extras</h1>
+
+<p><strong>scheduling algorithms</strong></p>
+
+<ul>
+  <li>MLFQS = multilevel feedback queue scheduling
+    <ul>
+      <li>processes are permanently assigned to the queue and cannot move</li>
+      <li>low scheduling overhead but not flexible, depends on priority</li>
+      <li>causes starvation cuz high priority queues can remain there indefinitely</li>
+    </ul>
+  </li>
+  <li>FCFS = first come first serve
+    <ul>
+      <li>maximizes throughput vs SRTF since fewer context switches</li>
+      <li>may cause starvation due to potential threads running indefinitely</li>
+    </ul>
+  </li>
+</ul>
+
+
+</div>
+  </main>
+
+  <footer class="mt-auto py-3 text-center">
+
+  <small class="text-muted mb-2">
+    <!-- <i class="fas fa-code"></i> with <i class="fas fa-heart"></i> -->
+    Designed by <strong>Jillian Goldberg</strong>
+  </small>
+
+  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="mailto:jilliangoldberg@berkeley.edu"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#db4437'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-2x"></i>
+    </a><a class="social mx-1"  href="https://www.facebook.com/jillian.goldberg.71"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#3b5998'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-facebook fa-2x"></i>
+    </a><a class="social mx-1"  href="https://www.github.com/jilliangoldberg"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#333333'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-2x"></i>
+    </a><a class="social mx-1"  href="https://www.linkedin.com/in/jilliangoldberg"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#007bb5'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-2x"></i>
+    </a><a class="social mx-1"  href="https://www.youtube.com/JillianGoldberg"
+       style="color: #6c757d"
+       onMouseOver="this.style.color='#ff0000'"
+       onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-youtube fa-2x"></i>
+    </a>
+
+</div><small id="attribution">
+    <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
+  </small>
+  
+</footer>
+
+  
+  <!-- GitHub Buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- jQuery CDN -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Bootstrap JS CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- wow.js CDN & Activation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script> new WOW().init(); </script>
+
+<!-- Initialize all tooltips -->
+<script>
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+
+
+</body>
+
+</html>
